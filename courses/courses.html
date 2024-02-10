@@ -3,106 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Molla Negash - portfolio</title>
-    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
+    <title>Java Code Example</title>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="images/image.jpg" alt="Molla Negash">
-            <h1>courses</h1>
-            <h2> Data Structure and Algorithms</h2>
-            <h2> Array</h2>
-        </div>
-    </header>
-
     <pre><code>
+       
 
-        import java.util.Scanner;
-        import java.util.Arrays;
-        
-        public class Main
-        {
-            public static void main(String[] args) {
-                
-                Scanner scan = new Scanner(System.in);
-                System.out.println("enter 7 temps");
-                double tArr[]=new double[7];
-               
-                double sum=0;
-                for(int count=0;count<7;count++){
-                    double temp = scan.nextInt();
-                    tArr[count]= temp;
-                    sum+=temp;
-                }
-                System.out.println("list of temps");
-                double maxT=tArr[0];
-                double minT=tArr[0];
-                for(double d: tArr){
-                    System.out.print(d + " ");
-                }
-                for(int i=0;i<tArr.length;i++){
-                    if(maxT<tArr[i]){
-                        maxT=tArr[i];
-                      
-                  }else{
-                       minT=tArr[i];
-                  }
-                 
-                  
-              }
-              System.out.println();
-              System.out.println("Max Temprature"+ " "+ maxT);
-              System.out.println("Min Temprature"+ " "+ minT);
-              double average = sum/7;
-              System.out.println();
-              System.out.println("average Tem"+ " "+average);
-            }
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main
+{
+    public static void main(String[] args) {
+        System.out.println("Welcome to Online IDE!! Happy Coding :)");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("enter 7 temps");
+        double tArr[]=new double[7];
+       
+        double sum=0;
+        for(int count=0;count<7;count++){
+             double temp = scan.nextInt();
+              tArr[count]= temp;
+             sum+=temp;
         }
-    </code></pre>
-
-<section class="container">
-    <h2>Code Expected output</h2>
-   
-   <p>
-
-    <pre><code>
-        Welcome to Online IDE!! Happy Coding :
-        enter 7 temps
-        1
-        2
-        3
-        4
-        5
-        6
-        7
-        list of temps
-        1.0 2.0 3.0 4.0 5.0 6.0 7.0 
-        Max Temprature 7.0
-        
-        average Tem 4.0
-        
-        
-        ** Process exited - Return Code: 0 **
+        System.out.println("list of temps");
+        double maxT=tArr[0];
+      
+        for(double d: tArr){
+            System.out.print(d + " ");
             
-            
-    </code></pre>
-
+        }
+        
+        for(int i=0;i<tArr.length;i++){
+          
+          if(maxT<tArr[i]){
+              maxT=tArr[i];
+              
+          }
+          
+      }
+      System.out.println();
+        System.out.println("Max Temprature"+ " "+ maxT);
+        double average = sum/7;
+        System.out.println();
+        System.out.println("average Tem"+ " "+average);
+         
     
-    </p> 
-</section>
-   
-<p>clik the link to view the file: ><a href="https://drive.google.com/file/d/https://docs.google.com/document/d/1Avl1_o22XElFKmqX0VEOaklxKKbmDOUe3ke6n0CJqaw/edit?usp=sharing/view" target="_blank">Resume PDF</a></p>
-    <script src="scripts/script.js"></script>
+    }
+}
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Molla Negash | Designed by Molla Negash</p>
-            <p>Contact: mdraya3@gmail.com | Follow me on <a href="https://www.linkedin.com/in/mnegash/" target="_blank">linkedin</a></p>
-        </div>
-    </footer>
+    </code></pre>
 </body>
 </html>
-
-
