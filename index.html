@@ -45,29 +45,23 @@
     </section>
     <div id="paypal-button-container"></div>
     
-    <script>
-        paypal.Buttons({
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '10.00' // The total amount to charge the customer
-                        }
-                    }]
-                });
-            },
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    alert('Transaction completed by ' + details.payer.name.given_name);
-                    // Call your backend to complete the payment process
-                });
-            }
-        }).render('#paypal-button-container');
-    </script>
+    
     <section class="container">
         <h2>Skills</h2>
         • Microservices • RESTful WebServices • Web Applications • Spring Boot • Multi programing
     </section>
+    <scipt>
+        <h2>courses</h2>
+
+        div class="container">
+         
+            <p> clik the link to view the file: ><a href="courses/courses.html" target="_blank">course file</a>
+            </p>
+
+        </div>
+
+        
+    </scipt>
 <p>clik the link to view the file: ><a href="https://drive.google.com/file/d/https://docs.google.com/document/d/1Avl1_o22XElFKmqX0VEOaklxKKbmDOUe3ke6n0CJqaw/edit?usp=sharing/view" target="_blank">Resume PDF</a></p>
     <script src="scripts/script.js"></script>
 
