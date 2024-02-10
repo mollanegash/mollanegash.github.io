@@ -12,8 +12,8 @@
         <div class="container">
             <img src="images/image.jpg" alt="Molla Negash">
             <h1>courses</h1>
-            <p> Data Structure and Algorithms</p>
-            <p> Array</p>
+            <h2> Data Structure and Algorithms</h2>
+            <h2> Array</h2>
         </div>
     </header>
 
@@ -32,23 +32,19 @@
                
                 double sum=0;
                 for(int count=0;count<7;count++){
-                     double temp = scan.nextInt();
-                      tArr[count]= temp;
-                     sum+=temp;
+                    double temp = scan.nextInt();
+                    tArr[count]= temp;
+                    sum+=temp;
                 }
                 System.out.println("list of temps");
-              double maxT=tArr[0];
-              double minT=tArr[0];
-              
+                double maxT=tArr[0];
+                double minT=tArr[0];
                 for(double d: tArr){
                     System.out.print(d + " ");
-                    
                 }
-                
                 for(int i=0;i<tArr.length;i++){
-                  
-                  if(maxT<tArr[i]){
-                      maxT=tArr[i];
+                    if(maxT<tArr[i]){
+                        maxT=tArr[i];
                       
                   }else{
                        minT=tArr[i];
@@ -57,41 +53,42 @@
                   
               }
               System.out.println();
-                System.out.println("Max Temprature"+ " "+ maxT);
-                System.out.println("Min Temprature"+ " "+ minT);
-                double average = sum/7;
-                System.out.println();
-                System.out.println("average Tem"+ " "+average);
-                 
-            
+              System.out.println("Max Temprature"+ " "+ maxT);
+              System.out.println("Min Temprature"+ " "+ minT);
+              double average = sum/7;
+              System.out.println();
+              System.out.println("average Tem"+ " "+average);
             }
         }
+    </code></pre>
 
-        
-    </code>
-</pre>
 <section class="container">
-    <h2>Code output</h2>
+    <h2>Code Expected output</h2>
    
    <p>
-    Welcome to Online IDE!! Happy Coding :)
-enter 7 temps
-1
-2
-3
-4
-5
-6
-7
-list of temps
-1.0 2.0 3.0 4.0 5.0 6.0 7.0 
-Max Temprature 7.0
 
-average Tem 4.0
+    <pre><code>
+        Welcome to Online IDE!! Happy Coding :
+        enter 7 temps
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        list of temps
+        1.0 2.0 3.0 4.0 5.0 6.0 7.0 
+        Max Temprature 7.0
+        
+        average Tem 4.0
+        
+        
+        ** Process exited - Return Code: 0 **
+            
+            
+    </code></pre>
 
-
-** Process exited - Return Code: 0 **
-    
     
     </p> 
 </section>
