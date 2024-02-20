@@ -85,3 +85,11 @@ footer {
 footer p {
     padding: 10px 0;
 }
+
+
+
+.logo-img {
+    max-width: 100px; /* Set the maximum width of the logo */
+    height: auto; /* Allow the height to adjust proportionally */
+}
+
