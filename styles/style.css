@@ -85,3 +85,22 @@ footer {
 footer p {
     padding: 10px 0;
 }
+.container {
+    display: flex;
+    justify-content: center; /* Align contents horizontally to the center */
+    align-items: center; /* Align contents vertically to the center */
+    /* Add other styles for container as needed */
+}
+
+.logo {
+    margin-right: auto; /* Pushes the logo to the left */
+    margin-left: auto; /* Pushes the logo to the right */
+}
+
+.logo img {
+    display: block; /* Ensures the image is treated as a block element */
+    max-width: 100%; /* Ensures the logo image doesn't exceed the container width */
+    height: auto; /* Maintains aspect ratio */
+    /* Add other styles for the logo image as needed */
+}
+
