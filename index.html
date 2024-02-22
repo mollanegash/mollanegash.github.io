@@ -7,6 +7,7 @@
     <title>Online Retail Business</title>
     <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
     <meta name="google-site-verification" content="AY4sqpV0JbgewjIGE6xVWLQoLN_K0GZU3-hYneq7WOM" />
+
     <link rel="icon" href="images/FibIcon.JPEG" type="FibIcon">
 
 </head>
@@ -68,40 +69,51 @@
         <!-- Add more products as needed -->
     </div>
 </section>
-<h1>Data Fetch Example</h1>
-    <div id="data-container">
-        <!-- Data will be inserted here -->
-    </div>
 
-    <script>
-        // Function to fetch data from the server
-        function fetchData() {
-            fetch(' https://api.covid19api.com/')
-                .then(response => response.json())
-                .then(data => {
-                    // Process the fetched data
-                    const container = document.getElementById('data-container');
-                    // Clear previous data
-                    container.innerHTML = '';
-                    // Iterate over the data and create HTML elements to display it
-                    data.forEach(post => {
-                        const postElement = document.createElement('div');
-                        postElement.innerHTML = `
-                            <h2>${post.title}</h2>
-                            <p>${post.body}</p>
-                            <hr>
-                        `;
-                        container.appendChild(postElement);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error fetching data:', error);
-                });
-        }
+<div id="data-container">
+    <!-- Data will be displayed here -->
+</div>
 
-        // Call fetchData when the page loads
-        window.onload = fetchData;
-    </script>
+<script>
+// Function to fetch data from the server
+function fetchData() {
+    fetch('https://api.covid19api.com/') // Example API endpoint
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json(); // Parse the JSON data
+        })
+        .then(data => {
+            // Process the fetched data
+            displayData(data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}
+
+// Function to display fetched data on the HTML page
+function displayData(data) {
+    const container = document.getElementById('data-container');
+    if (!container) return;
+
+    // Create HTML elements to display the data
+    const ul = document.createElement('ul');
+    data.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.id}: ${item.title}`;
+        ul.appendChild(li);
+    });
+
+    // Append the list to the container
+    container.appendChild(ul);
+}
+
+// Call the fetchData function when the page loads
+window.onload = fetchData;
+</script>
+
 
 <section id="about">
     <div class="container">
