@@ -97,4 +97,7 @@ footer p {
     max-width: 400px; /* Set the maximum width of the logo */
     height: auto; /* Allow the height to adjust proportionally */
 }
+.profile-separator__line {
+    border-bottom: 3px solid blue; /* Change the color and thickness as desired */
+}
 
