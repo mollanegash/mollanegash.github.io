@@ -1,154 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Online Retail Business</title>
-    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
-    <meta name="google-site-verification" content="AY4sqpV0JbgewjIGE6xVWLQoLN_K0GZU3-hYneq7WOM" />
-
-    <link rel="icon" href="images/FibIcon.JPEG" type="FibIcon">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Resume</title>
+  <link rel="stylesheet" href="styles/style.css"> <!-- Link to your CSS file for styling -->
 </head>
 <body>
-    <header>
-        
-        <div class="container">
-            <div class="logo">
-                <img src="images/logo.jpg" alt="logo" class="logo-img">
-            </div>
-<br>
-            <h1>Betselot Online Business</h1>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-
-   
+  <header>
     <div class="container">
-        <h2>Welcome to Your Online Store</h2>
-        <p>Discover the latest trends and shop with ease.</p>
-        <br>
-        <a href="#products" class="btn">Shop Now</a>
-    </div>
-</section>
-<section id="products">
-    <div class="container">
-      
-        <section class="featured">
-            <div class="container">
-                <h2>Featured Products</h2>
-                <p>1. kids</p> 
-                <p>2. men</p>
-                <p>3. women</p> 
-                <p>4. fashion</p> 
-            </div>
-        </section>
-
-        <div class="product">
-            <img src="product1.jpg" alt="Product 1">
-            <h3>Product 1</h3>
-            <p>Description of product 1.</p>
-            <span>$19.99</span>
-        </div>
-        <div class="product">
-            <img src="product2.jpg" alt="Product 2">
-            <br>
-            <h3>Product 2</h3>
-            <p>Description of product 2.</p>
-            <span>$24.99</span>
-        </div>
-        <!-- Add more products as needed -->
-    </div>
-</section>
-
-<div id="data-container">
-    <!-- Data will be displayed here -->
-</div>
-
-<script>
-// Function to fetch data from the server
-function fetchData() {
-    fetch('https://api.covid19api.com/') // Example API endpoint
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json(); // Parse the JSON data
-        })
-        .then(data => {
-            // Process the fetched data
-            displayData(data);
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
-}
-
-// Function to display fetched data on the HTML page
-function displayData(data) {
-    const container = document.getElementById('data-container');
-    if (!container) return;
-
-    // Create HTML elements to display the data
-    const ul = document.createElement('ul');
-    data.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.id}: ${item.title}`;
-        ul.appendChild(li);
-    });
-
-    // Append the list to the container
-    container.appendChild(ul);
-}
-
-// Call the fetchData function when the page loads
-window.onload = fetchData;
-</script>
-
-
-<section id="about">
-    <div class="container">
-        <h2>About Us</h2>
-        <p>Welcome to Betselot Online Business, your ultimate online destination for kids, men, women, fashion clothes.
-            At Betselot Online Business, we're passionate about fast delivery, style, quality, convenience, and
-            we're dedicated to providing our customers with an exceptional shopping experience, top-notch products,
-            unbeatable value. With a keen eye for trends, craftsmanship, sustainability], we curate a handpicked selection
-            of fashion-forward apparel, eco-friendly home goods, cutting-edge gadgets. Our mission is to empower your style,
-            simplify your life, elevate your home. Join us on this journey and discover the perfect blend of style and
-            substance, quality and affordability, innovation and tradition.</p>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="container">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or inquiries, please feel free to contact us:</p>
+      <h1>Your Name</h1>
+      <nav>
         <ul>
-            <li>Email: mnegash@bu.edu</li>
-            <li>Phone: 617-318-7005</li>
-            <li>Address: Austin, TX, US</li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+      </nav>
     </div>
-</section>
+  </header>
 
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>Dedicated and proven Java development professional with more than 8 years of experience designing complex applications and frameworks. Adept at building on project requirements to deliver leading-edge technologies that meet and exceed expectations. Solid user interface design skills centered on user-friendliness and streamlined performance. Able to effectively link back-end and front-end system components to deliver comprehensive business and web technologies that provide added functionality, optimized productivity, and improved efficiency.
+    </p>
+    </div>
+  </section>
 
+  <section id="resume">
+    <div class="container">
+      <h2>Resume</h2>
+      <p>      
+        Sr. Specialist: Software Engineering, LTIMindtree: Austin, TX                                             Jan 2023 - Current
+        implemented cloud service for intelligence, Payment System and mortgage product deployment: AWS (Cloudwatch, lambda:email handling, S3:APIs, EC2, SNS:messaging/alarms) and GCP;
+        configured and migrated requirements to jira/confluence; implemented project development and management tools: maven, and jira supports agile methodology: kanban,scrum and backlog;
+        used IDE, languages, frameworks, development tools (CI/CD) and database for feature enhancement: intellij, eclipse, pycharm,VSCode, java/spring boot, python/django, javaScript/expressJS, typescript, php/laravel, kafka, redis and aws cli, aws k8s, docker,  git, github actions and mysql, postgresql, MongoDb and aurora;
+        monitored synaptec daily search reports: hit/clear, data only and SQA searches on digital delve server;
+        updated, developed and deployed order search urls, AI/ML apis, Payment System, Mortgage Account, case level data web scraping applications and features (courtsmart improvement and data mapping) to S3 bucket;
+        identified logs and troubleshooted pending client orders using java, javascript, NodeJs, thymeleaf/angularJs/reactjs, cloudwatch, intellij IDE, redis cache, selenium and playwright, regression/mockito test;
+        
+        Java Developer, Tata Consultancy Service:  Boston, MA	                                                   Nov 2021 - Dec 2022
+        migrated monolithic API elements to modern container-based microservice architecture written in java, spring boot with kafka  and reactJs;
+        built cloud native applications using google cloud and tools that leverage fully managed services; 
+        developed and deployed backend insurance document management APIs;
+        troubleshooted, debugged and upgraded insurance software application;
+        monitored documentation processes and adhere to the coding standards as provided by TCS standards or as provided by the client;
+        Analyzed  insurance  data on spark AI/ML APSs (python, SQL): statistical and inferential analysis on databricks platform;
+        performed unit tests as per the test plans and test cases to enhance code quality;
+        
+        Java Developer, Public Health Institute: Ethiopia                                                                   Aug 2013 – July 2016
+        developed public health research applications using Spring MVC framework, JSP, html, CSS, and JavaScript;
+        developed REST based Microservices with Rest template/Web Client on RESTful APIs;
+        developed complex SQL statements and stored procedures with Oracle;
+        Analyzed  public health data using statistical and inferential analysis:R/python;
+         configured and managed RDBMs like Microsoft SQL Server, Oracle Database, MySQL;
+        developed applications in AWS – migrate applications to cloud;
+        
+        Java Developer, Ministry of Science and Technology: Ethiopia	                                   Nov 2011 – Aug 2013
+        designed professional UI web applications using front-end technologies: HTML/HTML5, CSS/CSS3, JavaScript, XML, jQuery, AJAX, JSON, AXIOS;
+        developed Java API to interact with the Amazon SQS used in sending bulk emails; 
+        developed presentation layer using JSP, HTML, CSS, AJAX, JavaScript;
+        developed additional UI Components using JSF and implemented an asynchronous, AJAX (jQuery) based rich client to improve customer experience;
+        designed database, data modeling and performance tuning and stored procedures, functions and triggers and applied CRUD using oracle and SQL Server;
+        
+        Java Developer, City Government of Addis Ababa:Ethiopia                                                 Mar 2010 – Nov 2011
+        implemented JSF framework in the application which is based on MVC design architecture on fleet management system;
+        developed Enterprise JavaBeans (EJB), MVC, JDBC, Spring with Hibernate, AJAX for search panel, Java Swing & AWT for desktop app;
+        designed and implemented user interface using JSP, Servlets, JavaScript, HTML, CSS, and AJAX on real time tracking system for waste collecting vehicles;
+        developed use case diagrams, class diagrams, database tables, and provided mapping between relational database tables and object-oriented java objects using Hibernate;
+        developed user interface using JSP, HTML, CSS, and JavaScript to simplify the complexities of applications;
+        developed fleet management system software to support a large-scale IT system with Linux- based servers, Amazon Web Services (AWS) cloud instances, and Oracle and/or Postgres databases;
+        
+        EDUCATION
+        Boston University | Boston, MA, US | May 2021 | MS in Computer Science
+        Mekelle University | Mekelle, Ethiopia | July 2009 | BSc in Economics
+        </p>
+    </div>
+  </section>
 
-<footer>
-        <div class="container">
-            <p>&copy; 2024 Molla Negash | Designed by Betselot Online Business</p>
-            <p>Contact: mdraya3@gmail.com | Follow us on <a href="https://www.linkedin.com/company/bet-ebusiness/?viewAsMember=true" target="_blank">linkedin</a></p>
-        </div>
-    </footer>
+  <section id="portfolio">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <p>github</p>
+    </div>
+  </section>
 
-    
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>mdraya3@gmail.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Molla Negash. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
