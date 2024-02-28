@@ -46,3 +46,12 @@ body {
     text-align: center;
   }
   
+  a {
+    color: #0366d6; /* GitHub's primary color */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
