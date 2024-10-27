@@ -12,6 +12,12 @@ body {
     margin-right: 0;
   }
 }
+footer a {
+  color: #fff;
+}
+footer a:hover {
+  color: #ccc;
+}
 nav ul li a:hover {
   color: #ccc;
 }
