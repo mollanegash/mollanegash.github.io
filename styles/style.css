@@ -3,7 +3,18 @@ body {
     margin: 0;
     padding: 0;
   }
-  
+  @media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  nav ul li {
+    display: block;
+    margin-right: 0;
+  }
+}
+nav ul li a:hover {
+  color: #ccc;
+}
   .container {
     width: 80%;
     margin: 0 auto;
