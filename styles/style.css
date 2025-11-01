@@ -46,14 +46,17 @@ p {
     line-height: 1.6;
 }
 
+/* --- LIST STYLING (SIMPLIFIED FOR CONSISTENT BULLETS) --- */
 ul {
+    /* Ensures all lists use the default disc and consistent padding */
+    list-style-type: disc;
     margin: 0;
     padding-left: 20px;
 }
 
-ul ul {
-    padding-left: 40px;
-}
+/* Note: Removed specific ul ul padding to ensure visual consistency across all levels */
+/* ------------------------------------------------------------ */
+
 
 a {
     color: #1A0DAB;
@@ -73,7 +76,6 @@ footer {
 
 /* -------------------------------------------
    BANNER SPECIFIC STYLING 
-   (The rules for placing the image correctly)
 ------------------------------------------- */
 .banner-container {
     /* Ensures the banner spans the full width of the screen */
