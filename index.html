@@ -60,6 +60,23 @@
     a:hover {
       text-decoration: underline;
     }
+.banner-container {
+    text-align: center;
+    margin: 20px 0 30px 0; /* top 20px, bottom 30px */
+}
+.banner-container img {
+    max-width: 100%; /* already there */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0 auto;
+}
+@media (max-width: 500px) {
+    .banner-container img {
+        width: 100%;
+    }
+}
 
     footer {
       text-align: center;
