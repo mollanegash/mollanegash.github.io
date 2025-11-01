@@ -1,401 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resume | Molla Negash</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f1f1f1;
-    }
-
-
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 20px;
-      background-color: #fff;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding-bottom: 20px;
-      margin-bottom: 30px;
-    }
-
-    h1, h2 {
-      color: #1A0DAB;
-    }
-
-    h2 {
-      border-bottom: 2px solid #1A0DAB;
-      padding-bottom: 5px;
-    }
-
-    section {
-      margin-bottom: 30px;
-      padding: 20px;
-      border-bottom: 1px solid #ccc;
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    ul ul {
-      padding-left: 40px;
-    }
-
-    a {
-      color: #1A0DAB;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-.banner-container {
-    text-align: center;
-    margin: 20px 0 30px 0; /* top 20px, bottom 30px */
-}
-.banner-container img {
-    max-width: 100%; /* already there */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: block;
-    margin: 0 auto;
-}
-@media (max-width: 500px) {
-    .banner-container img {
-        max-width: 100%;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Molla Negash</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      line-height: 1.6;
     }
-}
 
+    .container {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 30px 40px;
+    }
 
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #f1f1f1;
-      border-top: 1px solid #ccc;
-    }
-  </style>
-  <link rel="icon" href="images/fi.png" type="image/x-icon">
+    h1, h2, h3 {
+      color: #1A0DAB;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 32px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin-bottom: 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #007B7F;
+      font-weight: 600;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    th {
+      text-align: left;
+      padding: 10px;
+      background-color: #f1f1f1;
+      color: #1A0DAB;
+    }
+
+    td {
+      padding: 10px;
+      vertical-align: top;
+    }
+
+    a {
+      color: #007B7F;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #fff;
+      border-top: 1px solid #ccc;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Banner Styling */
+    .banner-container {
+      text-align: center;
+      margin: 0;
+      position: relative;
+    }
+
+    .banner-container img {
+      width: 100%;
+      max-height: 250px;
+      height: auto;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: block;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 20px;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+  <link rel="icon" href="images/fi.png" type="image/x-icon">
 </head>
+
 <body>
 
-<div class="banner-container" style="position:relative; text-align:center; margin-bottom:20px;">
+<!-- Banner (untouched, only position adjusted to top) -->
+<div class="banner-container">
   <img src="images/Microeconomics of Microservices Banner.png" 
-       alt="Molla Negash Banner" 
-       style="width:100%; max-height:250px; height:auto; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
-  
-  <!-- Name text overlay with background for readability -->
-  <div style="
-      position:absolute; 
-      top:50%; 
-      left:50%; 
-      transform:translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.4); /* semi-transparent dark layer */
-      color:white; 
-      font-size:26px; 
-      font-weight:bold; 
-      padding:8px 20px; 
-      border-radius:6px;
-      text-shadow:0 1px 3px rgba(0,0,0,0.5);
-  ">
-  </div>
+       alt="Molla Negash Banner">
 </div>
 
+<div class="container">
+  <h1>Molla Negash</h1>
 
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </nav>
+</div>
 
-
-
-
-
-
-
-
-    <h1>Molla Negash</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#Contact">Contact</a></li>
-      </ul>
-    </nav>
+<!-- About Section -->
+<section id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>Senior Software Engineer with over 8 years of experience in Java backend development, microservices architecture, and AI/ML. AWS Certified Solutions Architect with a demonstrated ability to design and implement scalable cloud solutions using Databricks, Apache Spark, and AWS services. Proven track record in transitioning from monolithic systems to microservices, optimizing system efficiency, and leading technical teams to deliver high-quality solutions. Committed to driving innovation and excellence in software engineering with a strong foundation in cloud-native technologies and best practices.</p>
   </div>
-</header>
-
-
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>Senior Software Engineer with over 8 years of experience in Java backend development, microservices architecture, and AI/ML. AWS Certified Solutions Architect with a demonstrated ability to design and implement scalable cloud solutions using Databricks, Apache Spark, and AWS services. Proven track record in transitioning from monolithic systems to microservices, optimizing system efficiency, and leading technical teams to deliver high-quality solutions. Committed to driving innovation and excellence in software engineering with a strong foundation in cloud-native technologies and best practices.</p>
-    </div>
-  </section>
-
-  <section id="resume">
-    <div class="container">
-      <h2>Resume</h2>
-      <p>
-        <strong>CERTIFICATIONS</strong><br>
-        AWS Certified Cloud Specialist - Technical<br>
-      <p style="font-weight: bold; color: white;">
-  <a href="https://docs.google.com/document/d/1wgFpgwH-zVchofJ6JTIg1LMu8h3dRGpmRcE0OzkiaJs/edit?usp=sharing" download style="display: inline-block; padding: 10px 20px; font-size: 16px; color: white; background-color: #007B7F; border: none; border-radius: 5px; text-decoration: none; transition: background-color 0.3s ease;">
-    Download My Resume
-  </a>
-</p>
-
-
-
-        
-         <strong>EXPERIENCE</strong><br>
-        <i class="fas fa-briefcase"></i> Tech Lead | Betsi Eco Hub LLC<br>
-<em>Austin, TX | December 2023 - Present</em><br>
-<ul>
-  <li>Developed a scalable notification system using Java, Spring Boot, and MySQL, achieving 99.9% uptime and a 30% increase in engagement through optimized AWS and Redis integration.</li>
-  <li>Engineered advanced big data processing solutions using Apache Spark and Java, driving innovation in healthcare and fintech.</li>
-  <li>Implemented a secure Money Transfer Service with integrated transaction logging and error handling.</li>
-</ul>
-
-        <br>
-        
-        <i class="fas fa-briefcase"></i> Senior Java Developer | LTIMindtree<br>
-        <em>Austin, TX | Jan 2023 - Nov 2023</em><br>
-        <ul>
-          <li>Designed and developed banking applications with new functionalities and seamless back-end integration.</li>
-          <li>Spearheaded the migration to microservices architecture using Java, Spring Boot, and Spring Cloud, focusing on robust RESTful API design and implementation.</li>
-          <li>Utilized Google Cloud Platform (GCP) and AWS for deploying secure payment systems, intelligence and mortgage product deployment, and scalable applications, ensuring compliance with industry best practices.</li>
-          <li>Developed and restructured mortgage account management using frontend components: Angular, React, and Thymeleaf/Spring MVC.</li>
-          <li>Developed and maintained SSRS reports to facilitate data-driven decision making.</li>
-          <li>Developed and maintained web and backend systems of Credit Reporting Solutions, implementing microservices and RESTful APIs with Spring Boot.</li>
-          <li>Managed database operations across PostgreSQL, Oracle, MySQL, and NoSQL (MongoDB, Cassandra) environments.</li>
-          <li>Emphasized secure development best practices, including encryption and authorization techniques.</li>
-          <li>Applied Agile methodologies for iterative development, and leveraged tools such as Jenkins, SonarQube, JIRA, Confluence, Git, Maven, and Gradle for continuous integration and team collaboration.</li>
-        </ul>
-        <br>
-        
-         <i class="fas fa-briefcase"></i> Java Developer | Tata Consultancy Services<br>
-        <em>Boston, MA | Nov 2021 - Dec 2022</em><br>
-        <ul>
-          <li>Led the design, development, and management of insurance enterprise microservices applications using Java, Spring Boot, and Hibernate.</li>
-          <li> Developed and implemented a RESTful API for insurance documents management utilizing CRUD operations and microservices architecture.</li>
-          
-         
-          <li>Upgraded existing applications and integrated new systems and databases, improving performance and functionality.</li>
-
-         <li> Refactored monolithic systems to microservices architecture.</li> 
-
- <li>  Developed and maintained SSRS reports to support business intelligence needs.</li> 
-
-         
-
-          <li>Actively participated in application testing, troubleshooting, and user support to resolve technical issues.</li>
-          <li>Promoted professional development by identifying skill gaps, engaging in continuous learning, and staying updated with industry advancements.</li>
-        </ul>
-        <br>
-        <i class="fas fa-briefcase"></i> Java Developer | Public Health Institute<br>
-        <em>Ethiopia | Aug 2013 – July 2016</em><br>
-        <ul>
-          <li>Engineered public health research applications using Spring MVC, contributing to significant improvements in data analysis and reporting.</li>
-          <li>Developed RESTful microservices to enhance API integration and facilitated seamless communication between systems.</li>
-          <li>Conducted comprehensive statistical analysis on health data utilizing R and Python.</li>
-        </ul>
-        <br>
-        <i class="fas fa-briefcase"></i> Java Developer | Ministry of Science and Technology<br>
-        <em>Ethiopia | Nov 2011 – Aug 2013</em><br>
-        <ul>
-          <li>Created professional web applications and dynamic interfaces using HTML, CSS, JavaScript, and AJAX.</li>
-          <li>Developed APIs for bulk email processing and implemented solutions for real-time data handling and search functionality.</li>
-          <li>Applied Java frameworks (Spring, Hibernate) to design backend components and enhance system capabilities.</li>
-        </ul>
-        <br>
-
-      <i class="fas fa-briefcase"></i> Java Developer | City Government of Addis Ababa<br>
-       <em>Ethiopia | Mar 2010 – Nov 2011</em><br>
-        <ul>
-          <li>Implemented a fleet management system using JSF framework and MVC design, streamlining operations and data management.</li>
-          <li>Developed backend components with EJB, JDBC, and Spring, integrated with Hibernate for data persistence.</li>
-          <li>Enhanced user experience by designing efficient and navigable user interfaces.</li>
-        </ul>
-        <br>
-      
-      <i class="fas fa-briefcase"></i> Career Break<br>
-      <em>August 2016 - May 2021</em><br>
-        <ul>
-          <li>Relocated to the US and pursued a Master's in Computer Science, graduating with resilience and determination despite pandemic challenges.</li>
-          <li>Balanced family responsibilities while engaging in online learning, completing courses in data science and machine learning to stay abreast of industry trends.</li>
-         
-        </ul>
-        
-       <br> <strong>EDUCATION</strong><br>
-MS in Computer Science | Boston University | Boston, MA | May 2021<br>
-BSc in Economics | Mekelle University | Mekelle, Ethiopia | July 2009<br><br>
-
-
-<br><strong>Technical Skills</strong><br>
-<table style="border-collapse: collapse; width: 100%;">
-  <tr>
-    <th style="padding: 10px; text-align: left;">Category</th>
-    <th style="padding: 10px; text-align: left; margin-left: 40px;">Skills</th> <!-- Pushed to the right using margin -->
-  </tr>
-  <tr>
-    <td style="padding: 10px;">Programming Languages</td>
-    <td style="padding: 10px; padding-left: 50px;">
-      Java (Expert)<br>
-      Python (Advanced)<br>
-      R (Intermediate)
-    </td>
-  </tr>
-  <tr>
-    <td style="padding: 10px;">Frameworks</td>
-    <td style="padding: 10px; padding-left: 50px;">
-      Spring Boot (Expert)<br>
-      React (Intermediate)<br>
-      Angular (Intermediate)
-    </td>
-  </tr>
-  <tr>
-    <td style="padding: 10px;">Databases</td>
-    <td style="padding: 10px; padding-left: 50px;">
-      MySQL (Expert)<br>
-      PostgreSQL (Advanced)
-    </td>
-  </tr>
-  <tr>
-    <td style="padding: 10px;">Cloud Platforms</td>
-    <td style="padding: 10px; padding-left: 50px;">
-      AWS (Advanced)<br>
-      GCP (Basic)
-    </td>
-  </tr>
-</table>
-
-
-
-
-
 </section>
 
-        
-    <section id="Contact">
-    <div class="container">
-      <h2>CONTACT INFORMATION</h2>
-     Email: mdraya3@gmail.com | Phone: +1-617-318-7005 | GitHub: <a href="https://github.com/mollanegash" target="_blank">mollanegash</a>
-      </p>
-    </div>
-      
-     
+<!-- Resume Section -->
+<section id="resume">
+  <div class="container">
+    <h2>Resume</h2>
+    <p><strong>CERTIFICATIONS</strong><br>
+      AWS Certified Cloud Specialist - Technical
+    </p>
 
+    <p>
+      <a href="https://docs.google.com/document/d/1wgFpgwH-zVchofJ6JTIg1LMu8h3dRGpmRcE0OzkiaJs/edit?usp=sharing"
+         target="_blank"
+         style="display:inline-block; padding:10px 20px; background-color:#007B7F; color:white; border-radius:5px; text-decoration:none;">
+         📄 Download My Resume
+      </a>
+    </p>
 
+    <!-- Experience Section -->
+    <h3>Experience</h3>
+    <ul>
+      <li><strong>Tech Lead | Betsi Eco Hub LLC</strong> — Austin, TX | Dec 2023 - Present
+        <ul>
+          <li>Developed a scalable notification system using Java, Spring Boot, and MySQL with 99.9% uptime and 30% engagement improvement.</li>
+          <li>Engineered advanced big data processing using Apache Spark and Java.</li>
+          <li>Implemented secure Money Transfer Service with integrated logging and error handling.</li>
+        </ul>
+      </li>
 
+      <li><strong>Senior Java Developer | LTIMindtree</strong> — Austin, TX | Jan 2023 - Nov 2023
+        <ul>
+          <li>Led migration to microservices architecture using Spring Boot and Spring Cloud.</li>
+          <li>Deployed scalable payment systems on AWS and GCP ensuring compliance.</li>
+          <li>Implemented RESTful APIs, SSRS reports, and managed PostgreSQL, Oracle, MySQL, MongoDB, and Cassandra environments.</li>
+        </ul>
+      </li>
 
+      <li><strong>Java Developer | Tata Consultancy Services</strong> — Boston, MA | Nov 2021 - Dec 2022
+        <ul>
+          <li>Designed and implemented insurance microservices applications using Java and Hibernate.</li>
+          <li>Created RESTful API for insurance document management.</li>
+          <li>Refactored legacy monolith systems to microservices architecture.</li>
+        </ul>
+      </li>
 
-    </div> 
-  </section>
+      <li><strong>Java Developer | Public Health Institute</strong> — Ethiopia | Aug 2013 – July 2016
+        <ul>
+          <li>Developed Spring MVC-based public health research applications.</li>
+          <li>Implemented RESTful microservices for inter-system communication.</li>
+          <li>Conducted statistical analysis using R and Python.</li>
+        </ul>
+      </li>
+
+      <li><strong>Java Developer | Ministry of Science and Technology</strong> — Ethiopia | Nov 2011 – Aug 2013
+        <ul>
+          <li>Created web applications using HTML, CSS, JS, and AJAX.</li>
+          <li>Built APIs for bulk email and real-time search systems.</li>
+        </ul>
+      </li>
+
+      <li><strong>Java Developer | City Government of Addis Ababa</strong> — Ethiopia | Mar 2010 – Nov 2011
+        <ul>
+          <li>Implemented fleet management system using JSF and MVC.</li>
+          <li>Developed EJB and Hibernate-based backend systems.</li>
+        </ul>
+      </li>
+
+      <li><strong>Career Break</strong> — Aug 2016 - May 2021
+        <ul>
+          <li>Pursued M.S. in Computer Science at Boston University.</li>
+          <li>Balanced family life and online learning in data science and ML.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Education Section -->
+    <h3>Education</h3>
+    <p>
+      <strong>MS in Computer Science</strong> — Boston University, Boston, MA | May 2021<br>
+      <strong>BSc in Economics</strong> — Mekelle University, Ethiopia | July 2009
+    </p>
+
+    <!-- Technical Skills Table -->
+    <h3>Technical Skills</h3>
+    <table>
+      <tr><th>Category</th><th>Skills</th></tr>
+      <tr><td>Programming Languages</td><td>Java (Expert), Python (Advanced), R (Intermediate)</td></tr>
+      <tr><td>Frameworks</td><td>Spring Boot (Expert), React (Intermediate), Angular (Intermediate)</td></tr>
+      <tr><td>Databases</td><td>MySQL (Expert), PostgreSQL (Advanced)</td></tr>
+      <tr><td>Cloud Platforms</td><td>AWS (Advanced), GCP (Basic)</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
 <section id="portfolio">
-  <div class="container">
-    <h2>Repositories:</h2>
-    <h3>Full-stack Applications:</h3>
-<ul>
-  <li>
-    <strong><a href="https://github.com/mollanegash/ordertrackingsystem" target="_blank">Order Tracking System (Java, Spring Boot, React)</a></strong>
-    <p>A full-stack order tracking system with a Java Spring Boot backend and a React.js frontend. Features include multi-product ordering, shipping status tracking, customer type differentiation (personal & corporate), credit checks, and reward point logic. This project showcases end-to-end development including RESTful API design, in-memory H2 database, React forms, and UI rendering.</p>
-  </li>
-</ul>
-    <h3>Backend Development:</h3>
-   <ul>
-  <li>
-    <strong><a href="https://github.com/mollanegash/moneytransfer-service" target="_blank">Money Transfer Service (Java, Spring Boot)</a></strong>
-    <p>A robust Spring Boot application for managing money transfers. This project features transaction handling, account management, and secure transfer processing, demonstrating advanced backend development skills and error-handling capabilities.</p>
-  </li>
-  
-  <li>
-    <strong><a href="https://github.com/mollanegash/EduExcellence-School-Management-System" target="_blank">EduExcellence - School Management System (Java, Spring Boot)</a></strong>
-    <p>A comprehensive School Management Software developed using Java, Spring Boot, Spring Web, Spring Data JPA, and H2 (in-memory database) for EduExcellence. It offers a full suite of management tools for schools.</p>
-  </li>
-  
-  <li>
-    <strong><a href="https://github.com/mollanegash/Employee-Management-System-EMS-" target="_blank">Employee Management System (EMS) (Java, Spring Boot)</a></strong>
-    <p>A Spring Boot-based RESTful API for efficiently managing employee data. This system allows for CRUD operations, ensuring smooth data handling and user management.</p>
-  </li>
-  
-  <li>
-    <strong><a href="https://github.com/mollanegash/toast-notifications-app" target="_blank">Toast Notifications App (Java, Spring Boot, MySQL, H2 DB)</a></strong>
-    <p>A Spring Boot application for managing user notifications with CRUD operations, utilizing both H2 in-memory database and MySQL. It supports creating, reading, updating, and deleting user notifications.</p>
-  </li>
-  
-  <li>
-    <strong><a href="https://github.com/mollanegash/ML-ETL-Project" target="_blank">Machine Learning Project (Python, Jupyter Notebook, Databricks)</a></strong>
-    <p>This repository contains code for an end-to-end Machine Learning and ETL (Extract, Transform, Load) project developed on Databricks. It showcases data processing, model training, and deployment using Flask.</p>
-  </li>
-  
-  <li>
-    <strong><a href="https://github.com/mollanegash/cybersecurity-anomaly-detection" target="_blank">Cybersecurity Anomaly Detection (ML, Python, Jupyter Notebook, Google Colab)</a></strong>
-    <p>This repository contains code for detecting anomalies in cybersecurity using machine learning techniques, developed on Google Colab.</p>
-  </li>
-  
-  <li>
-    <strong><a href="https://github.com/mollanegash/data-processor" target="_blank">Data Processor (Java, React,springboot,MYSQL)</a></strong>
-    <p>A full-stack application built using Java and React for processing and analyzing large datasets. his project demonstrates my expertise in integrating Java for backend processing with React for frontend user interfaces, showcasing my full-stack development skills.</p>
-  </li>
-</ul>
-<h3>Data Structures, Algorithms, and Coding Challenges:</h3>
-<ul>
-  <li>
-    <strong><a href="https://github.com/mollanegash/ContainerizedCoding-ProblemSolving" target="_blank">Containerized Coding Problem Solving</a></strong>
-    <p>A repository showcasing a wide range of problem-solving approaches, focusing on algorithmic challenges and data structure implementations. Solutions are containerized to ensure scalability and modular development.</p>
-  </li>
-</ul>
-
-    <h3>Other Projects:</h3>
-    <ul>
-      <li>
-        <strong><a href="https://github.com/mollanegash/college-student-management-web-app" target="_blank">College Student Management Web App</a></strong>
-        <p>A comprehensive web application for managing college students, courses, and registrations. Developed using PHP, MySQL, HTML, and CSS.)</p>
-        </li>
-      <li>
-        <strong><a href="https://github.com/mollanegash/filesystem" target="_blank">FilesystemChained: Efficient Hash Table Implementation</a></strong>
-        <p>FilesystemChained is a Java library that provides an efficient hash table implementation with chaining for collision resolution. This repository showcases a fundamental data structure in computer science, offering a reliable and scalable solution for various applications.</p>
-        </li>
-      <li>
-        <strong><a href="https://github.com/mollanegash/income-tax-calculator-php" target="_blank">Income Tax Calculator</a></strong>
-        <p>This repository contains two PHP scripts for calculating income tax based on different filing statuses and tax tables.</p>
-        </li>
-      <li>
-        <strong><a href="https://github.com/mollanegash/project-portal" target="_blank">Computer Science Project Portal</a></strong>
-        <p>The Computer Science Project Portal provides a scalable, integrated platform for project development and publication. Projects in different stages of development can share progress and seek input from other experts in their field. Every project submitted will be open source and searchable via keyword tagging manually from user submission and from keyword extraction in the project description.</p>
-        </li>
-      <li>
-    <strong><a href="https://selammartcafe.com/" target="_blank">Selam International Mart & Cafe E-Commerce Platform</a></strong>
-    <p>The Selam International Mart & Cafe e-commerce platform was developed using WordPress and integrated with AWS for scalability and Stripe for secure payments, providing a seamless shopping experience.</p>
-</li>
-      
-    </ul>
-    <h2>GitHub Profile</h2>
-    <ul>
-      <li>
-        <strong><a href="https://github.com/mollanegash/" target="_blank">GitHub Profile</a></strong>
-      </li>
-    </ul>
-  </div>
-  
+  <div class="container">
+    <h2>Repositories</h2>
+    <p>View my latest projects on <a href="https://github.com/mollanegash" target="_blank">GitHub</a>.</p>
+  </div>
 </section>
- 
 
+<!-- Contact Section -->
+<section id="Contact">
+  <div class="container">
+    <h2>Contact Information</h2>
+    <p>Email: <a href="mailto:mdraya3@gmail.com">mdraya3@gmail.com</a> | Phone: +1-617-318-7005 | GitHub: <a href="https://github.com/mollanegash" target="_blank">mollanegash</a></p>
+  </div>
+</section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2024 Molla Negash. All Rights Reserved.</p>
-    </div>
-  </footer>
+<footer>
+  <p>&copy; 2024 Molla Negash. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
