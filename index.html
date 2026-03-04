@@ -13,7 +13,6 @@
       color: #333;
       line-height: 1.6;
     }
-
     .container {
       max-width: 900px;
       margin: 0 auto 40px auto;
@@ -22,49 +21,13 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       padding: 30px 40px;
     }
-
-    h1, h2, h3 {
-      color: #1A0DAB;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      text-align: center;
-      margin-top: 10px;
-      font-size: 32px;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      list-style: none;
-      padding: 0;
-      margin-bottom: 30px;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #007B7F;
-      font-weight: 600;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      margin-bottom: 40px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 12px;
-    }
-
+    h1, h2, h3 { color: #1A0DAB; margin-bottom: 10px; }
+    h1 { text-align: center; margin-top: 10px; font-size: 32px; }
+    nav ul { display: flex; justify-content: center; gap: 20px; list-style: none; padding: 0; margin-bottom: 30px; }
+    nav ul li a { text-decoration: none; color: #007B7F; font-weight: 600; }
+    section { margin-bottom: 40px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 12px; }
     .featured-box {
       border: 2px solid #007B7F;
       background-color: #f0fdfa;
@@ -72,81 +35,22 @@
       border-radius: 8px;
       margin-bottom: 30px;
     }
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      margin-top: 15px;
-    }
-
-    th {
-      text-align: left;
-      padding: 10px;
-      background-color: #f1f1f1;
-      color: #1A0DAB;
-    }
-
-    td {
-      padding: 10px;
-      vertical-align: top;
-    }
-
-    a {
-      color: #007B7F;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #fff;
-      border-top: 1px solid #ccc;
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    .banner-container {
-      text-align: center;
-      margin: 0;
-      position: relative;
-    }
-
-    .banner-container img {
-      width: 100%;
-      max-height: 250px;
-      height: auto;
-      border-radius: 0 0 8px 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      display: block;
-    }
-
-    @media (max-width: 500px) {
-      .container {
-        padding: 20px;
-      }
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
+    table { border-collapse: collapse; width: 100%; margin-top: 15px; }
+    th { text-align: left; padding: 10px; background-color: #f1f1f1; color: #1A0DAB; }
+    td { padding: 10px; vertical-align: top; border-bottom: 1px solid #eee; }
+    a { color: #007B7F; text-decoration: none; }
+    footer { text-align: center; padding: 20px 0; background-color: #fff; border-top: 1px solid #ccc; margin-top: 40px; font-size: 14px; color: #666; }
+    .banner-container img { width: 100%; max-height: 250px; height: auto; border-radius: 0 0 8px 8px; display: block; }
   </style>
 </head>
-
 <body>
 
 <div class="banner-container">
   <img src="images/Microeconomics of Microservices Banner.png" alt="Molla Negash Banner">
 </div>
 
-<header class="container" style="text-align:center; padding: 20px 0;">
-  <h1 style="color: #007B7F; font-size: 28px; margin-bottom: 10px;">
-    Senior Software Engineer & Tech Lead | Business Information Architect
-  </h1>
+<header class="container">
+  <h1 style="color: #007B7F;">Senior Software Engineer & Tech Lead | Business Information Architect</h1>
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
@@ -157,89 +61,46 @@
   </nav>
 </header>
 
-<section id="about" style="padding: 40px 0; background-color: #f9f9f9;">
-  <div class="container" style="max-width: 800px; margin: auto; line-height: 1.7;">
-    <h2 style="color: #007B7F; margin-bottom: 15px;">About Me</h2>
-    <p>I am a <strong>Senior Software Engineer</strong> and Business Information Architect with over 10 years of experience. My professional philosophy, <strong>"The Microeconomics of Microservices,"</strong> ensures that every architectural decision—from selecting a database to defining an API—is justified by its financial efficiency (ROI).</p>
-    <p>I specialize in building high-performance Java ecosystems, leading large-scale microservices transformations, and bridging the gap between executive business strategy and cloud technical execution. I hold dual backgrounds in <strong>Computer Science and Economics</strong>, giving me a unique edge in building analytical and cost-optimized distributed systems.</p>
+<section id="about">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>I am a <strong>Senior Software Engineer</strong> and Business Information Architect with over 10 years of experience. My professional philosophy, <strong>"The Microeconomics of Microservices,"</strong> ensures that every architectural decision is justified by its financial efficiency (ROI).</p>
+    <p>I specialize in building high-performance Java ecosystems and bridging the gap between executive business strategy and cloud technical execution. I hold dual backgrounds in <strong>Computer Science and Economics</strong>.</p>
   </div>
 </section>
 
 <section id="resume">
   <div class="container">
-    <h2>Resume</h2>
-    <p><strong>CERTIFICATIONS</strong><br>
-      AWS Certified Cloud Specialist - Technical
-    </p>
-
-    <p>
-      <a href="https://docs.google.com/document/d/1wgFpgwH-zVchofJ6JTIg1LMu8h3dRGpmRcE0OzkiaJs/edit?usp=sharing"
-         target="_blank"
-         style="display:inline-block; padding:10px 20px; background-color:#007B7F; color:white; border-radius:5px; text-decoration:none;">
-         📄 Download My Resume
-      </a>
-    </p>
-
-    <h3>Professional Experience</h3>
+    <h2>Professional Experience</h2>
     <ul>
       <li><strong>Tech Lead | Betsi Eco Hub LLC</strong> — Austin, TX | Dec 2023 - Present
         <ul>
-          <li>Engineered a high-concurrency notification engine achieving <strong>99.9% availability</strong> and driving a **30% increase** in user engagement.</li>
-          <li>Architected distributed data processing pipelines using **Apache Spark**, reducing ingestion latency by **45%**.</li>
-          <li>Delivered mission-critical Money Transfer Service with robust transactional integrity, reducing manual reconciliation by **25%**.</li>
+          <li>Engineered a high-concurrency notification engine achieving <strong>99.9% availability</strong> and driving a <strong>30% increase</strong> in user engagement.</li>
+          <li>Architected distributed data processing pipelines using <strong>Apache Spark</strong>, reducing ingestion latency by <strong>45%</strong>.</li>
+          <li>Delivered mission-critical Money Transfer Service, reducing manual reconciliation by <strong>25%</strong>.</li>
         </ul>
       </li>
       <li><strong>Senior Java Developer | LTIMindtree</strong> — Austin, TX | Jan 2023 - Nov 2023
         <ul>
-          <li>Spearheaded transition to **Cloud-Native Microservices** (Spring Cloud/AWS), improving deployment frequency by **40%**.</li>
-          <li>Refactored PostgreSQL and DynamoDB indexing, resulting in a **35% improvement** in transaction throughput.</li>
-          <li>Designed RESTful APIs ensuring **SOC2 compliance** for high-volume enterprise workflows.</li>
+          <li>Spearheaded transition to <strong>Cloud-Native Microservices</strong> (Spring Cloud/AWS), improving deployment frequency by <strong>40%</strong>.</li>
+          <li>Refactored PostgreSQL indexing, resulting in a <strong>35% improvement</strong> in transaction throughput.</li>
+          <li>Designed RESTful APIs ensuring <strong>SOC2 compliance</strong>.</li>
         </ul>
       </li>
-      <li><strong>Java Developer | Tata Consultancy Services</strong> — Boston, MA | Nov 2021 - Dec 2022
+      <li><strong>Java Developer | Ministry of Science and Technology</strong> — Ethiopia
         <ul>
-          <li>Designed and implemented enterprise insurance microservices using Java and Hibernate.</li>
-          <li>Refactored monolithic systems into modular services, improving API performance and scalability.</li>
-        </ul>
-      </li>
-      <li><strong>Career Break & M.S. Research</strong> — Aug 2016 - May 2021
-        <ul>
-          <li>Completed **M.S. in Computer Science at Boston University**.</li>
-          <li>Focused on distributed systems, data science, and advanced ML applications.</li>
-        </ul>
-      </li>
-      <li><strong>Java Developer | Public Health Institute</strong> — Ethiopia | Aug 2013 – July 2016
-        <ul>
-          <li>Developed secure RESTful services using Java and Spring for national health research platforms.</li>
-          <li>Designed database schemas for inter-system interoperability across government sectors.</li>
-        </ul>
-      </li>
-      <li><strong>Java Developer | Ministry of Science and Technology</strong> — Ethiopia | Nov 2011 – Aug 2013
-        <ul>
-          <li>Directed SDLC for enterprise-scale government systems and cloud infrastructure.</li>
           <li><strong>Contributed to 16+ technology patents</strong> through innovative software design and real-time search optimization.</li>
         </ul>
       </li>
-      <li><strong>Java Developer | City Government of Addis Ababa</strong> — Ethiopia | Mar 2010 – Nov 2011
-        <ul>
-          <li>Built enterprise fleet management systems using JSF, EJB, and Hibernate.</li>
-        </ul>
-      </li>
     </ul>
-
-    <h3>Education</h3>
-    <p>
-      <strong>MS in Computer Science</strong> — Boston University<br>
-      <strong>BSc in Economics</strong> — Mekelle University
-    </p>
 
     <h3>Technical Skills</h3>
     
     <table>
       <tr><th>Category</th><th>Skills</th></tr>
       <tr><td>Backend</td><td>Java 17, Spring Boot 3, Hibernate, REST APIs, Microservices, <strong>Concurrency & Multithreading</strong></td></tr>
-      <tr><td>Data & Cloud</td><td>AWS, GCP, PostgreSQL, MySQL, Apache Spark, SHA-256, <strong>JVM Tuning</strong></td></tr>
-      <tr><td>Other</td><td>Distributed Systems, System Architecture, ROI-driven Design, <strong>Spring Security (OAuth2)</strong></td></tr>
+      <tr><td>Data & Cloud</td><td>AWS, GCP, PostgreSQL, MySQL, Apache Spark, <strong>JVM Tuning</strong></td></tr>
+      <tr><td>Strategy</td><td>ROI-driven Design, Distributed Systems Architecture, <strong>Spring Security (OAuth2)</strong></td></tr>
     </table>
   </div>
 </section>
@@ -247,33 +108,21 @@
 <section id="portfolio">
   <div class="container">
     <h2>Project Portfolio</h2>
-
     <div class="featured-box">
         <h3>⭐ Featured: Federal Regulatory Insights Engine</h3>
         <p><strong>Stack:</strong> Java 17, Spring Boot 3, Parallel Streams, NLP Heuristics</p>
-        <p>A high-performance "RegTech" tool that processes eCFR data to quantify administrative burden. It applies Economic Theory to software architecture by calculating Requirement Density (RD) using parallel processing and NLP.</p>
-        <a href="https://github.com/mollanegash/federal-regulations-analyzer" target="_blank">View on GitHub &rarr;</a>
+        <p>A high-performance "RegTech" tool that processes eCFR data to quantify administrative burden through Requirement Density (RD) metrics.</p>
+        <a href="https://github.com/mollanegash/federal-regulations-analyzer" target="_blank"><strong>View on GitHub →</strong></a>
     </div>
-
-    <h3>Selected Repositories:</h3>
-    <ul>
-      <li><strong><a href="https://github.com/mollanegash/ordertrackingsystem">Order Tracking System</a></strong> (Spring Boot & React)</li>
-      <li><strong><a href="https://github.com/mollanegash/money-transfer-service">Money Transfer Service</a></strong> (Java/Spring Boot)</li>
-      <li><strong><a href="https://github.com/mollanegash/ML-ETL-Project">ML & ETL Project</a></strong> (Databricks/Python)</li>
-      <li><strong><a href="https://github.com/mollanegash/filesystem">FilesystemChained</a></strong> (Advanced Data Structures)</li>
-      <li><strong><a href="https://github.com/mollanegash/EduExcellence-School-Management-System">EduExcellence</a></strong> (School Management Platform)</li>
-      <li><strong><a href="https://github.com/mollanegash/Employee-Management-System-EMS-">Employee Management (EMS)</a></strong> (RESTful API)</li>
-      <li><strong><a href="https://github.com/mollanegash/toast-notifications-app">Toast Notifications App</a></strong> (CRUD Operations)</li>
-    </ul>
   </div>
 </section>
 
 <section id="Contact">
-  <div class="container">
+  <div class="container" style="text-align: center;">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:mdraya3@gmail.com">mdraya3@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/mollanegash" target="_blank">github.com/mollanegash</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/mollanegash" target="_blank">linkedin.com/in/mollanegash</a></p>
+    <p>Email: <a href="mailto:mdraya3@gmail.com">mdraya3@gmail.com</a> | 
+       GitHub: <a href="https://github.com/mollanegash">github.com/mollanegash</a> | 
+       LinkedIn: <a href="https://linkedin.com/in/mollanegash">linkedin.com/in/mollanegash</a></p>
   </div>
 </section>
 
