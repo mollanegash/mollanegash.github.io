@@ -3,25 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Molla Negash | Portfolio</title>
+  <title>Molla Negash | Senior Tech Lead</title>
   <style>
     body { font-family: "Segoe UI", Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; color: #333; line-height: 1.6; }
     .hero-banner {
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), 
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.3)), 
                   url('images/Microeconomics of Microservices Banner.png'); 
-      background-size: cover; background-position: center; height: 400px;
+      background-size: cover; background-position: center; height: 450px;
       display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
       color: white; padding-left: 8%;
     }
-    .hero-banner h1 { font-size: 52px; margin: 0; font-weight: 800; }
-    .hero-banner p { font-size: 24px; margin-top: 5px; color: #00d1d6; font-weight: 400; text-transform: uppercase; }
-    .container { max-width: 1000px; margin: -50px auto 30px; background-color: #fff; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); padding: 50px; position: relative; z-index: 10; }
+    .hero-banner h1 { font-size: 56px; margin: 0; font-weight: 800; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
+    .hero-banner p { font-size: 26px; margin-top: 5px; color: #00d1d6; font-weight: 400; text-transform: uppercase; letter-spacing: 2px; }
+    
+    .container { max-width: 1000px; margin: -60px auto 30px; background-color: #fff; border-radius: 12px; box-shadow: 0 15px 50px rgba(0,0,0,0.2); padding: 50px; position: relative; z-index: 10; }
+    
     h2 { color: #1A0DAB; border-bottom: 2px solid #007B7F; padding-bottom: 10px; margin-top: 40px; }
-    .experience-item { margin-bottom: 30px; }
-    .role-title { font-weight: bold; font-size: 19px; }
+    .featured-box { border-left: 5px solid #007B7F; background-color: #f0fdfa; padding: 25px; border-radius: 8px; margin: 30px 0; }
+    .experience-item { margin-bottom: 35px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+    .role-title { font-weight: bold; font-size: 20px; color: #222; }
     .company-info { color: #007B7F; font-weight: 700; }
-    .date-location { font-size: 14px; color: #666; font-style: italic; display: block; }
-    .skill-tag { background: #e8f4f4; color: #007B7F; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; display: inline-block; margin: 3px; }
+    .date-location { font-size: 14px; color: #777; font-style: italic; display: block; margin-bottom: 10px; }
+    .skill-tag { background: #e8f4f4; color: #007B7F; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; display: inline-block; margin: 5px; }
   </style>
 </head>
 <body>
@@ -32,15 +35,30 @@
 </header>
 
 <div class="container">
+  <section id="about">
+    <h2>Professional Philosophy</h2>
+    <p>I am a <strong>Senior Software Engineer</strong> with over 10 years of experience. My approach, <strong>"The Microeconomics of Microservices,"</strong> treats architectural decisions as financial investments, ensuring every line of code provides maximum ROI and long-term scalability.</p>
+  </section>
+
+  <section id="project">
+    <h2>Flagship Project</h2>
+    <div class="featured-box">
+      <h3>⭐ Federal Regulatory Insights Engine</h3>
+      <p><strong>Stack:</strong> Java 21, Spring Boot 3, Parallel Streams, NLP Heuristics</p>
+      <p>A high-performance analytical engine that ingests eCFR data to quantify administrative burden. It uses parallel processing to turn unstructured federal mandates into actionable economic data.</p>
+    </div>
+  </section>
+
   <section id="experience">
-    <h2>Professional Experience (Full Uncut History)</h2>
+    <h2>Professional Experience (Uncut)</h2>
 
     <div class="experience-item">
       <span class="role-title">Tech Lead</span> | <span class="company-info">Betsi Eco Hub LLC</span>
       <span class="date-location">Austin, TX | 2023 - Present</span>
       <ul>
-        <li>Engineered high-concurrency notification system achieving 99.9% uptime.</li>
-        <li>Architected distributed data processing using Apache Spark.</li>
+        <li>Engineered high-concurrency notification system achieving <strong>99.9% uptime</strong> and a 30% improvement in engagement.</li>
+        <li>Architected distributed data processing using <strong>Apache Spark</strong>, reducing latency by 45%.</li>
+        <li>Implemented secure Money Transfer Service with automated error-recovery.</li>
       </ul>
     </div>
 
@@ -48,24 +66,9 @@
       <span class="role-title">Senior Java Developer</span> | <span class="company-info">LTIMindtree</span>
       <span class="date-location">Austin, TX | 2023</span>
       <ul>
-        <li>Spearheaded transition to Cloud-Native Microservices (AWS), increasing deployment frequency by 40%.</li>
-        <li>Refactored PostgreSQL/DynamoDB indexing for 35% throughput improvement.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item">
-      <span class="role-title">Java Developer</span> | <span class="company-info">Tata Consultancy Services</span>
-      <span class="date-location">Boston, MA | 2021 - 2022</span>
-      <ul>
-        <li>Designed enterprise insurance microservices using Java and Hibernate.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item">
-      <span class="role-title">M.S. Research</span> | <span class="company-info">Boston University</span>
-      <span class="date-location">2016 - 2021</span>
-      <ul>
-        <li>Master of Science in Computer Science; Research in Distributed Systems.</li>
+        <li>Spearheaded transition to <strong>Cloud-Native Microservices (AWS)</strong>, increasing deployment frequency by 40%.</li>
+        <li>Refactored PostgreSQL/DynamoDB indexing for <strong>35% throughput improvement</strong>.</li>
+        <li>Designed RESTful APIs ensuring SOC2 compliance for financial workflows.</li>
       </ul>
     </div>
 
@@ -74,7 +77,7 @@
       <span class="date-location">Ethiopia | 2011 - 2013</span>
       <ul>
         <li><strong>Contributed to 16+ technology patents</strong> through innovative software design.</li>
-        <li>Led SDLC for large-scale government systems.</li>
+        <li>Led the Software Development Life Cycle (SDLC) for large-scale government systems.</li>
       </ul>
     </div>
   </section>
@@ -82,7 +85,7 @@
   <section id="skills">
     <h2>Technical Expertise</h2>
     <div class="skills-grid">
-      <span class="skill-tag">Java 21</span> <span class="skill-tag">Spring Boot 3</span> <span class="skill-tag">AWS Architecture</span> <span class="skill-tag">Kubernetes</span> <span class="skill-tag">Apache Spark</span>
+      <span class="skill-tag">Java 21</span> <span class="skill-tag">Spring Boot 3</span> <span class="skill-tag">AWS Cloud</span> <span class="skill-tag">Virtual Threads</span> <span class="skill-tag">Apache Spark</span> <span class="skill-tag">Kubernetes</span> <span class="skill-tag">OAuth2</span>
     </div>
   </section>
 </div>
