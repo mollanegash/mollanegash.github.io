@@ -3,185 +3,162 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Molla Negash | Senior Tech Lead Portfolio</title>
+  <title>Molla Negash | Senior Tech Lead</title>
   <style>
-    body { font-family: "Segoe UI", Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+    :root { --primary: #007B7F; --secondary: #1A0DAB; --bg: #f4f7f6; }
+    body { font-family: "Segoe UI", Arial, sans-serif; background-color: var(--bg); margin: 0; padding: 0; color: #333; line-height: 1.6; }
 
-    /* FULL WIDTH BANNER - STRETCHED HORIZONTALLY */
-    .banner-container {
+    /* NAVIGATION MENU */
+    .top-nav {
+      background: #fff;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .top-nav a { text-decoration: none; color: var(--primary); font-weight: bold; margin: 0 20px; text-transform: uppercase; font-size: 13px; transition: 0.3s; }
+    .top-nav a:hover { color: var(--secondary); }
+
+    /* FULL WIDTH BANNER - HIGH QUALITY */
+    .hero-container {
       width: 100%;
-      height: 350px; 
-      background-image: url('images/Microeconomics of Microservices Banner.png'); 
-      background-size: 100% 100%; /* Pulls image to both side edges */
-      background-repeat: no-repeat;
+      height: 450px;
+      background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/Microeconomics of Microservices Banner.png');
+      background-size: cover; 
       background-position: center;
-      border-bottom: 5px solid #007B7F;
+      border-bottom: 5px solid var(--primary);
     }
 
-    /* MODERN IDENTITY SECTION */
-    .identity-section {
+    /* NAME SECTION BELOW COVER */
+    .header-content {
       background: #fff;
       text-align: center;
       padding: 50px 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-bottom: 1px solid #eee;
     }
-    .identity-section h1 { font-size: 54px; margin: 0; color: #1A0DAB; font-weight: 800; letter-spacing: -1px; }
-    .brand-tag { font-size: 24px; color: #007B7F; margin-top: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; }
+    .header-content h1 { font-size: 52px; margin: 0; color: var(--secondary); font-weight: 800; }
+    .header-content .tagline { font-size: 24px; color: var(--primary); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-top: 10px; }
 
-    /* CONTENT AREA */
-    .container { max-width: 1050px; margin: 0 auto 60px; background-color: #fff; padding: 40px 70px; }
+    /* MAIN CONTAINER */
+    .container { max-width: 1000px; margin: 0 auto 60px; background: #fff; padding: 20px 60px 60px; }
     
-    h2 { color: #1A0DAB; border-bottom: 2px solid #007B7F; padding-bottom: 12px; margin-top: 50px; font-size: 28px; }
+    h2 { color: var(--secondary); border-left: 5px solid var(--primary); padding-left: 15px; margin-top: 50px; font-size: 28px; }
     
-    .experience-item { margin-bottom: 50px; border-bottom: 1px solid #eee; padding-bottom: 30px; }
-    .role-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
-    .role-title { font-weight: bold; font-size: 24px; color: #222; }
-    .company-info { color: #007B7F; font-weight: 700; font-size: 20px; }
-    .date-location { font-size: 15px; color: #666; font-style: italic; }
-    
-    ul { margin-top: 15px; padding-left: 20px; }
-    li { margin-bottom: 12px; font-size: 17px; }
-    strong { color: #1A0DAB; }
+    /* PROJECT HIGHLIGHT */
+    .project-card {
+      background: #f0fdfa;
+      border: 1px solid #cbf3f0;
+      padding: 30px;
+      border-radius: 12px;
+      margin: 30px 0;
+    }
+    .project-card h3 { margin-top: 0; color: var(--primary); }
 
-    .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
-    .skill-tag { background: #e8f4f4; color: #007B7F; padding: 10px 20px; border-radius: 25px; font-size: 15px; font-weight: 600; }
+    /* EXPERIENCE SECTION - UNCUT */
+    .exp-item { margin-bottom: 45px; border-bottom: 1px solid #eee; padding-bottom: 30px; }
+    .exp-header { display: flex; justify-content: space-between; align-items: baseline; }
+    .role { font-weight: bold; font-size: 22px; }
+    .company { color: var(--primary); font-weight: 700; font-size: 19px; }
+    .date { font-size: 14px; color: #777; font-style: italic; }
+
+    /* SKILLS */
+    .skill-badge { background: #e8f4f4; color: var(--primary); padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; display: inline-block; margin: 5px; }
     
-    .resume-btn { display: inline-block; background: #007B7F; color: white; padding: 15px 35px; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 25px; font-size: 18px; }
-    .resume-btn:hover { background: #005f61; transition: 0.3s; }
-    
-    footer { text-align: center; padding: 80px; color: #999; font-size: 15px; background: #fff; }
+    .btn { display: inline-block; background: var(--primary); color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 20px; }
   </style>
 </head>
 <body>
 
-<div class="banner-container"></div>
+<nav class="top-nav">
+    <a href="#about">Philosophy</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Uncut History</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-<header class="identity-section">
+<div class="hero-container"></div>
+
+<header class="header-content">
     <h1>Molla Negash</h1>
-    <div class="brand-tag">Microeconomics of Microservices</div>
-    <p style="font-size: 18px; color: #555; max-width: 700px; margin: 20px auto;">Senior Software Engineer & Tech Lead | Business Information Architect</p>
-    <a href="https://docs.google.com/document/d/YOUR_DOC_ID/edit" target="_blank" class="resume-btn">📄 View Full Google Doc Resume</a>
+    <div class="tagline">Microeconomics of Microservices</div>
+    <a href="https://docs.google.com/document/d/YOUR_GOOGLE_DOC_ID/edit" target="_blank" class="btn">📄 Download Resume (Google Doc)</a>
 </header>
 
 <div class="container">
   
-  <section id="philosophy">
+  <section id="about">
     <h2>Professional Philosophy</h2>
-    <p style="font-size: 18px;">I am a <strong>Senior Software Engineer</strong> with over 10 years of experience designing scalable Java backend systems. My unique approach, <strong>"The Microeconomics of Microservices,"</strong> ensures that every architectural choice—from database selection to API design—is justified by its financial efficiency (ROI) and long-term scalability.</p>
+    <p>I am a <strong>Senior Software Engineer & Tech Lead</strong> with 15 years of experience. My <strong>"Microeconomics of Microservices"</strong> framework ensures architectural efficiency and measurable ROI for enterprise systems.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Flagship Project</h2>
+    <div class="project-card">
+        <h3>⭐ Federal Regulatory Insights Engine</h3>
+        <p><strong>Tech:</strong> Java 21, Spring Boot 3, Parallel Streams, NLP Heuristics</p>
+        <p>High-performance analytical engine that processes eCFR data to quantify administrative burdens. Uses advanced concurrency to transform unstructured mandates into actionable data.</p>
+        <a href="https://github.com/mollanegash" target="_blank" style="color: var(--primary); font-weight: bold;">View GitHub Project →</a>
+    </div>
   </section>
 
   <section id="experience">
     <h2>Professional Experience (Uncut)</h2>
 
-    <div class="experience-item">
-      <div class="role-header">
-        <span class="role-title">Tech Lead</span>
-        <span class="date-location">Austin, TX | 2023 - Present</span>
-      </div>
-      <div class="company-info">Betsi Eco Hub LLC</div>
+    <div class="exp-item">
+      <div class="exp-header"><span class="role">Tech Lead</span><span class="date">2023 - Present</span></div>
+      <div class="company">Betsi Eco Hub LLC | Austin, TX</div>
       <ul>
-        <li>Engineered a high-concurrency notification system (Java/Spring Boot) achieving <strong>99.9% uptime</strong> and a <strong>30% improvement</strong> in user engagement.</li>
-        <li>Architected distributed data processing using <strong>Apache Spark</strong>, reducing ingestion latency by <strong>45%</strong>.</li>
-        <li>Implemented a secure Money Transfer Service with integrated logging and automated error-recovery protocols.</li>
+        <li>Engineered high-concurrency notification system (Java/Spring Boot) achieving <strong>99.9% uptime</strong>.</li>
+        <li>Architected distributed data processing using <strong>Apache Spark</strong>, reducing latency by 45%.</li>
       </ul>
     </div>
 
-    <div class="experience-item">
-      <div class="role-header">
-        <span class="role-title">Senior Java Developer</span>
-        <span class="date-location">Austin, TX | 2023</span>
-      </div>
-      <div class="company-info">LTIMindtree</div>
+    <div class="exp-item">
+      <div class="exp-header"><span class="role">Senior Java Developer</span><span class="date">2023</span></div>
+      <div class="company">LTIMindtree | Austin, TX</div>
       <ul>
-        <li>Spearheaded transition to <strong>Cloud-Native Microservices</strong> (Spring Cloud/AWS), increasing deployment frequency by <strong>40%</strong>.</li>
-        <li>Refactored PostgreSQL and DynamoDB indexing, achieving a <strong>35% throughput improvement</strong>.</li>
-        <li>Designed RESTful APIs ensuring <strong>SOC2 compliance</strong> for enterprise financial workflows.</li>
+        <li>Led transition to <strong>Cloud-Native Microservices (AWS)</strong>, increasing deployment frequency by 40%.</li>
+        <li>Refactored PostgreSQL/DynamoDB for 35% throughput improvement.</li>
       </ul>
     </div>
 
-    <div class="experience-item">
-      <div class="role-header">
-        <span class="role-title">Java Developer</span>
-        <span class="date-location">Boston, MA | 2021 - 2022</span>
-      </div>
-      <div class="company-info">Tata Consultancy Services</div>
-      <ul>
-        <li>Designed and implemented enterprise insurance microservices using Java and Hibernate.</li>
-        <li>Refactored legacy monolith systems into modular services, improving API performance and scalability.</li>
-      </ul>
+    <div class="exp-item">
+        <div class="exp-header"><span class="role">Java Developer</span><span class="date">2021 - 2022</span></div>
+        <div class="company">Tata Consultancy Services | Boston, MA</div>
+        <ul><li>Designed enterprise insurance microservices using Java and Hibernate.</li></ul>
     </div>
 
-    <div class="experience-item">
-      <div class="role-header">
-        <span class="role-title">Career Break & M.S. Research</span>
-        <span class="date-location">Boston, MA | 2016 - 2021</span>
-      </div>
-      <div class="company-info">Boston University</div>
-      <ul>
-        <li>Completed <strong>Master of Science in Computer Science</strong>.</li>
-        <li>Conducted research in distributed systems, advanced machine learning, and data science.</li>
-      </ul>
+    <div class="exp-item">
+        <div class="exp-header"><span class="role">M.S. Computer Science</span><span class="date">2016 - 2021</span></div>
+        <div class="company">Boston University | Boston, MA</div>
+        <ul><li>Research in distributed systems, machine learning, and data science.</li></ul>
     </div>
 
-    <div class="experience-item">
-      <div class="role-header">
-        <span class="role-title">Java Developer</span>
-        <span class="date-location">Ethiopia | 2013 - 2016</span>
-      </div>
-      <div class="company-info">Public Health Institute</div>
-      <ul>
-        <li>Developed secure RESTful services using Java/Spring for national-level health research platforms.</li>
-        <li>Optimized database schemas to ensure seamless interoperability between research systems.</li>
-      </ul>
+    <div class="exp-item">
+        <div class="exp-header"><span class="role">Java Developer</span><span class="date">2011 - 2013</span></div>
+        <div class="company">Ministry of Science and Technology | Ethiopia</div>
+        <ul>
+          <li><strong>Contributed to 16+ technology patents</strong> via innovative search optimization software.</li>
+          <li>Led SDLC for large-scale government infrastructure.</li>
+        </ul>
     </div>
 
-    <div class="experience-item">
-      <div class="role-header">
-        <span class="role-title">Java Developer</span>
-        <span class="date-location">Ethiopia | 2011 - 2013</span>
-      </div>
-      <div class="company-info">Ministry of Science and Technology</div>
-      <ul>
-        <li><strong>Contributed to 16+ technology patents</strong> through innovative software design and search optimization.</li>
-        <li>Led the Software Development Life Cycle (SDLC) for large-scale government systems and cloud integration.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item">
-      <div class="role-header">
-        <span class="role-title">Java Developer</span>
-        <span class="date-location">Ethiopia | 2010 - 2011</span>
-      </div>
-      <div class="company-info">City Government of Addis Ababa</div>
-      <ul>
-        <li>Developed an enterprise fleet management system using JSF, EJB, and Hibernate.</li>
-        <li>Implemented backend logic for municipal infrastructure and data management.</li>
-      </ul>
-    </div>
-
-  </section>
-
-  <section id="skills">
-    <h2>Technical Expertise</h2>
-    <div class="skills-grid">
-      <span class="skill-tag">Java 21</span><span class="skill-tag">Spring Boot 3</span>
-      <span class="skill-tag">AWS Cloud Architecture</span><span class="skill-tag">Apache Spark</span>
-      <span class="skill-tag">Virtual Threads (Loom)</span><span class="skill-tag">PostgreSQL</span>
-      <span class="skill-tag">Kubernetes & Docker</span><span class="skill-tag">OAuth2 & Security</span>
+    <div class="exp-item">
+        <div class="exp-header"><span class="role">Java Developer</span><span class="date">2010 - 2011</span></div>
+        <div class="company">City Government of Addis Ababa | Ethiopia</div>
+        <ul><li>Developed enterprise fleet management system using JSF, EJB, and Hibernate.</li></ul>
     </div>
   </section>
 
   <section id="contact">
-    <h2>Contact Information</h2>
-    <p style="font-size: 18px;">Email: <a href="mailto:mdraya3@gmail.com" style="color:#007B7F; font-weight:bold;">mdraya3@gmail.com</a></p>
-    <p style="font-size: 18px;">LinkedIn: <a href="https://linkedin.com/in/mollanegash" target="_blank" style="color:#007B7F; font-weight:bold;">linkedin.com/in/mollanegash</a></p>
+    <h2>Contact</h2>
+    <p>Email: <strong>mdraya3@gmail.com</strong></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/mollanegash">linkedin.com/in/mollanegash</a></p>
   </section>
-
 </div>
 
-<footer>
-  <p>&copy; 2026 Molla Negash. All Rights Reserved.</p>
-</footer>
-
+<footer>&copy; 2026 Molla Negash</footer>
 </body>
 </html>
