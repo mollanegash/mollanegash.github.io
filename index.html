@@ -8,7 +8,6 @@
     :root { --primary: #007B7F; --secondary: #1A0DAB; --bg: #f4f7f6; }
     body { font-family: "Segoe UI", Arial, sans-serif; background-color: var(--bg); margin: 0; padding: 0; color: #333; line-height: 1.6; }
 
-    /* MODERN STICKY TOP MENU */
     .top-nav {
       background: rgba(255, 255, 255, 0.98);
       padding: 18px 0;
@@ -18,10 +17,8 @@
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       text-align: center;
     }
-    .top-nav a { text-decoration: none; color: var(--primary); font-weight: bold; margin: 0 25px; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; transition: 0.3s; }
-    .top-nav a:hover { color: var(--secondary); border-bottom: 2px solid var(--secondary); }
+    .top-nav a { text-decoration: none; color: var(--primary); font-weight: bold; margin: 0 25px; text-transform: uppercase; font-size: 13px; letter-spacing: 1px; }
 
-    /* FULL WIDTH HORIZONTAL BANNER */
     .hero-banner {
       width: 100%;
       height: 480px; 
@@ -30,35 +27,28 @@
       border-bottom: 6px solid var(--primary);
     }
 
-    /* NAME & TITLE SECTION */
     .identity-block { background: #fff; text-align: center; padding: 60px 20px; border-bottom: 1px solid #eee; }
     .identity-block h1 { font-size: 56px; margin: 0; color: var(--secondary); font-weight: 800; }
     .identity-block .brand { font-size: 26px; color: var(--primary); font-weight: 600; margin-top: 10px; text-transform: uppercase; letter-spacing: 3px; }
 
-    /* CONTENT CONTAINER */
     .container { max-width: 1100px; margin: 0 auto 60px; background: #fff; padding: 50px 80px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); }
     
     h2 { color: var(--secondary); border-left: 6px solid var(--primary); padding-left: 20px; margin-top: 60px; font-size: 30px; text-transform: uppercase; }
     
-    /* MIT-STYLE INTERESTS GRID */
     .interests-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; background: #f9f9f9; padding: 30px; border-radius: 12px; margin-top: 20px; }
     .field-item { font-size: 18px; font-weight: 600; color: #444; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
 
-    /* EXPERIENCE ENTRIES - 100% UNCUT */
     .exp-card { margin-bottom: 50px; border-bottom: 1px solid #eee; padding-bottom: 30px; }
     .exp-meta { display: flex; justify-content: space-between; align-items: baseline; }
     .exp-role { font-size: 26px; font-weight: bold; color: #111; }
     .exp-date { color: var(--primary); font-weight: bold; font-size: 16px; }
     .exp-comp { font-size: 20px; color: var(--secondary); font-weight: 600; margin-top: 5px; }
     
-    ul { margin-top: 15px; }
-    li { margin-bottom: 12px; font-size: 18px; line-height: 1.7; color: #444; }
+    li { margin-bottom: 12px; font-size: 18px; color: #444; }
 
-    /* CENTERED COPYRIGHT FOOTER */
     .site-footer { text-align: center; padding: 60px; background: #fff; color: #888; font-size: 15px; border-top: 1px solid #eee; }
 
-    .resume-btn { display: inline-block; background: var(--primary); color: white; padding: 15px 40px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 30px; font-size: 18px; transition: 0.3s; }
-    .resume-btn:hover { background: var(--secondary); transform: translateY(-2px); }
+    .resume-btn { display: inline-block; background: var(--primary); color: white; padding: 15px 40px; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 30px; font-size: 18px; }
   </style>
 </head>
 <body>
@@ -76,37 +66,30 @@
 <header class="identity-block">
     <h1>Molla Negash</h1>
     <div class="brand">Microeconomics of Microservices</div>
-    <a href="https://docs.google.com/document/d/1wgFpgwH-zVchofJ6JTIg1LMu8h3dRGpmRcE0OzkiaJs/edit?usp=sharing" target="_blank" class="resume-btn">📄 View Full Personnel Record (Google Doc)</a>
+    <a href="https://docs.google.com/document/d/1wgFpgwH-zVchofJ6JTIg1LMu8h3dRGpmRcE0OzkiaJs/edit?usp=sharing" target="_blank" class="resume-btn">📄 View Full Personnel Record</a>
 </header>
 
 <div class="container">
   
+  <section id="about">
+    <h2>Professional Philosophy & About Me</h2>
+    <p style="font-size: 20px; line-height: 1.8;">
+      Senior Software Engineer with 10+ years of experience designing and delivering scalable, production-grade Java and React applications. I have a strong background in distributed microservices, high-volume transaction systems, and cloud-native architectures across AWS and GCP.
+    </p>
+    <p style="font-size: 20px; line-height: 1.8;">
+      I specialize in supporting financial transaction platforms and regulated enterprise systems, building resilient backend services, and delivering full-stack solutions from design through production. My unique <strong>"Microeconomics of Microservices"</strong> approach ensures architectural efficiency and measurable ROI for the enterprise.
+    </p>
+  </section>
+
   <section id="interests">
-    <h2>Principal Fields of Interest</h2>
+    <h2>Principal Fields of Interest (MIT Style)</h2>
     <div class="interests-grid">
-        <div class="field-item">Distributed Systems & Microservices</div>
-        <div class="field-item">FinTech & Secure Transaction Systems</div> <div class="field-item">Parallel & Concurrency Patterns (Java 21)</div>
-        <div class="field-item">Cloud-Native Architectures (AWS/Azure)</div>
-        <div class="field-item">RegTech & Administrative Burden Analysis</div> <div class="field-item">Legacy System Modernization (Monolith-to-Micro)</div> </div>
-  </section>
-
-  <section id="honors">
-    <h2>Intellectual Property & Honors</h2>
-    <div style="background: #fff; border: 1px dashed var(--primary); padding: 20px; border-radius: 12px; display: flex; align-items: center; gap: 20px;">
-        <span style="font-size: 40px;">🏆</span>
-        <div>
-            <strong style="font-size: 20px; color: var(--secondary);">Patent Contributor (16+ Technology Patents)</strong><br>
-            <span style="color: #666;">Ministry of Science and Technology | Focus on Search Optimization & Infrastructure Algorithms.</span>
-        </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Flagship Portfolio Project</h2>
-    <div style="background: #f0fdfa; padding: 35px; border-radius: 15px; border: 1px solid var(--primary);">
-        <h3>⭐ Federal Regulatory Insights Engine</h3>
-        <p><strong>Technologies:</strong> Java 21, Spring Boot 3, Parallel Streams, NLP Heuristics</p>
-        <p>A high-performance engine processing eCFR data to quantify administrative burdens. Transforms unstructured mandates into actionable data. <a href="https://github.com/mollanegash" target="_blank" style="color:var(--primary); font-weight:bold;">Access GitHub Project →</a></p>
+        <div class="field-item">Distributed Systems & Microservices </div>
+        <div class="field-item">Software Performance Engineering </div>
+        <div class="field-item">Parallel & Concurrency Patterns (Java 21) </div>
+        <div class="field-item">Cloud-Native Architectures (AWS/GCP) </div>
+        <div class="field-item">FinTech & Secure Transaction Systems </div>
+        <div class="field-item">RegTech & Administrative Burden Analysis</div>
     </div>
   </section>
 
@@ -114,66 +97,68 @@
     <h2>Full Professional History (100% Uncut)</h2>
 
     <div class="exp-card">
-      <div class="exp-meta"><span class="exp-role">Tech Lead</span><span class="exp-date">2023 - Present</span></div>
-      <div class="exp-comp">Betsi Eco Hub LLC | Austin, TX</div>
+      <div class="exp-meta"><span class="exp-role">Tech Lead</span><span class="exp-date">Dec 2023 - Present</span></div>
+      <div class="exp-comp">Betsi Eco Hub LLC | Austin, TX </div>
       <ul>
-        <li>Engineered a high-concurrency notification system (Java/Spring Boot) achieving <strong>99.9% uptime</strong>.</li>
-        <li>Architected distributed data processing using <strong>Apache Spark</strong>, reducing latency by 45%.</li>
-        <li>Implemented secure Money Transfer Service with integrated logging and error-recovery.</li>
+        <li>Architect and deliver scalable full-stack applications using Java, Spring Boot, and React.</li>
+        <li>Design high-concurrency backend services in a cloud-native environment.</li>
+        <li>Lead technical implementation of complex features with production-readiness focus.</li>
+        <li>Implement CI/CD pipelines, reducing deployment cycles by 40%.</li>
       </ul>
     </div>
 
     <div class="exp-card">
-      <div class="exp-meta"><span class="exp-role">Senior Java Developer</span><span class="exp-date">2023</span></div>
-      <div class="exp-comp">LTIMindtree | Austin, TX</div>
+      <div class="exp-meta"><span class="exp-role">Senior Java Developer</span><span class="exp-date">Jan 2023 - Nov 2023</span></div>
+      <div class="exp-comp">LTIMindtree | Austin, TX </div>
       <ul>
-        <li>Led transition to <strong>Cloud-Native Microservices (AWS)</strong>, increasing deployment frequency by 40%.</li>
-        <li>Refactored PostgreSQL and DynamoDB indexing for 35% throughput improvement.</li>
-        <li>Designed RESTful APIs ensuring <strong>SOC2 compliance</strong> for financial workflows.</li>
+        <li>Led migration of legacy financial platforms to distributed microservices using Java/Spring Boot and AWS.</li>
+        <li>Improved system reliability and fault tolerance by 35%.</li>
+        <li>Optimized high-volume financial transaction processing using PostgreSQL and DynamoDB.</li>
       </ul>
     </div>
 
     <div class="exp-card">
-      <div class="exp-meta"><span class="exp-role">Java Developer</span><span class="exp-date">2021 - 2022</span></div>
-      <div class="exp-comp">Tata Consultancy Services | Boston, MA</div>
+      <div class="exp-meta"><span class="exp-role">Java Developer</span><span class="exp-date">Nov 2021 - Dec 2022</span></div>
+      <div class="exp-comp">Tata Consultancy Services | Boston, MA </div>
       <ul>
-        <li>Designed enterprise insurance microservices using Java and Hibernate.</li>
-        <li>Refactored legacy monolith systems into modular services for improved scalability.</li>
+        <li>Developed enterprise microservices for insurance and financial systems using Java and Spring Boot.</li>
+        <li>Refactored monolithic systems into modular services, improving API performance.</li>
+        <li>Designed and optimized SQL queries and data models for large datasets.</li>
       </ul>
     </div>
 
     <div class="exp-card">
-      <div class="exp-meta"><span class="exp-role">M.S. Research / Career Break</span><span class="exp-date">2016 - 2021</span></div>
-      <div class="exp-comp">Boston University | Boston, MA</div>
+      <div class="exp-meta"><span class="exp-role">M.S. Computer Science</span><span class="exp-date">Graduated 2021</span></div>
+      <div class="exp-comp">Boston University | Boston, MA </div>
       <ul>
-        <li>Completed <strong>Master of Science in Computer Science</strong> with research in distributed systems and ML.</li>
+        <li>Master of Science in Computer Science with a focus on distributed systems and ML.</li>
       </ul>
     </div>
 
     <div class="exp-card">
-      <div class="exp-meta"><span class="exp-role">Java Developer</span><span class="exp-date">2013 - 2016</span></div>
-      <div class="exp-comp">Public Health Institute | Ethiopia</div>
+      <div class="exp-meta"><span class="exp-role">Java Developer</span><span class="exp-date">Aug 2013 - Jul 2016</span></div>
+      <div class="exp-comp">Public Health Institute | Ethiopia </div>
       <ul>
-        <li>Developed secure RESTful services using Java/Spring for national health research platforms.</li>
-        <li>Optimized database schemas to ensure seamless interoperability between research systems.</li>
+        <li>Developed secure RESTful services using Java and Spring.</li>
+        <li>Designed database schemas and ensured system interoperability.</li>
       </ul>
     </div>
 
     <div class="exp-card">
-      <div class="exp-meta"><span class="exp-role">Java Developer</span><span class="exp-date">2011 - 2013</span></div>
-      <div class="exp-comp">Ministry of Science and Technology | Ethiopia</div>
+      <div class="exp-meta"><span class="exp-role">Java Developer & Patent Contributor</span><span class="exp-date">Nov 2011 - Aug 2013</span></div>
+      <div class="exp-comp">Ministry of Science and Technology | Ethiopia </div>
       <ul>
-        <li><strong>Contributed to 16+ technology patents</strong> through innovative software design.</li>
-        <li>Led the Software Development Life Cycle (SDLC) for large-scale government infrastructure.</li>
+        <li><strong>Contributed to 16+ technology patents</strong>.</li>
+        <li>Led the SDLC for enterprise-scale government systems on cloud infrastructure.</li>
       </ul>
     </div>
 
     <div class="exp-card">
-      <div class="exp-meta"><span class="exp-role">Java Developer</span><span class="exp-date">2010 - 2011</span></div>
-      <div class="exp-comp">City Government of Addis Ababa | Ethiopia</div>
+      <div class="exp-meta"><span class="exp-role">Java Developer</span><span class="exp-date">Mar 2010 - Nov 2011</span></div>
+      <div class="exp-comp">City Government of Addis Ababa | Ethiopia </div>
       <ul>
-        <li>Developed an enterprise fleet management system using <strong>JSF, EJB, and Hibernate</strong>.</li>
-        <li>Implemented backend logic for municipal infrastructure and data management.</li>
+        <li>Built enterprise fleet management systems using JSF, EJB, and Hibernate.</li>
+        <li>Managed backend services and database integrations.</li>
       </ul>
     </div>
 
@@ -181,9 +166,9 @@
 
   <section id="contact">
     <h2>Contact & Socials</h2>
-    <p style="font-size: 18px;">Email: <strong>mdraya3@gmail.com</strong></p>
-    <p style="font-size: 18px;">LinkedIn: <a href="https://linkedin.com/in/mollanegash" target="_blank" style="color:var(--primary); font-weight:bold;">mollanegash</a></p>
-    <p style="font-size: 18px;">GitHub: <a href="https://github.com/mollanegash" target="_blank" style="color:var(--primary); font-weight:bold;">github.com/mollanegash</a></p>
+    <p>Email: <strong>mdraya3@gmail.com</strong> </p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/mollanegash" target="_blank">mollanegash</a> </p>
+    <p>GitHub: <a href="https://github.com/mollanegash" target="_blank">github.com/mollanegash</a> </p>
   </section>
 
 </div>
