@@ -3,65 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Molla Negash | Senior Software Engineer Portfolio</title>
+  <title>Molla Negash | Portfolio</title>
   <style>
     body { font-family: "Segoe UI", Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; color: #333; line-height: 1.6; }
-    
-    /* CLEANED HERO SECTION */
     .hero-banner {
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)), 
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), 
                   url('images/Microeconomics of Microservices Banner.png'); 
-      background-size: cover;
-      background-position: center;
-      height: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      color: white;
-      padding-left: 10%;
+      background-size: cover; background-position: center; height: 400px;
+      display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+      color: white; padding-left: 8%;
     }
-
-    /* ONLY ONE H1 - NO DUPLICATES */
-    .hero-banner h1 { 
-      font-size: 52px; 
-      margin: 0; 
-      font-weight: 800;
-      text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-    }
-
-    .hero-banner p { 
-      font-size: 24px; 
-      margin-top: 10px; 
-      color: #00d1d6; 
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    .container { 
-      max-width: 1000px; 
-      margin: -50px auto 30px; 
-      background-color: #fff; 
-      border-radius: 12px; 
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2); 
-      padding: 50px; 
-      position: relative; 
-      z-index: 10; 
-    }
-    
-    .headline { text-align: center; font-weight: 600; color: #007B7F; margin-bottom: 30px; font-size: 22px; border-bottom: 2px solid #eee; padding-bottom: 20px; }
+    .hero-banner h1 { font-size: 52px; margin: 0; font-weight: 800; }
+    .hero-banner p { font-size: 24px; margin-top: 5px; color: #00d1d6; font-weight: 400; text-transform: uppercase; }
+    .container { max-width: 1000px; margin: -50px auto 30px; background-color: #fff; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); padding: 50px; position: relative; z-index: 10; }
     h2 { color: #1A0DAB; border-bottom: 2px solid #007B7F; padding-bottom: 10px; margin-top: 40px; }
-    nav ul { display: flex; justify-content: center; gap: 30px; list-style: none; padding: 0; margin-bottom: 40px; }
-    nav a { text-decoration: none; color: #007B7F; font-weight: bold; text-transform: uppercase; font-size: 14px; }
-    .experience-item { margin-bottom: 40px; }
-    .experience-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
-    .role-title { font-weight: bold; font-size: 20px; color: #333; }
-    .company-info { color: #007B7F; font-weight: 700; font-size: 17px; }
-    .date-location { font-size: 14px; color: #666; font-style: italic; }
-    .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-    .skill-tag { background: #e8f4f4; color: #007B7F; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; }
-    footer { text-align: center; padding: 60px; color: #999; font-size: 14px; }
+    .experience-item { margin-bottom: 30px; }
+    .role-title { font-weight: bold; font-size: 19px; }
+    .company-info { color: #007B7F; font-weight: 700; }
+    .date-location { font-size: 14px; color: #666; font-style: italic; display: block; }
+    .skill-tag { background: #e8f4f4; color: #007B7F; padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; display: inline-block; margin: 3px; }
   </style>
 </head>
 <body>
@@ -72,58 +32,60 @@
 </header>
 
 <div class="container">
-  <div class="headline">Senior Software Engineer & Tech Lead | Business Information Architect</div>
-  
-  <nav>
-    <ul>
-      <li><a href="#about">Philosophy</a></li>
-      <li><a href="#experience">Full Experience</a></li>
-      <li><a href="#skills">Expertise</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section id="about">
-    <h2>Professional Philosophy</h2>
-    <p>I am a <strong>Senior Software Engineer</strong> with over 10 years of experience designing scalable Java backend systems. My unique approach, <strong>"The Microeconomics of Microservices,"</strong> ensures that every architectural choice is justified by its financial efficiency and long-term scalability.</p>
-  </section>
-
   <section id="experience">
-    <h2>Professional Experience (Uncut)</h2>
+    <h2>Professional Experience (Full Uncut History)</h2>
+
     <div class="experience-item">
-      <div class="experience-header">
-        <span class="role-title">Tech Lead</span>
-        <span class="date-location">Austin, TX | 2023 - Present</span>
-      </div>
-      <div class="company-info">Betsi Eco Hub LLC</div>
+      <span class="role-title">Tech Lead</span> | <span class="company-info">Betsi Eco Hub LLC</span>
+      <span class="date-location">Austin, TX | 2023 - Present</span>
       <ul>
-        <li>Engineered a high-concurrency notification system achieving 99.9% uptime.</li>
+        <li>Engineered high-concurrency notification system achieving 99.9% uptime.</li>
         <li>Architected distributed data processing using Apache Spark.</li>
       </ul>
     </div>
-    </section>
+
+    <div class="experience-item">
+      <span class="role-title">Senior Java Developer</span> | <span class="company-info">LTIMindtree</span>
+      <span class="date-location">Austin, TX | 2023</span>
+      <ul>
+        <li>Spearheaded transition to Cloud-Native Microservices (AWS), increasing deployment frequency by 40%.</li>
+        <li>Refactored PostgreSQL/DynamoDB indexing for 35% throughput improvement.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <span class="role-title">Java Developer</span> | <span class="company-info">Tata Consultancy Services</span>
+      <span class="date-location">Boston, MA | 2021 - 2022</span>
+      <ul>
+        <li>Designed enterprise insurance microservices using Java and Hibernate.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <span class="role-title">M.S. Research</span> | <span class="company-info">Boston University</span>
+      <span class="date-location">2016 - 2021</span>
+      <ul>
+        <li>Master of Science in Computer Science; Research in Distributed Systems.</li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <span class="role-title">Java Developer</span> | <span class="company-info">Ministry of Science & Technology</span>
+      <span class="date-location">Ethiopia | 2011 - 2013</span>
+      <ul>
+        <li><strong>Contributed to 16+ technology patents</strong> through innovative software design.</li>
+        <li>Led SDLC for large-scale government systems.</li>
+      </ul>
+    </div>
+  </section>
 
   <section id="skills">
     <h2>Technical Expertise</h2>
     <div class="skills-grid">
-      <span class="skill-tag">Java 21</span>
-      <span class="skill-tag">Spring Boot 3</span>
-      <span class="skill-tag">AWS Cloud Architecture</span>
-      <span class="skill-tag">Virtual Threads</span>
-      <span class="skill-tag">Kubernetes</span>
+      <span class="skill-tag">Java 21</span> <span class="skill-tag">Spring Boot 3</span> <span class="skill-tag">AWS Architecture</span> <span class="skill-tag">Kubernetes</span> <span class="skill-tag">Apache Spark</span>
     </div>
   </section>
-
-  <section id="contact">
-    <h2>Contact Information</h2>
-    <p>Email: <a href="mailto:mdraya3@gmail.com">mdraya3@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/mollanegash">github.com/mollanegash</a></p>
-  </section>
 </div>
-
-<footer>
-  <p>&copy; 2026 Molla Negash. All Rights Reserved.</p>
-</footer>
 
 </body>
 </html>
