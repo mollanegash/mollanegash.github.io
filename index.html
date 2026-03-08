@@ -19,12 +19,14 @@
     }
     .top-nav a { text-decoration: none; color: #007B7F; font-weight: bold; margin: 0 20px; text-transform: uppercase; font-size: 13px; }
 
-    /* CLEAR COVER IMAGE - NO TEXT ON TOP */
+    /* FULL VISIBILITY BANNER - NO CROPPING */
     .banner-container {
       width: 100%;
-      height: 400px;
-      background: url('images/Microeconomics of Microservices Banner.png'); 
-      background-size: cover;
+      height: 500px; /* Increased height to show more detail */
+      background-color: #1a1a1a; /* Dark background for the edges */
+      background-image: url('images/Microeconomics of Microservices Banner.png'); 
+      background-size: contain; /* THIS ENSURES THE ENTIRE PIC IS VISIBLE */
+      background-repeat: no-repeat;
       background-position: center;
       border-bottom: 4px solid #007B7F;
     }
@@ -77,7 +79,7 @@
   
   <section id="philosophy">
     <h2>Professional Philosophy</h2>
-    <p>I am a <strong>Senior Software Engineer</strong> with over 10 years of experience designing scalable Java backend systems. My unique approach, <strong>"The Microeconomics of Microservices,"</strong> ensures that every architectural choice—from database selection to API design—is justified by its financial efficiency (ROI) and long-term scalability.</p>
+    <p>I am a <strong>Senior Software Engineer</strong> with over 10 years of experience. My unique approach, <strong>"The Microeconomics of Microservices,"</strong> treats architectural decisions as financial investments, ensuring maximum ROI and long-term scalability.</p>
   </section>
 
   <section id="experience">
@@ -90,7 +92,7 @@
       </div>
       <div class="company-info">Betsi Eco Hub LLC</div>
       <ul>
-        <li>Engineered a high-concurrency notification system (Java/Spring Boot) achieving <strong>99.9% uptime</strong> and a <strong>30% improvement</strong> in user engagement.</li>
+        <li>Engineered a high-concurrency notification system achieving <strong>99.9% uptime</strong> and a <strong>30% improvement</strong> in user engagement.</li>
         <li>Architected distributed data processing using <strong>Apache Spark</strong>, reducing ingestion latency by <strong>45%</strong>.</li>
         <li>Implemented a secure Money Transfer Service with integrated logging and automated error-recovery protocols.</li>
       </ul>
@@ -103,21 +105,8 @@
       </div>
       <div class="company-info">LTIMindtree</div>
       <ul>
-        <li>Spearheaded transition to <strong>Cloud-Native Microservices</strong> (Spring Cloud/AWS), increasing deployment frequency by <strong>40%</strong>.</li>
+        <li>Spearheaded transition to <strong>Cloud-Native Microservices</strong> (AWS), increasing deployment frequency by <strong>40%</strong>.</li>
         <li>Refactored PostgreSQL and DynamoDB indexing, achieving a <strong>35% throughput improvement</strong>.</li>
-        <li>Designed RESTful APIs ensuring <strong>SOC2 compliance</strong> for enterprise financial workflows.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item">
-      <div class="role-header">
-        <span class="role-title">Java Developer</span>
-        <span class="date-location">Boston, MA | 2021 - 2022</span>
-      </div>
-      <div class="company-info">Tata Consultancy Services</div>
-      <ul>
-        <li>Designed and implemented enterprise insurance microservices using Java and Hibernate.</li>
-        <li>Refactored legacy monolith systems into modular services, improving API performance and scalability.</li>
       </ul>
     </div>
 
@@ -129,19 +118,7 @@
       <div class="company-info">Boston University</div>
       <ul>
         <li>Completed <strong>Master of Science in Computer Science</strong>.</li>
-        <li>Conducted research in distributed systems, advanced machine learning, and data science.</li>
-      </ul>
-    </div>
-
-    <div class="experience-item">
-      <div class="role-header">
-        <span class="role-title">Java Developer</span>
-        <span class="date-location">Ethiopia | 2013 - 2016</span>
-      </div>
-      <div class="company-info">Public Health Institute</div>
-      <ul>
-        <li>Developed secure RESTful services using Java/Spring for national-level health research platforms.</li>
-        <li>Optimized database schemas to ensure seamless interoperability between research systems.</li>
+        <li>Conducted research in distributed systems and advanced machine learning.</li>
       </ul>
     </div>
 
@@ -152,7 +129,7 @@
       </div>
       <div class="company-info">Ministry of Science and Technology</div>
       <ul>
-        <li><strong>Contributed to 16+ technology patents</strong> through innovative software design and search optimization.</li>
+        <li><strong>Contributed to 16+ technology patents</strong> through innovative software design.</li>
         <li>Led the Software Development Life Cycle (SDLC) for large-scale government systems and cloud integration.</li>
       </ul>
     </div>
@@ -165,7 +142,6 @@
       <div class="company-info">City Government of Addis Ababa</div>
       <ul>
         <li>Developed an enterprise fleet management system using JSF, EJB, and Hibernate.</li>
-        <li>Implemented backend logic for municipal infrastructure and data management.</li>
       </ul>
     </div>
 
