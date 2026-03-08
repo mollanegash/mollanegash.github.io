@@ -5,60 +5,59 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Molla Negash | Senior Software Engineer Portfolio</title>
   <style>
-    body { font-family: "Segoe UI", Arial, sans-serif; background-color: #f4f7f6; margin: 0; padding: 0; color: #333; line-height: 1.6; }
-    
-    /* HERO BANNER SECTION */
-    .hero-banner {
-      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
-                  url('images/Microeconomics of Microservices Banner.png'); 
-      background-size: cover;
-      background-position: center;
-      height: 400px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-    }
-    .hero-banner h1 { font-size: 52px; margin: 0; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); }
-    .hero-banner p { font-size: 24px; font-weight: 300; margin-top: 10px; }
+  /* IMPROVED HERO BANNER SECTION */
+  .hero-banner {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.2)), 
+                url('images/Microeconomics of Microservices Banner.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* MOVED TO LEFT */
+    color: white;
+    text-align: left; /* MOVED TO LEFT */
+    padding-left: 80px; /* SPACE FROM THE EDGE */
+  }
 
-    /* FLOATING CONTENT CONTAINER */
-    .container { 
-      max-width: 1000px; 
-      margin: -60px auto 30px; 
-      background-color: #fff; 
-      border-radius: 12px; 
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2); 
-      padding: 50px; 
-      position: relative; 
-      z-index: 10; 
-    }
-    
-    h2 { color: #1A0DAB; border-bottom: 2px solid #007B7F; padding-bottom: 10px; margin-top: 40px; }
-    .headline { text-align: center; font-weight: 600; color: #007B7F; margin-bottom: 30px; font-size: 22px; }
-    
-    nav ul { display: flex; justify-content: center; gap: 30px; list-style: none; padding: 0; margin-bottom: 40px; }
-    nav a { text-decoration: none; color: #007B7F; font-weight: bold; text-transform: uppercase; font-size: 14px; }
-    
-    .experience-item { margin-bottom: 40px; }
-    .experience-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
-    .role-title { font-weight: bold; font-size: 20px; color: #333; }
-    .company-info { color: #007B7F; font-weight: 700; font-size: 17px; }
-    .date-location { font-size: 14px; color: #666; font-style: italic; }
-    
-    ul { padding-left: 20px; }
-    li { margin-bottom: 8px; }
+  .hero-banner h1 { 
+    font-size: 58px; 
+    margin: 0; 
+    font-weight: 800;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5); /* ADDS DEPTH */
+    letter-spacing: -1px;
+  }
 
-    .skills-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-    .skill-tag { background: #e8f4f4; color: #007B7F; padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600; }
-    
-    footer { text-align: center; padding: 60px; color: #999; font-size: 14px; }
-    a { color: #007B7F; text-decoration: none; font-weight: bold; }
-    a:hover { text-decoration: underline; }
-  </style>
-</head>
+  .hero-banner p { 
+    font-size: 28px; 
+    font-weight: 300; 
+    margin-top: 5px; 
+    color: #00d1d6; /* BRAND COLOR FOR CONTRAST */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 5px rgba(0,0,0,0.5);
+  }
+
+  /* REFINED FLOATING CONTAINER */
+  .container { 
+    max-width: 1000px; 
+    margin: -50px auto 30px; 
+    background-color: #fff; 
+    border-radius: 12px; 
+    box-shadow: 0 15px 50px rgba(0,0,0,0.15); 
+    padding: 60px; 
+    position: relative; 
+    z-index: 10; 
+  }
+</style>
+
+<body>
+
+<header class="hero-banner">
+    <h1>Molla Negash</h1>
+    <p>Microeconomics of Microservices</p>
+</header>
 <body>
 
 <header class="hero-banner">
