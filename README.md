@@ -1,30 +1,85 @@
 # Molla Negash
 
-Welcome to my GitHub profile! I’m a Senior Software Engineer with over 8 years of experience in Java backend development, microservices, and AI/ML. I specialize in cloud-native technologies and scalable solutions, with certifications in AWS and a strong background in various programming languages and frameworks.
-
-## Highlights
-
-- **Experience:** Tech Lead at Betsi Eco Hub LLC, previously Senior Java Developer at LTIMindtree, and Java Developer at Tata Consultancy Services.
-- **Education:** MS in Computer Science from Boston University.
-- 
-## Repositories
-
-- [**EduExcellence School Management System**](https://github.com/mollanegash/EduExcellence-School-Management-System) - Java Spring Boot application for managing school operations.
-- [**Employee Management System (EMS)**](https://github.com/mollanegash/Employee-Management-System-EMS-) - RESTful API for employee data management.
-- [**Toast Notifications App**](https://github.com/mollanegash/toast-notifications-app) - Spring Boot app for managing notifications.
-- [**Money Transfer Service**](https://github.com/mollanegash/money-transfer-service) - Java Spring Boot application for secure and efficient financial transactions with integrated payment systems.
-- [**ML ETL Project**](https://github.com/mollanegash/ML-ETL-Project) - End-to-end ML and ETL project on Databricks.
-- [**Cybersecurity Anomaly Detection**](https://github.com/mollanegash/cybersecurity-anomaly-detection) - ML project for detecting cybersecurity anomalies.
-
-
-## Contact
-
-- **Email:** [mdraya3@gmail.com](mailto:mdraya3@gmail.com)
-- **Phone:** +1-617-318-7005
-- **GitHub:** [mollanegash](https://github.com/mollanegash)
-
-Feel free to explore my projects and reach out if you have any questions or opportunities!
+Senior Backend Engineer | Java • Spring Boot • Microservices • AWS • Distributed Systems
 
 ---
 
-© 2024 Molla Negash. All Rights Reserved.
+## About Me
+
+Senior Backend Engineer with 10+ years of experience building scalable backend systems using Java, Spring Boot, and cloud-native architectures (AWS/GCP).
+
+I specialize in:
+- Distributed systems and microservices architecture
+- Backend performance optimization and system design
+- Cloud-native development (AWS: Fargate, Lambda, S3, DynamoDB)
+- Modernization of legacy monolithic systems into microservices
+- Building production-grade APIs and event-driven systems
+
+---
+
+## Tech Stack
+
+**Languages:** Java 17/21, SQL  
+**Frameworks:** Spring Boot, Spring Data JPA, Hibernate  
+**Cloud:** AWS (Fargate, Lambda, S3, DynamoDB), GCP  
+**Architecture:** Microservices, Event-Driven Systems, Distributed Systems  
+**Tools:** Docker, Kubernetes, GitHub Actions, CI/CD  
+**Databases:** PostgreSQL, MySQL, Redis  
+
+---
+
+## Experience Highlights
+
+**Tech Lead – Betsi Eco Hub LLC (Present)**  
+- Designed and built scalable microservices using Spring Boot and AWS  
+- Improved system performance by 40% using caching and async processing  
+- Built CI/CD pipelines reducing deployment time by 40%  
+- Implemented high-concurrency backend services and secure APIs  
+
+**Senior Java Engineer – LTIMindtree (Client: Equifax)**  
+- Built Java microservices for large-scale data processing systems  
+- Migrated legacy systems into cloud-native architecture (AWS)  
+- Improved system throughput by 35% using optimized database design  
+
+**Java Developer – TCS (Client: CNA Insurance)**  
+- Modernized SOAP/WSDL monolith into Spring Boot microservices  
+- Built REST APIs and improved system modularity and scalability  
+
+---
+
+## Featured Projects
+
+### Federal Regulatory Insights Engine
+Java 21 • Spring Boot 3 • NLP • Parallel Processing  
+- Processes large-scale regulatory datasets (eCFR)
+- Extracts structured insights using custom analytics engine
+- Demonstrates system design + data processing at scale
+
+### Money Transfer Service
+Spring Boot • REST APIs • Security • Transactions  
+- Secure financial transaction system with logging and recovery
+- Designed for reliability and consistency in distributed environments
+
+### ML & Data Engineering Projects
+Python • Databricks • ETL Pipelines  
+- Built ML pipelines for anomaly detection and predictive analytics
+- Designed scalable ETL workflows for large datasets
+
+---
+
+## Education
+
+**M.S. Computer Science – Boston University**  
+Focus: Distributed Systems, Software Architecture, Cloud Computing
+
+---
+
+## Contact
+
+- Email: mdraya3@gmail.com  
+- LinkedIn: linkedin.com/in/mollanegash  
+- GitHub: github.com/mollanegash  
+
+---
+
+*Open to Senior Backend Engineer / Tech Lead opportunities (Java, Spring Boot, AWS, Distributed Systems).*
