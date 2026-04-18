@@ -4,6 +4,221 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Molla Negash | Senior Tech Lead</title>
+
+  <style>
+
+:root {
+  --primary: #007B7F;
+  --secondary: #1A0DAB;
+  --bg: #f4f7f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* NAV */
+.top-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.top-nav a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: bold;
+  margin: 0 25px;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+/* HERO (APPLE OPENING MOMENT) */
+.hero-banner {
+  width: 100%;
+  height: 480px;
+  background: #111 url('images/Microeconomics of Microservices Banner.png') no-repeat center;
+  background-size: cover;
+  border-bottom: 6px solid var(--primary);
+}
+
+.identity-block {
+  background: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.identity-block h1 {
+  font-size: 56px;
+  margin: 0;
+  color: var(--secondary);
+  font-weight: 800;
+}
+
+.identity-block .brand {
+  font-size: 22px;
+  color: var(--primary);
+  font-weight: 600;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* STORY CHAPTER SECTIONS */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 120px 80px;
+
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.9s ease;
+}
+
+/* activated via JS later (Apple scroll feel) */
+section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* CHAPTER TITLE */
+h2 {
+  font-size: 42px;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  color: var(--secondary);
+  border-left: 6px solid var(--primary);
+  padding-left: 20px;
+}
+
+/* alternating background like Apple storytelling pages */
+section:nth-of-type(odd) {
+  background: #ffffff;
+}
+
+section:nth-of-type(even) {
+  background: #f7f9f8;
+}
+
+/* PROJECT CARDS */
+.project-card {
+  background: #f9f9f9;
+  padding: 25px;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--primary);
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  margin-top: 0;
+  color: var(--secondary);
+}
+
+/* EXPERIENCE CARDS */
+.exp-card {
+  margin-bottom: 50px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30px;
+}
+
+/* INTEREST GRID */
+.interests-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.field-item {
+  font-size: 18px;
+  font-weight: 600;
+  color: #444;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+/* LIST TEXT */
+li {
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* FOOTER */
+.site-footer {
+  text-align: center;
+  padding: 60px;
+  background: #fff;
+  color: #888;
+  font-size: 15px;
+  border-top: 1px solid #eee;
+}
+
+/* BUTTON */
+.resume-btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 15px 40px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+/* OPTIONAL: PROGRESS DOTS (Apple-style storytelling UX) */
+.story-progress {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.story-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  transition: 0.3s;
+}
+
+.story-dot.active {
+  background: var(--primary);
+  transform: scale(1.4);
+}
+
+</style>
   <style>
 
     .project-card {
@@ -387,4 +602,22 @@ My engineering journey spans startup systems, enterprise platforms, and governme
 
 </body>
 </html>"
+
+<script>
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+}, {
+  threshold: 0.25
+});
+
+sections.forEach(section => {
+  observer.observe(section);
+});
+</script>
 
