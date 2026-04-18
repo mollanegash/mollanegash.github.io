@@ -1,54 +1,56 @@
 # Molla Negash – Portfolio Website
 
-This is my personal portfolio website showcasing my experience as a Senior Backend Engineer / Technical Lead.
+This is the source code for my personal portfolio website, hosted using GitHub Pages.
 
-The site presents my professional background, technical skills, and selected projects in backend engineering, distributed systems, and cloud-native development.
+The website presents my professional experience as a Senior Backend Engineer / Technical Lead, highlighting my work in distributed systems, backend engineering, and cloud-native architecture.
 
 ---
 
 ## 🌐 Live Website
 
-https://mollanegash.github.io
+👉 https://mollanegash.github.io
 
 ---
 
-## 📁 Project Structure
+## 📁 Repository Structure
 
-- `index.html` → Main portfolio website  
-- `images/` → Website images and assets  
-- `scripts/` → JavaScript files (if any)  
-- `.gitignore` → Git ignored files  
-- `README.md` → Project documentation  
+- `index.html` → Main portfolio website
+- `images/` → Static assets (images, banners, etc.)
+- `scripts/` → JavaScript functionality (if applicable)
+- `README.md` → Project documentation
 
 ---
 
-## 🚀 Features
+## 🚀 Purpose
 
-- Professional engineering portfolio design  
-- Backend systems and distributed systems focus  
-- Project showcases (Java, Spring Boot, AWS, etc.)  
-- Responsive layout for desktop and mobile  
-- Clean single-page navigation  
+This project serves as a personal engineering portfolio to showcase:
+
+- Backend system design and architecture
+- Distributed systems and microservices work
+- Cloud-native development (AWS/GCP)
+- Production engineering and DevOps practices
+- Selected software engineering projects
 
 ---
 
 ## 🛠️ Built With
 
-- HTML5  
-- CSS3  
-- JavaScript  
+- HTML5
+- CSS3
+- JavaScript
+- GitHub Pages (hosting)
 
 ---
 
-## 👨‍💻 About Me
+## 👨‍💻 About
 
 Senior Backend Engineer / Technical Lead with experience in:
 
-- Java & Spring Boot backend systems  
-- Microservices and distributed architecture  
-- AWS cloud-native systems  
-- High-performance backend design  
-- Production system delivery  
+- Java & Spring Boot backend systems
+- Microservices architecture and distributed systems
+- Cloud infrastructure (AWS/GCP)
+- High-performance backend engineering
+- Production system delivery and optimization
 
 ---
 
