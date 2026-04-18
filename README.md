@@ -9,7 +9,7 @@ The site presents my professional background, technical skills, and selected pro
 ## 🌐 Live Website
 
 If deployed, view the portfolio here:  
-https://YOUR-LIVE-LINK-HERE
+https://github.com/mollanegash/mollanegash.github.io
 
 ---
 
