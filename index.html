@@ -172,83 +172,99 @@
 
 <div class="hero-banner"></div>
 
-<header style="padding:90px 20px; background:#fff; border-bottom:1px solid #eee;">
+<header style="background:#fff; border-bottom:1px solid #eee; padding:70px 20px;">
 
-  <div style="max-width:1100px; margin:auto;">
+  <div style="max-width:1200px; margin:auto; display:flex; gap:50px; flex-wrap:wrap;">
 
-    <!-- INTRO (ACADEMIC STYLE SUMMARY) -->
-    <p style="font-size:18px; line-height:1.75; color:#222; margin-bottom:35px;">
-      Molla D Negash is a Senior Backend Engineer specializing in distributed systems, cloud-native architecture, and high-performance Java platforms. He has designed and delivered scalable microservices systems across FinTech, enterprise software, and government infrastructure. His focus is on reliability, scalability, and production-grade backend engineering for real-world systems.
-    </p>
+    <!-- LEFT: STICKY IDENTITY PANEL -->
+    <div style="flex:0 0 280px; position:sticky; top:90px; align-self:flex-start;">
 
-    <!-- MAIN PROFILE ROW -->
-    <div style="display:flex; gap:45px; align-items:flex-start; flex-wrap:wrap;">
+      <div style="border:1px solid #eee; border-radius:14px; padding:18px; background:#fafafa;">
 
-      <!-- LEFT: IMAGE CARD -->
-      <div style="flex:0 0 auto;">
-        <div style="width:230px; height:270px; border-radius:10px; overflow:hidden; border:2px solid #007B7F; box-shadow:0 6px 18px rgba(0,0,0,0.08);">
-          <img src="images/photo_2025-05-11_15-00-05.jpg"
-               style="width:100%; height:100%; object-fit:cover;">
-        </div>
-      </div>
+        <img src="images/photo_2025-05-11_15-00-05.jpg"
+             style="width:100%; height:300px; object-fit:cover; border-radius:10px; border:2px solid #007B7F;">
 
-      <!-- RIGHT: IDENTITY + LINKS -->
-      <div style="flex:1; min-width:280px;">
-
-        <h1 style="margin:0; font-size:44px; color:#1A0DAB; letter-spacing:-0.5px;">
+        <h2 style="margin:15px 0 5px 0; font-size:22px; color:#1A0DAB;">
           Molla D Negash
-        </h1>
+        </h2>
 
-        <div style="margin-top:8px; font-size:16px; color:#007B7F; font-weight:600;">
-          Senior Backend Engineer • Distributed Systems • Cloud Architecture • Java/Spring Boot
+        <div style="font-size:13px; color:#007B7F; font-weight:600; line-height:1.5;">
+          Senior Backend Engineer<br>
+          Distributed Systems • Cloud • Java/Spring Boot
         </div>
 
-        <p style="margin-top:18px; font-size:15px; color:#444; line-height:1.7;">
-          I design and build scalable backend systems that handle real production workloads. My work spans financial systems, regulatory platforms, and enterprise microservices architectures deployed on AWS and Kubernetes.
+        <p style="font-size:13px; color:#444; margin-top:12px; line-height:1.6;">
+          Building large-scale backend systems for financial, government, and enterprise platforms with focus on reliability, scalability, and performance engineering.
         </p>
 
-        <!-- NAVIGATION CARDS (REPLACES BULLETS) -->
-        <div style="margin-top:25px; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px;">
+      </div>
+    </div>
 
-          <a href="#contact" style="text-decoration:none;">
-            <div style="padding:12px; border:1px solid #eee; border-left:4px solid #007B7F; background:#fafafa;">
-              Contact Information
-            </div>
-          </a>
+    <!-- RIGHT: MAIN CONTENT -->
+    <div style="flex:1; min-width:320px;">
 
-          <a href="#experience" style="text-decoration:none;">
-            <div style="padding:12px; border:1px solid #eee; border-left:4px solid #1A0DAB; background:#fafafa;">
-              Resume & Career History
-            </div>
-          </a>
+      <!-- EXECUTIVE SUMMARY -->
+      <div style="margin-bottom:25px;">
+        <h1 style="font-size:38px; margin:0; color:#111;">
+          Backend Systems Engineer
+        </h1>
 
-          <a href="#projects" style="text-decoration:none;">
-            <div style="padding:12px; border:1px solid #eee; border-left:4px solid #007B7F; background:#fafafa;">
-              Systems & Engineering Work
-            </div>
-          </a>
+        <p style="font-size:16px; color:#333; line-height:1.75; margin-top:15px;">
+          I design and build distributed systems that operate at scale under real production constraints.
+          My focus is high-performance Java systems, microservices architecture, and cloud-native engineering on AWS.
+          I specialize in turning monolithic systems into resilient, observable, and scalable platforms.
+        </p>
+      </div>
 
-          <a href="#projects" style="text-decoration:none;">
-            <div style="padding:12px; border:1px solid #eee; border-left:4px solid #1A0DAB; background:#fafafa;">
-              Publications / Projects
-            </div>
-          </a>
+      <!-- IMPACT METRICS (FAANG STYLE SIGNAL BLOCK) -->
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px,1fr)); gap:12px; margin-bottom:25px;">
 
-          <a href="#experience" style="text-decoration:none;">
-            <div style="padding:12px; border:1px solid #eee; border-left:4px solid #007B7F; background:#fafafa;">
-              Leadership & Engineering Impact
-            </div>
-          </a>
+        <div style="padding:12px; background:#f7f9fa; border-left:4px solid #007B7F;">
+          <div style="font-size:20px; font-weight:700;">40%</div>
+          <div style="font-size:12px; color:#555;">Deployment Efficiency</div>
+        </div>
 
-          <a href="#contact" style="text-decoration:none;">
-            <div style="padding:12px; border:1px solid #eee; border-left:4px solid #1A0DAB; background:#fafafa;">
-              FAQ / Contact
-            </div>
-          </a>
+        <div style="padding:12px; background:#f7f9fa; border-left:4px solid #1A0DAB;">
+          <div style="font-size:20px; font-weight:700;">35%</div>
+          <div style="font-size:12px; color:#555;">System Reliability Gain</div>
+        </div>
 
+        <div style="padding:12px; background:#f7f9fa; border-left:4px solid #007B7F;">
+          <div style="font-size:20px; font-weight:700;">10M+</div>
+          <div style="font-size:12px; color:#555;">Transactions Handled</div>
         </div>
 
       </div>
+
+      <!-- FAANG NAVIGATION TILES -->
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:12px;">
+
+        <a href="#contact" style="text-decoration:none;">
+          <div style="padding:14px; border:1px solid #eee; border-left:4px solid #007B7F; background:#fff;">
+            Contact & Collaboration
+          </div>
+        </a>
+
+        <a href="#experience" style="text-decoration:none;">
+          <div style="padding:14px; border:1px solid #eee; border-left:4px solid #1A0DAB; background:#fff;">
+            Engineering Experience
+          </div>
+        </a>
+
+        <a href="#projects" style="text-decoration:none;">
+          <div style="padding:14px; border:1px solid #eee; border-left:4px solid #007B7F; background:#fff;">
+            Systems Architecture
+          </div>
+        </a>
+
+        <a href="#projects" style="text-decoration:none;">
+          <div style="padding:14px; border:1px solid #eee; border-left:4px solid #1A0DAB; background:#fff;">
+            Production Systems
+          </div>
+        </a>
+
+      </div>
+
     </div>
   </div>
 </header>
