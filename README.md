@@ -1,19 +1,23 @@
 # Molla Negash
 
-Senior Backend Engineer | Java • Spring Boot • Microservices • AWS • Distributed Systems
+Senior Backend Engineer / Technical Lead | Java • Spring Boot • Full-Stack Systems • AWS • Distributed Systems
 
 ---
 
 ## About Me
 
-Senior Backend Engineer with 10+ years of experience building scalable backend systems using Java, Spring Boot, and cloud-native architectures (AWS/GCP).
+Senior Backend Engineer / Technical Lead with 10+ years of experience designing and delivering scalable distributed systems using Java, Spring Boot, and cloud-native architectures (AWS/GCP).
 
-I specialize in:
+I specialize in building production-grade systems across backend, full-stack integration, and production infrastructure, with strong focus on system design, performance, and reliability.
+
+Experience includes leading end-to-end delivery of software systems, modernizing legacy architectures into microservices, and managing production deployments and cloud infrastructure in real-world environments.
+
+I work across:
 - Distributed systems and microservices architecture
+- Full-stack system delivery (backend + integration layers)
+- Cloud infrastructure and production deployments
 - Backend performance optimization and system design
-- Cloud-native development (AWS: Fargate, Lambda, S3, DynamoDB)
-- Modernization of legacy monolithic systems into microservices
-- Building production-grade APIs and event-driven systems
+- Legacy modernization and enterprise system transformation
 
 ---
 
