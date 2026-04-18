@@ -15,23 +15,28 @@
     html { scroll-behavior: smooth; }
 
 .hero-banner {
-  width: 100%;
+  /* This 'breaks' the banner out of the 1000px container */
+  width: 100vw; 
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
   height: 480px; 
   background: #111 url('images/Microeconomics of Microservices Banner.png') no-repeat;
   
-  /* This stretches the image to cover the full width from end to end */
-  background-size: cover; 
-  
-  /* This keeps the image anchored to the top so it doesn't cut off your heading */
-  background-position: top center; 
-  
+  /* Use 100% 100% to ensure the image hits every corner exactly */
+  background-size: 100% 100%; 
+  background-position: center; 
   border-bottom: 6px solid var(--primary);
 }
 
-/* For mobile - we reduce height so it doesn't look stretched on tall screens */
+/* On mobile, we keep it stretching but lower the height */
 @media (max-width: 768px) {
   .hero-banner {
-    height: 300px;
+    height: 250px;
+    width: 100vw;
   }
 }
 
