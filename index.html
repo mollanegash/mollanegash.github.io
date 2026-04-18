@@ -24,7 +24,6 @@ body{
   color:var(--text);
 }
 
-/* NAV */
 nav{
   position:sticky;
   top:0;
@@ -48,7 +47,6 @@ nav a{
 
 nav a:hover{color:var(--accent);}
 
-/* LAYOUT */
 .container{
   max-width:1200px;
   margin:auto;
@@ -57,13 +55,7 @@ nav a:hover{color:var(--accent);}
   gap:50px;
 }
 
-/* LEFT */
-.left{
-  flex:0 0 320px;
-  position:sticky;
-  top:100px;
-  height:fit-content;
-}
+.left{flex:0 0 320px; position:sticky; top:100px; height:fit-content;}
 
 .profile{
   background:var(--card);
@@ -77,46 +69,17 @@ nav a:hover{color:var(--accent);}
   height:320px;
   object-fit:cover;
   border-radius:12px;
-  border:1px solid #2a3a4d;
 }
 
-.name{
-  font-size:22px;
-  margin-top:12px;
-  font-weight:700;
-}
+.name{font-size:22px;margin-top:12px;font-weight:700;}
+.role{color:var(--accent);font-size:12px;margin-top:4px;}
+.bio{color:var(--muted);font-size:13px;margin-top:12px;line-height:1.6;}
 
-.role{
-  color:var(--accent);
-  font-size:12px;
-  margin-top:4px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
-
-.bio{
-  color:var(--muted);
-  font-size:13px;
-  margin-top:12px;
-  line-height:1.6;
-}
-
-/* RIGHT */
 .right{flex:1;}
 
-h1{
-  font-size:42px;
-  margin:0;
-}
+h1{font-size:42px;margin:0;}
+.subtitle{color:var(--muted);margin-top:10px;line-height:1.7;}
 
-.subtitle{
-  color:var(--muted);
-  margin-top:10px;
-  font-size:15px;
-  line-height:1.7;
-}
-
-/* IMPACT STRIP */
 .metrics{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
@@ -131,18 +94,12 @@ h1{
   border-radius:12px;
 }
 
-.metric strong{
-  font-size:20px;
-  color:var(--accent);
-}
+.metric strong{font-size:20px;color:var(--accent);}
 
-/* SECTION */
-section{
-  margin-top:70px;
-}
+section{margin-top:70px;}
 
 h2{
-  font-size:20px;
+  font-size:14px;
   text-transform:uppercase;
   letter-spacing:2px;
   color:var(--muted);
@@ -150,7 +107,7 @@ h2{
   padding-left:10px;
 }
 
-/* PROJECTS (CASE STUDY STYLE) */
+/* PROJECTS */
 .project{
   background:var(--card);
   border:1px solid #1f2a37;
@@ -161,19 +118,16 @@ h2{
 }
 
 .project:hover{
-  transform:translateY(-3px);
+  transform:translateY(-4px);
   border-color:var(--accent);
 }
 
-.project h3{
-  margin:0;
-  color:var(--text);
-}
+.project h3{margin:0;}
 
-.project p{
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.6;
+.project a{
+  color:var(--accent);
+  text-decoration:none;
+  font-size:13px;
 }
 
 /* EXPERIENCE */
@@ -191,37 +145,21 @@ h2{
   font-weight:600;
 }
 
-.company{
-  color:var(--accent);
-  margin:6px 0 10px;
-}
+.company{color:var(--accent);margin:6px 0 10px;}
 
-ul{
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.7;
-}
+ul{color:var(--muted);font-size:14px;line-height:1.7;}
 
 /* CONTACT */
-.contact{
-  text-align:center;
-  margin-top:80px;
-}
+.contact{text-align:center;margin-top:80px;}
 
-.contact a{
-  color:var(--accent);
-  text-decoration:none;
-  font-weight:600;
-}
+.contact a{color:var(--accent);text-decoration:none;}
 
-/* FOOTER */
 footer{
   text-align:center;
   padding:40px;
   color:#6b7280;
   font-size:12px;
   border-top:1px solid #1f2a37;
-  margin-top:60px;
 }
 </style>
 </head>
@@ -232,6 +170,7 @@ footer{
 <a href="#about">About</a>
 <a href="#projects">Systems</a>
 <a href="#experience">Experience</a>
+<a href="#education">Education</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -241,13 +180,10 @@ footer{
 <div class="left">
 <div class="profile">
 <img src="images/photo_2025-05-11_15-00-05.jpg">
-
 <div class="name">Molla D Negash</div>
 <div class="role">Backend Systems Engineer</div>
-
 <div class="bio">
-Distributed Systems • Microservices • Java/Spring Boot • AWS  
-Building scalable backend platforms for finance, government & enterprise systems.
+Distributed Systems • Microservices • Java/Spring Boot • AWS
 </div>
 </div>
 </div>
@@ -257,85 +193,103 @@ Building scalable backend platforms for finance, government & enterprise systems
 
 <h1>Backend Systems Engineer</h1>
 <div class="subtitle">
-I design distributed systems that operate reliably at scale under real production constraints.
+I design distributed systems that operate reliably at scale.
 </div>
 
 <div class="metrics">
 <div class="metric"><strong>40%</strong><br>Faster Deployments</div>
-<div class="metric"><strong>35%</strong><br>Reliability Increase</div>
+<div class="metric"><strong>35%</strong><br>Reliability Gain</div>
 <div class="metric"><strong>10M+</strong><br>Transactions</div>
 </div>
 
 <section id="about">
 <h2>Engineering Focus</h2>
 <p class="subtitle">
-I specialize in backend architecture, distributed systems, microservices design, and cloud-native engineering on AWS using Java & Spring Boot.
+Distributed Systems, Microservices, Cloud Architecture (AWS), Java/Spring Boot, and High-Throughput Systems.
 </p>
 </section>
 
+<!-- SYSTEMS -->
 <section id="projects">
 <h2>System Design Case Studies</h2>
 
 <div class="project">
 <h3>Federal Regulatory Insights Engine</h3>
-<p>NLP-powered distributed system for regulatory data processing using parallel computation pipelines.</p>
+<p>NLP + distributed processing pipeline for regulatory intelligence.</p>
+<a href="https://github.com/mollanegash/federal-regulations-analyzer" target="_blank">View Repository →</a>
 </div>
 
 <div class="project">
 <h3>Money Transfer Platform</h3>
-<p>Secure financial transaction system with async workflows, retries, and API integrations.</p>
+<p>Secure financial transaction system with async workflows & retries.</p>
+<a href="https://github.com/mollanegash/money-transfer-service" target="_blank">View Repository →</a>
 </div>
 
 <div class="project">
 <h3>Order Tracking Microservices</h3>
-<p>Scalable event-driven system with React frontend and modular backend services.</p>
+<p>Event-driven microservices with React + Spring Boot backend.</p>
+<a href="https://github.com/mollanegash/ordertrackingsystem" target="_blank">View Repository →</a>
 </div>
 
 <div class="project">
 <h3>Employee Management API</h3>
-<p>REST-based enterprise HR system built with layered architecture and clean domain separation.</p>
+<p>Enterprise HR REST API with layered architecture.</p>
+<a href="https://github.com/mollanegash/Employee-Management-System-EMS-" target="_blank">View Repository →</a>
 </div>
+
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
-<h2>Experience Timeline</h2>
+<h2>Experience</h2>
 
 <div class="exp">
-<div class="exp-top">
-<span>Technical Lead</span><span>2023 - Present</span>
-</div>
+<div class="exp-top"><span>Technical Lead</span><span>2023 - Present</span></div>
 <div class="company">Betsi Eco Hub LLC</div>
 <ul>
-<li>Architected full-stack distributed systems</li>
-<li>Led Kubernetes + AWS deployments</li>
-<li>Improved system performance by 40%</li>
+<li>Architected distributed systems</li>
+<li>Kubernetes + AWS deployments</li>
+<li>40% performance improvement</li>
 </ul>
 </div>
 
 <div class="exp">
-<div class="exp-top">
-<span>Senior Java Engineer</span><span>2023</span>
-</div>
+<div class="exp-top"><span>Senior Java Engineer</span><span>2023</span></div>
 <div class="company">LTIMindtree</div>
 <ul>
-<li>Led microservices migration of financial systems</li>
-<li>Improved reliability by 35%</li>
+<li>Microservices migration</li>
+<li>35% reliability improvement</li>
 </ul>
 </div>
 
 <div class="exp">
-<div class="exp-top">
-<span>Software Engineer</span><span>2011 - 2022</span>
-</div>
-<div class="company">Enterprise & Government Systems</div>
+<div class="exp-top"><span>Enterprise Software Engineer</span><span>2011 - 2022</span></div>
+<div class="company">Government & Enterprise Systems</div>
 <ul>
-<li>Built national-scale systems (health, fleet, finance)</li>
-<li>Designed Java backend architectures</li>
+<li>National-scale systems</li>
+<li>Java backend architecture</li>
 </ul>
 </div>
 
 </section>
 
+<!-- EDUCATION (FIXED - YOU WERE MISSING THIS) -->
+<section id="education">
+<h2>Education</h2>
+
+<div class="exp">
+<div class="exp-top"><span>M.S. Computer Science</span><span>2016 - 2021</span></div>
+<div class="company">Boston University</div>
+</div>
+
+<div class="exp">
+<div class="exp-top"><span>B.Sc. Natural Resources Economics & Management</span><span>2006 - 2009</span></div>
+<div class="company">Mekelle University</div>
+</div>
+
+</section>
+
+<!-- CONTACT -->
 <section id="contact" class="contact">
 <h2>Contact</h2>
 <p>
