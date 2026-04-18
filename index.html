@@ -12,6 +12,68 @@
       --bg: #f4f7f6; 
     }
 
+    <style>
+.top-section {
+  padding: 40px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+/* INTRO FULL WIDTH */
+.intro-full {
+  max-width: 900px;
+  margin-bottom: 30px;
+}
+
+.intro-full h1 {
+  margin-bottom: 15px;
+  color: #1A0DAB;
+}
+
+.intro-full p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+/* PHOTO + LINKS */
+.profile-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.profile-photo {
+  width: 180px;
+  border-radius: 6px;
+}
+
+.profile-links p {
+  margin: 6px 0;
+}
+
+.profile-links a {
+  text-decoration: none;
+  color: #1A0DAB;
+  font-weight: 500;
+}
+
+.profile-links a:hover {
+  text-decoration: underline;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .profile-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-links {
+    text-align: center;
+  }
+}
+</style>
+
     html { scroll-behavior: smooth; }
 
     body { 
@@ -162,30 +224,44 @@
   <a href="#contact">Connect</a>
 </nav>
 
-<!-- CLEAN INTRO (NO HERO BANNER) -->
 <header class="top-section">
-  <img src="images/photo_2025-05-11_15-00-05.jpg" class="profile-photo">
 
-  <div class="intro-text">
+  <!-- INTRO FULL WIDTH -->
+  <div class="intro-full">
     <h1>Molla D. Negash – Homepage</h1>
 
     <p>
-      Molla D. Negash is a Senior Backend Engineer and Technical Lead specializing in
-      scalable distributed systems, microservices architecture, and high-performance backend platforms.
+      I am a Senior Backend Engineer and Technical Lead specializing in scalable
+      distributed systems, microservices architecture, and high-performance backend platforms.
     </p>
 
     <p>
-      He has led the design and delivery of production-grade systems across FinTech,
+      I have led the design and delivery of production-grade systems across FinTech,
       regulatory platforms, and cloud-native environments, focusing on reliability,
       performance, and real-world scalability constraints.
     </p>
 
     <p>
-      His work spans system architecture, cloud infrastructure, and platform engineering,
+      My work spans system architecture, cloud infrastructure, and platform engineering,
       with a strong emphasis on clean design, efficiency, and building resilient systems
       that operate at scale.
     </p>
   </div>
+
+  <!-- PHOTO + LINKS ROW -->
+  <div class="profile-row">
+    <img src="images/photo_2025-05-11_15-00-05.jpg" class="profile-photo">
+
+    <div class="profile-links">
+      <p><a href="#">Contact information</a></p>
+      <p><a href="#">Curriculum vitae (CV)</a></p>
+      <p><a href="#">Research</a></p>
+      <p><a href="#">Publications</a></p>
+      <p><a href="#">Projects</a></p>
+      <p><a href="#">FAQ</a></p>
+    </div>
+  </div>
+
 </header>
 
 <div class="container">
