@@ -14,9 +14,6 @@
     
     html { scroll-behavior: smooth; }
 
-background: url('images/Microeconomics of Microservices Banner.png') no-repeat center;
-background-size: cover;
-
     body { 
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Arial, sans-serif; 
       background-color: var(--bg); 
@@ -30,7 +27,7 @@ background-size: cover;
     section {
       opacity: 0;
       transform: translateY(50px);
-      transition: all 1.0s cubic-bezier(0.2, 1, 0.3, 1); /* Smooth Apple-like easing */
+      transition: all 1.0s cubic-bezier(0.2, 1, 0.3, 1); 
       min-height: 80vh;
       display: flex;
       flex-direction: column;
@@ -43,7 +40,6 @@ background-size: cover;
       transform: translateY(0);
     }
 
-    /* Alternating backgrounds for storytelling feel */
     section:nth-child(even) { background: #f9fbfb; }
     section:nth-child(odd) { background: #ffffff; }
 
@@ -69,68 +65,41 @@ background-size: cover;
       letter-spacing: 1px; 
     }
 
-.hero-banner {
-  width: 100%;
-  height: 80vh; /* Makes it look more like a "Hero" section */
-  background: #111 url('images/Microeconomics of Microservices Banner.png') no-repeat center;
-  background-size: cover; /* Use 'cover' so it fills the screen like Apple's site */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  position: relative;
-}
+    /* 4. FIXED HERO BANNER SECTION */
+    .hero-banner {
+      width: 100%;
+      /* Aspect ratio ensures the banner keeps its 16:9 shape */
+      aspect-ratio: 16 / 9; 
+      max-height: 550px; 
+      background: #111 url('images/Microeconomics of Microservices Banner.png') no-repeat center;
+      /* 'contain' ensures the WHOLE image (and your name inside it) is visible without cutting */
+      background-size: contain; 
+      background-color: #111;
+      display: flex;
+      align-items: flex-end; /* Pushes button to bottom of banner */
+      justify-content: center;
+      position: relative;
+      border-bottom: 6px solid var(--primary);
+    }
 
-/* Adds a slight dark tint so your white text is easy to read over the image */
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.4); 
-  padding: 40px;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    .hero-overlay {
+      padding: 40px;
+      width: 100%;
+      text-align: center;
+      background: linear-gradient(transparent, rgba(0,0,0,0.4));
+    }
 
-.hero-banner h1 {
-  font-size: clamp(40px, 8vw, 72px);
-  margin: 0;
-  font-weight: 800;
-  letter-spacing: -2px;
-  color: #fff;
-}
-
-.hero-banner .brand {
-  font-size: clamp(18px, 3vw, 24px);
-  color: var(--primary); /* That teal color you chose */
-  font-weight: 600;
-  margin-top: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-    .identity-block { 
+    .brand-subhead { 
       background: #fff; 
       text-align: center; 
-      padding: 120px 20px; 
+      padding: 50px 20px; 
       border-bottom: 1px solid #eee; 
     }
 
-    .identity-block h1 { 
-      font-size: clamp(40px, 8vw, 64px); 
-      margin: 0; 
-      color: var(--secondary); 
-      font-weight: 800; 
-      letter-spacing: -1px;
-    }
-
-    .identity-block .brand { 
-      font-size: clamp(18px, 3vw, 26px); 
+    .brand-subhead div { 
+      font-size: clamp(18px, 3vw, 24px); 
       color: var(--primary); 
       font-weight: 600; 
-      margin-top: 15px; 
       text-transform: uppercase; 
       letter-spacing: 2px; 
     }
@@ -193,7 +162,6 @@ background-size: cover;
       border-radius: 50px; 
       text-decoration: none; 
       font-weight: bold; 
-      margin-top: 40px; 
       transition: opacity 0.3s;
     }
     .resume-btn:hover { opacity: 0.9; }
@@ -212,15 +180,15 @@ background-size: cover;
     <a href="#contact">Connect</a>
 </nav>
 
-<div class="hero-banner"></div>
-
 <header class="hero-banner">
     <div class="hero-overlay">
-        <h1>Molla Negash</h1>
-        <div class="brand">Senior Backend Engineer | Java • Spring Boot • AWS</div>
-        <a href="https://docs.google.com/document/d/1MZpqwvTWn7cprrfOErJcfSVR7RJlckTD4uuUWkX5hmU/edit?usp=sharing" target="_blank" class="resume-btn">📄 View Personnel Record</a>
+        <a href="https://docs.google.com/document/d/1MZpqwvTWn7cprrfOErJcfSVR7RJlckTD4uuUWkX5hmU/edit?usp=sharing" target="_blank" class="resume-btn">📄 View Full Personnel Record</a>
     </div>
 </header>
+
+<div class="brand-subhead">
+    <div>Senior Backend Engineer | Java • Spring Boot • AWS • Distributed Systems</div>
+</div>
 
 <div class="container">
   
@@ -228,9 +196,6 @@ background-size: cover;
   <h2>Engineering at Scale</h2>
   <p style="font-size: 22px;">
     I build backend systems designed for scale, resilience, and real-world production constraints. My focus is distributed systems, microservices architecture, and cloud-native engineering using Java and Spring Boot.
-  </p>
-  <p style="font-size: 22px;">
-    Across FinTech, insurance, and government systems, I’ve worked on transforming monoliths into distributed architectures and building platforms that process real-time financial and regulatory workloads.
   </p>
 </section>
 
@@ -248,34 +213,18 @@ background-size: cover;
 
 <section id="projects">
   <h2>Systems I’ve Built</h2>
-  <p style="font-size:18px;">These are production-oriented systems built for scalability, reliability, and real operational constraints.</p>
-
   <div class="project-card" style="border-left-color: gold;">
     <h3>⭐ Federal Regulatory Insights Engine</h3>
-    <p><b>Flagship System</b> — High-performance RegTech engine analyzing eCFR data using Requirement Density metrics with parallel processing and NLP-based analysis.</p>
+    <p><b>Flagship System</b> — High-performance RegTech engine analyzing eCFR data using Requirement Density metrics.</p>
     <p><b>Stack:</b> Java 21, Spring Boot, NLP, Parallel Streams</p>
     <a href="https://github.com/mollanegash/federal-regulations-analyzer">GitHub →</a>
   </div>
 
   <div class="project-card" style="border-left-color: gold;">
     <h3>⭐ Money Transfer Service</h3>
-    <p><b>Flagship System</b> — Secure financial transaction platform with asynchronous processing, external API confirmations, and resilient transfer workflows.</p>
+    <p><b>Flagship System</b> — Secure financial transaction platform with asynchronous processing.</p>
     <p><b>Stack:</b> Java, Spring Boot, REST APIs, Async Processing</p>
     <a href="https://github.com/mollanegash/money-transfer-service">GitHub →</a>
-  </div>
-
-  <div class="project-card" style="border-left-color: var(--secondary);">
-    <h3>🔷 Order Tracking System</h3>
-    <p><b>Core System</b> — Full-stack microservices order management platform with React frontend and scalable backend architecture.</p>
-    <p><b>Stack:</b> Java, Spring Boot, React, MySQL</p>
-    <a href="https://github.com/mollanegash/ordertrackingsystem">GitHub →</a>
-  </div>
-
-  <div class="project-card" style="border-left-color: #888;">
-    <h3>⚙️ Employee Management System (EMS)</h3>
-    <p><b>Supporting System</b> — RESTful Spring Boot API for employee CRUD operations with layered architecture.</p>
-    <p><b>Stack:</b> Java, Spring Boot, REST APIs</p>
-    <a href="https://github.com/mollanegash/Employee-Management-System-EMS-">GitHub →</a>
   </div>
 </section>
 
@@ -289,99 +238,16 @@ background-size: cover;
     </div>
     <div class="exp-comp">Betsi Eco Hub LLC | Austin, TX</div>
     <ul>
-      <li>Led design and delivery of end-to-end software systems spanning backend services, frontend integration, and production infrastructure.</li>
-      <li>Architected and implemented scalable full-stack applications using Java, Spring Boot, and React in cloud-native environments.</li>
-      <li>Designed and deployed containerized microservices systems using Docker and Kubernetes, improving scalability, resilience, and maintainability.</li>
-      <li>Built and optimized RESTful APIs and third-party integrations for production-grade systems.</li>
-      <li>Implemented CI/CD pipelines using GitHub Actions and AWS CodePipeline, reducing deployment time by 40%.</li>
-      <li>Improved application performance by ~40% through caching strategies, database optimization, and asynchronous processing.</li>
-      <li>Provided technical leadership across system design, implementation, and cross-functional collaboration with product and infrastructure teams.</li>
-      <li>Supported production systems through monitoring, debugging, and reliability improvements.</li>
-      <li><strong>Engineering Ownership:</strong> Managed production infrastructure including WordPress deployment, AWS/SiteGround hosting configuration, DNS setup, SSL management, and live system maintenance.</li>
-      <li>Developed backend Java/Spring Boot services supporting internal prototypes and AI-driven workflows integrated with OpenAI APIs.</li>
+      <li>Led design and delivery of end-to-end software systems spanning backend services and infrastructure.</li>
+      <li>Architected scalable full-stack applications using Java, Spring Boot, and React.</li>
+      <li>Implemented CI/CD pipelines using GitHub Actions and AWS CodePipeline.</li>
     </ul>
   </div>
 
-  <div class="exp-card">
-    <div class="exp-meta"><span class="exp-role">Senior Java Developer</span><span class="exp-date">Jan 2023 - Nov 2023</span></div>
-    <div class="exp-comp">LTIMindtree | Austin, TX</div>
-    <ul>
-      <li>Led migration of legacy financial platforms to distributed microservices using Java/Spring Boot and AWS.</li>
-      <li>Improved system reliability and fault tolerance by 35%.</li>
-      <li>Optimized high-volume financial transaction processing using PostgreSQL and DynamoDB.</li>
-      <li>Led transition to Cloud-Native Microservices (AWS), increasing deployment frequency by 40%.</li>
-      <li>Refactored PostgreSQL and DynamoDB indexing for 35% throughput improvement.</li>
-      <li>Designed RESTful APIs ensuring SOC2 compliance for financial workflows.</li>
-    </ul>
-  </div>
-
-  <div class="exp-card">
-    <div class="exp-meta"><span class="exp-role">Java Developer</span><span class="exp-date">Nov 2021 - Dec 2022</span></div>
-    <div class="exp-comp">Tata Consultancy Services | Boston, MA</div>
-    <ul>
-      <li>Developed enterprise microservices for insurance and financial systems using Java and Spring Boot.</li>
-      <li>Refactored monolithic systems into modular services, improving API performance.</li>
-      <li>Designed and optimized SQL queries and data models for large datasets.</li>
-      <li>Refactored legacy monolith systems into modular services for improved scalability.</li>
-    </ul>
-  </div>
-
-  <div class="exp-card">
-    <div class="exp-meta"><span class="exp-role">M.S. Computer Science</span><span class="exp-date">2016 - 2021</span></div>
-    <div class="exp-comp">Boston University | Boston, MA</div>
-    <ul>
-      <li>Completed Master of Science in Computer Science with research in distributed systems and ML.</li>
-    </ul>
-  </div>
-
-  <div class="exp-card">
-    <div class="exp-meta"><span class="exp-role">Java Developer</span><span class="exp-date">Aug 2013 - Jul 2016</span></div>
-    <div class="exp-comp">Public Health Institute | Ethiopia</div>
-    <ul>
-      <li>Developed secure RESTful services using Java and Spring for national health research platforms.</li>
-      <li>Designed database schemas and ensured seamless interoperability between research systems.</li>
-    </ul>
-  </div>
-
-<div class="exp-card">
-    <div class="exp-meta">
-      <span class="exp-role">Java Developer</span>
-      <span class="exp-date">Nov 2011 - Aug 2013</span>
-    </div>
-    <div class="exp-comp">Ministry of Science and Technology | Ethiopia</div>
-   <ul>
-  <li>Led the full Software Development Life Cycle (SDLC) for large-scale government infrastructure on cloud.</li>
-  <li>Applied Linear Programming for budget and resource optimization systems.</li>
-  <li>Collaborated with cross-functional teams to gather requirements and develop innovative, scalable web applications.</li>
-</ul>
-  </div>
-
-  <div class="exp-card">
-    <div class="exp-meta"><span class="exp-role">Java Developer</span><span class="exp-date">Mar 2010 - Nov 2011</span></div>
-    <div class="exp-comp">City Government of Addis Ababa | Ethiopia</div>
-    <ul>
-      <li>Developed an enterprise fleet management system using JSF, EJB, and Hibernate.</li>
-      <li>Implemented backend logic for municipal infrastructure and data management.</li>
-    </ul>
-  </div>
-
-<div class="exp-card">
-    <div class="exp-meta">
-      <span class="exp-role">B.Sc. Natural Resources Economics & Management</span>
-      <span class="exp-date">2006 - 2009</span>
-    </div>
-    <div class="exp-comp">Mekelle University | Ethiopia</div>
-    <ul>
-      <li><strong>Applied Economics Focus:</strong> Specialized in economic modeling and project management for natural resources.</li>
-      <li>Strong quantitative foundation in Mathematics for Economists, Statistics, and early Computer Applications.</li>
-      <li>Graduated with a focus on transforming environmental data into actionable economic insights.</li>
-    </ul>
-  </div>
-</section>
+  </section>
 
 <section id="contact" style="text-align: center;">
   <h2>Let’s Build Something Scalable</h2>
-  <p style="font-size: 20px;">I’m open to senior backend, distributed systems, and platform engineering roles.</p>
   <p style="font-size: 20px;">
     LinkedIn: <a href="https://www.linkedin.com/in/mollanegash">Profile</a><br>
     GitHub: <a href="https://github.com/mollanegash">Code</a><br>
@@ -396,7 +262,6 @@ background-size: cover;
 </footer>
 
 <script>
-  // THE APPLE OBSERVER: Triggers animation when section enters viewport
   const sections = document.querySelectorAll("section");
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
