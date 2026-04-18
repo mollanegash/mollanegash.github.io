@@ -8,36 +8,35 @@ The site presents my professional background, technical skills, and selected pro
 
 ## 🌐 Live Website
 
-If deployed, view the portfolio here:  
-https://github.com/mollanegash/mollanegash.github.io
+https://mollanegash.github.io
 
 ---
 
 ## 📁 Project Structure
 
-- `index.html` → Main portfolio website
-- `images/` → Website images and assets
-- `scripts/` → JavaScript files (if any)
-- `.gitignore` → Git ignored files
-- `README.md` → Project documentation
+- `index.html` → Main portfolio website  
+- `images/` → Website images and assets  
+- `scripts/` → JavaScript files (if any)  
+- `.gitignore` → Git ignored files  
+- `README.md` → Project documentation  
 
 ---
 
 ## 🚀 Features
 
-- Professional engineering portfolio design
-- Backend systems and distributed systems focus
-- Project showcases (Java, Spring Boot, AWS, etc.)
-- Responsive layout for desktop and mobile
-- Clean single-page navigation
+- Professional engineering portfolio design  
+- Backend systems and distributed systems focus  
+- Project showcases (Java, Spring Boot, AWS, etc.)  
+- Responsive layout for desktop and mobile  
+- Clean single-page navigation  
 
 ---
 
 ## 🛠️ Built With
 
-- HTML5
-- CSS3
-- JavaScript
+- HTML5  
+- CSS3  
+- JavaScript  
 
 ---
 
@@ -45,11 +44,11 @@ https://github.com/mollanegash/mollanegash.github.io
 
 Senior Backend Engineer / Technical Lead with experience in:
 
-- Java & Spring Boot backend systems
-- Microservices and distributed architecture
-- AWS cloud-native systems
-- High-performance backend design
-- Production system delivery
+- Java & Spring Boot backend systems  
+- Microservices and distributed architecture  
+- AWS cloud-native systems  
+- High-performance backend design  
+- Production system delivery  
 
 ---
 
