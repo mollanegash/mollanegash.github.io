@@ -6,16 +6,18 @@ Senior Backend Engineer / Technical Lead | Java • Spring Boot • Full-Stack S
 
 ## About Me
 
+## About Me
+
 Senior Backend Engineer / Technical Lead with 10+ years of experience designing and delivering scalable distributed systems using Java, Spring Boot, and cloud-native architectures (AWS/GCP).
 
-I specialize in building production-grade systems across backend, full-stack integration, and production infrastructure, with strong focus on system design, performance, and reliability.
+I specialize in building production-grade systems across backend services, full-stack integration layers, and cloud infrastructure, with a strong focus on system design, scalability, and reliability.
 
-Experience includes leading end-to-end delivery of software systems, modernizing legacy architectures into microservices, and managing production deployments and cloud infrastructure in real-world environments.
+Experience includes modernizing legacy monolithic systems into microservices, leading end-to-end system delivery, and supporting production deployments in real-world environments.
 
 I work across:
 - Distributed systems and microservices architecture
 - Full-stack system delivery (backend + integration layers)
-- Cloud infrastructure and production deployments
+- Cloud infrastructure and production environments
 - Backend performance optimization and system design
 - Legacy modernization and enterprise system transformation
 
