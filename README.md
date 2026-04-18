@@ -37,19 +37,15 @@ I work across:
 ## Experience Highlights
 
 **Tech Lead – Betsi Eco Hub LLC (Present)**  
-- Designed and built scalable microservices using Spring Boot and AWS  
-- Improved system performance by 40% using caching and async processing  
-- Built CI/CD pipelines reducing deployment time by 40%  
-- Implemented high-concurrency backend services and secure APIs  
-
-**Senior Java Engineer – LTIMindtree (Client: Equifax)**  
-- Built Java microservices for large-scale data processing systems  
-- Migrated legacy systems into cloud-native architecture (AWS)  
-- Improved system throughput by 35% using optimized database design  
-
-**Java Developer – TCS (Client: CNA Insurance)**  
-- Modernized SOAP/WSDL monolith into Spring Boot microservices  
-- Built REST APIs and improved system modularity and scalability  
+- Led end-to-end delivery of software systems spanning backend services, API integrations, and production infrastructure  
+- Architected and implemented scalable microservices using Spring Boot, Docker, Kubernetes, and AWS  
+- Built and optimized REST APIs and third-party integrations for production-grade systems  
+- Delivered full-stack system components including backend services and integration layers  
+- Implemented CI/CD pipelines using GitHub Actions and AWS CodePipeline, reducing deployment time by 40%  
+- Improved system performance by ~40% through caching, database optimization, and asynchronous processing  
+- Provided technical leadership across system design, implementation, and cross-functional collaboration  
+- Managed production infrastructure including hosting, DNS, SSL, WordPress deployment, and live system operations  
+- Supported AI-driven backend workflows integrated with OpenAI APIs  
 
 ---
 
