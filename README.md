@@ -1,10 +1,8 @@
 # Molla Negash
 
-Senior Backend Engineer / Technical Lead | Java • Spring Boot • Full-Stack Systems • AWS • Distributed Systems
+**Senior Backend Engineer / Technical Lead** | Java • Spring Boot • Full-Stack Systems • AWS • Distributed Systems
 
 ---
-
-## About Me
 
 ## About Me
 
@@ -12,14 +10,14 @@ Senior Backend Engineer / Technical Lead with 10+ years of experience designing 
 
 I specialize in building production-grade systems across backend services, full-stack integration layers, and cloud infrastructure, with a strong focus on system design, scalability, and reliability.
 
-Experience includes modernizing legacy monolithic systems into microservices, leading end-to-end system delivery, and supporting production deployments in real-world environments.
+My experience includes modernizing legacy monolithic systems into microservices, leading end-to-end system delivery, and supporting production systems in real-world environments.
 
-I work across:
-- Distributed systems and microservices architecture
-- Full-stack system delivery (backend + integration layers)
-- Cloud infrastructure and production environments
-- Backend performance optimization and system design
-- Legacy modernization and enterprise system transformation
+### Core Focus Areas
+- Distributed systems and microservices architecture  
+- Full-stack system delivery (backend services + integration layers)  
+- Cloud infrastructure and production environments (AWS/GCP)  
+- Backend performance optimization and system design  
+- Legacy modernization and enterprise system transformation  
 
 ---
 
@@ -36,15 +34,17 @@ I work across:
 
 ## Experience Highlights
 
-**Tech Lead – Betsi Eco Hub LLC (Present)**  
-- Led end-to-end delivery of software systems spanning backend services, API integrations, and production infrastructure  
+### Technical Lead – Betsi Eco Hub LLC (Present)
+
+- Led end-to-end delivery of software systems across backend services, API integrations, and production infrastructure  
 - Architected and implemented scalable microservices using Spring Boot, Docker, Kubernetes, and AWS  
-- Built and optimized REST APIs and third-party integrations for production-grade systems  
+- Designed and optimized REST APIs and third-party integrations for production-grade applications  
 - Delivered full-stack system components including backend services and integration layers  
 - Implemented CI/CD pipelines using GitHub Actions and AWS CodePipeline, reducing deployment time by 40%  
-- Improved system performance by ~40% through caching, database optimization, and asynchronous processing  
+- Improved system performance by ~40% through caching strategies, database optimization, and asynchronous processing  
 - Provided technical leadership across system design, implementation, and cross-functional collaboration  
-- Managed production infrastructure including hosting, DNS, SSL, WordPress deployment, and live system operations  
+- Supported production systems through monitoring, debugging, and reliability improvements  
+- Assisted with production infrastructure operations including hosting setup, DNS configuration, SSL management, and WordPress deployment  
 - Supported AI-driven backend workflows integrated with OpenAI APIs  
 
 ---
@@ -52,27 +52,34 @@ I work across:
 ## Featured Projects
 
 ### Federal Regulatory Insights Engine
-Java 21 • Spring Boot 3 • NLP • Parallel Processing  
-- Processes large-scale regulatory datasets (eCFR)
-- Extracts structured insights using custom analytics engine
-- Demonstrates system design + data processing at scale
+**Java 21 • Spring Boot 3 • NLP • Parallel Processing**
+
+- Processes large-scale regulatory datasets (eCFR)  
+- Extracts structured insights using custom analytics engine  
+- Demonstrates system design and data processing at scale  
+
+---
 
 ### Money Transfer Service
-Spring Boot • REST APIs • Security • Transactions  
-- Secure financial transaction system with logging and recovery
-- Designed for reliability and consistency in distributed environments
+**Spring Boot • REST APIs • Security • Transactions**
+
+- Built secure financial transaction system with logging and recovery  
+- Designed for reliability and consistency in distributed environments  
+
+---
 
 ### ML & Data Engineering Projects
-Python • Databricks • ETL Pipelines  
-- Built ML pipelines for anomaly detection and predictive analytics
-- Designed scalable ETL workflows for large datasets
+**Python • Databricks • ETL Pipelines**
+
+- Developed ML pipelines for anomaly detection and predictive analytics  
+- Designed scalable ETL workflows for large-scale datasets  
 
 ---
 
 ## Education
 
 **M.S. Computer Science – Boston University**  
-Focus: Distributed Systems, Software Architecture, Cloud Computing
+Focus: Distributed Systems, Software Architecture, Cloud Computing  
 
 ---
 
@@ -84,4 +91,4 @@ Focus: Distributed Systems, Software Architecture, Cloud Computing
 
 ---
 
-*Open to Senior Backend Engineer / Tech Lead opportunities (Java, Spring Boot, AWS, Distributed Systems).*
+**Open to Senior Backend Engineer / Technical Lead opportunities (Java, Spring Boot, AWS, Distributed Systems).**
