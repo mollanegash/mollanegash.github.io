@@ -354,19 +354,17 @@
     &copy; 2026 Molla Negash | Senior Backend Engineer | Austin, Texas
 </footer>
 
-<script>
-  // THE APPLE OBSERVER: Triggers animation when section enters viewport
-  const sections = document.querySelectorAll("section");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      }
-    });
-  }, { threshold: 0.1 });
+const elements = document.querySelectorAll("section, .hero-banner, .identity-block, .container");
 
-  sections.forEach(section => { observer.observe(section); });
-</script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+}, { threshold: 0.1 });
+
+elements.forEach(el => observer.observe(el));
 
 </body>
 </html>
