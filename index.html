@@ -1,6 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Molla Negash | Senior Tech Lead</title>
+  <style>
+    :root { 
+      --primary: #007B7F; 
+      --secondary: #1A0DAB; 
+      --bg: #f4f7f6; 
+    }
 
-.hero-overlay {
-    /* Other CSS properties above remain unchanged */
-    text-align: justify;
-    /* Other CSS properties below remain unchanged */
-}
+    body { 
+      font-family: "Segoe UI", Arial, sans-serif; 
+      background-color: var(--bg); 
+      margin: 0; 
+      padding: 0; 
+      color: #333; 
+      line-height: 1.6; 
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* --- FIXED HERO BANNER --- */
+    .hero-banner {
+      width: 100%;
+      /* Height is responsive: 480px on desktop, smaller on mobile */
+      height: clamp(250px, 50vh, 480px); 
+      background: #111 url('images/Microeconomics of Microservices Banner.png') no-repeat center;
+      /* 'cover' ensures the image justifies left-to-right to fill the screen */
+      background-size: cover; 
+      background-position: center center;
+      border-bottom: 6px solid var(--primary);
+    }
+
+    /* --- NAVIGATION --- */
+    .top-nav {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .top-nav a { 
+      text-decoration: none; 
+      color: var(--primary); 
+      font-weight: bold; 
+      margin: 0 25px; 
+      text-transform: uppercase; 
+      font-size: 13px; 
+      letter-spacing: 1px; 
+    }
+
+    /* --- IDENTITY BLOCK --- */
+    .identity-block { 
+      background: #fff; 
+      text-align: center; 
+      padding: 90px 20px; 
+      border-bottom: 1px solid #eee; 
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .identity-block h1 { 
+      font-size: 56px; 
+      margin: 0; 
+      color: var(--secondary); 
+      font-weight: 800; 
+    }
+
+    .identity-block .brand { 
+      font-size: 26px; 
+      color: var(--primary); 
+      font-weight: 600; 
+      margin-top: 10px; 
+      text-transform: uppercase; 
+      letter-spacing: 3px; 
+    }
+
+    /* --- CONTAINER & LAYOUT --- */
+    .container { 
+      max-width: 1100px; 
+      margin: 0 auto 60px; 
+      background: #fff; 
+      padding: 50px 80px; 
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05); 
+    }
+
+    /* --- STORYTELLING SECTIONS & ANIMATIONS --- */
+    section {
+      padding: 120px 0;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.9s ease;
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    section.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section:nth-child(odd) { background: #ffffff; }
+    section:nth-child(even) { background: #f7f9f8; }
+
+    h2 { 
+      color: var(--secondary); 
+      border-left: 6px solid var(--primary); 
+      padding-left: 20px; 
+      margin-bottom: 20px;
+      font-size: 42px; 
+      text-transform: uppercase; 
+      letter-spacing: -0.5px;
+    }
+
+    .project-card {
+      background: #f9f9f9;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-left: 5px solid var(--primary);
+      border-radius: 10px;
+    }
+
+    .project-card h3 { margin-top: 0; color: var(--secondary); }
+
+    .interests-grid { 
+      display: grid; 
+      grid-template-columns: 1fr 1fr; 
+      gap: 15px; 
+      background: #f9f9f9; 
+      padding: 30px; 
+      border-radius: 12px; 
+      margin-top: 20px; 
+    }
+
+    .field-item { 
+      font-size: 18px; 
+      font-weight: 600; 
+      color: #444; 
+      border-bottom: 1px solid #ddd; 
+      padding-bottom: 5px; 
+    }
+
+    .exp-card { margin-bottom: 50px; border-bottom: 1px solid #eee; padding-bottom: 30px; }
+    .exp-meta { display: flex; justify-content: space-between; align-items: baseline; }
+    .exp-role { font-size: 26px; font-weight: bold; color: #111; }
+    .exp-date { color: var(--primary); font-weight: bold; font-size: 16px; }
+    .exp-comp { font-size: 20px; color: var(--secondary); font-weight: 600; margin-top: 5px; }
+    
+    ul { margin-top: 15px; }
+    li { margin-bottom: 12px; font-size: 18px; line-height: 1.7; color: #444; }
+
+    .resume-btn { 
+      display: inline-block; 
+      background: var(--primary); 
+      color: white; 
+      padding: 15px 40px; 
+      border-radius: 6px; 
+      text-decoration: none; 
+      font-weight: bold; 
+      margin-top: 30px; 
+      font-size: 18px; 
+      width: fit-content;
+      align-self: center;
+    }
+
+    .site-footer { text-align: center; padding: 60px; background: #fff; color: #888; font-size: 15px; border-top: 1px solid #eee; }
+
+  </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="#about">Start</a>
+    <a href="#interests">Expertise</a>
+    <a href="#projects">Systems</a>
+    <a href="#experience">Journey</a>
+    <a href="#contact">Connect</a>
+</nav>
+
+<div class="hero-banner"></div>
+
+<header class="identity-block">
+    <h1>Molla Negash</h1>
+    <div class="brand">Senior Backend Engineer | Java • Spring Boot • AWS • Distributed Systems</div>
+    <a href="https://docs.google.com/document/d/1MZpqwvTWn7cprrfOErJcfSVR7RJlckTD4uuUWkX5hmU/edit?usp=sharing" target="_blank" class="resume-btn">📄 View Full Personnel Record</a>
+</header>
+
+<div class="container">
+  
+<section id="about">
+  <h2>Engineering at Scale</h2>
+  <p>
+    I build backend systems designed for scale, resilience, and real-world production constraints. My focus is distributed systems, microservices architecture, and cloud-native engineering using Java and Spring Boot.
+  </p>
+  <p>
+    Across FinTech, insurance, and government systems, I’ve worked on transforming monoliths into distributed architectures and building platforms that process real-time financial and regulatory workloads.
+  </p>
+</section>
+
+<section id="interests">
+    <h2>Principal Fields of Interest</h2>
+    <div class="interests-grid">
+        <div class="field-item">Distributed Systems & Microservices</div>
+        <div class="field-item">High-Performance Software Engineering</div>
+        <div class="field-item">Concurrency & High-Performance Java Systems</div>
+        <div class="field-item">Cloud-Native Systems Design (AWS/GCP)</div>
+        <div class="field-item">Secure Transactional Systems & FinTech</div>
+        <div class="field-item">RegTech & Regulatory Data Systems</div>
+    </div>
+</section>
+
+<section id="projects">
+  <h2>Systems I’ve Built</h2>
+  <div class="project-card" style="border-left: 6px solid gold;">
+    <h3>⭐ Federal Regulatory Insights Engine</h3>
+    <p><b>Flagship System</b> — High-performance RegTech engine analyzing eCFR data using Requirement Density metrics with parallel processing.</p>
+    <p><b>Stack:</b> Java 21, Spring Boot, NLP, Parallel Streams</p>
+    <a href="https://github.com/mollanegash/federal-regulations-analyzer">GitHub →</a>
+  </div>
+
+  <div class="project-card" style="border-left: 6px solid gold;">
+    <h3>⭐ Money Transfer Service</h3>
+    <p><b>Flagship System</b> — Secure financial transaction platform with asynchronous processing and resilient transfer workflows.</p>
+    <p><b>Stack:</b> Java, Spring Boot, REST APIs, Async Processing</p>
+    <a href="https://github.com/mollanegash/money-transfer-service">GitHub →</a>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Professional Experience</h2>
+  <div class="exp-card">
+    <div class="exp-meta">
+      <span class="exp-role">Technical Lead</span>
+      <span class="exp-date">Dec 2023 - Present</span>
+    </div>
+    <div class="exp-comp">Betsi Eco Hub LLC | Austin, TX</div>
+    <ul>
+      <li>Led design and delivery of end-to-end software systems spanning backend services and production infrastructure.</li>
+      <li>Architected and implemented scalable full-stack applications using Java, Spring Boot, and React.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let’s Build Something Scalable</h2>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/mollanegash">Profile</a><br>
+     GitHub: <a href="https://github.com/mollanegash">Code</a><br>
+     Email: mdraya3@gmail.com</p>
+</section>
+
+</div>
+
+<footer class="site-footer">
+    &copy; 2026 Molla Negash | Senior Backend Engineer | Austin, Texas
+</footer>
+
+<script>
+  // Script to handle section activation on scroll
+  const sections = document.querySelectorAll("section");
+  const options = { threshold: 0.2 };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("active");
+      }
+    });
+  }, options);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
+</body>
+</html>
