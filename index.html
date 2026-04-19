@@ -7,21 +7,20 @@
 
 <style>
 :root{
-  --bg:#070a0f;
-  --panel:#0f1623;
+  --bg:#06090f;
+  --panel:#0f1724;
   --card:#111c2e;
   --text:#e8eef6;
   --muted:#9aa6b2;
   --accent:#4dd4ff;
-  --accent2:#7c5cff;
-  --border:#1d2a3a;
+  --border:#1c2a3a;
 }
 
 html{scroll-behavior:smooth;}
 
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto;
   background:var(--bg);
   color:var(--text);
   line-height:1.6;
@@ -32,11 +31,11 @@ nav{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(7,10,15,0.75);
+  background:rgba(6,9,15,0.85);
   backdrop-filter:blur(14px);
   display:flex;
   justify-content:center;
-  gap:28px;
+  gap:26px;
   padding:14px;
   border-bottom:1px solid var(--border);
 }
@@ -45,7 +44,7 @@ nav a{
   color:var(--muted);
   text-decoration:none;
   font-size:11px;
-  letter-spacing:1.5px;
+  letter-spacing:1.6px;
   text-transform:uppercase;
 }
 
@@ -53,15 +52,15 @@ nav a:hover{color:var(--accent);}
 
 /* LAYOUT */
 .container{
-  max-width:1180px;
+  max-width:1150px;
   margin:auto;
   padding:70px 20px;
   display:grid;
-  grid-template-columns:320px 1fr;
+  grid-template-columns:340px 1fr;
   gap:50px;
 }
 
-/* LEFT PANEL */
+/* LEFT */
 .left{
   position:sticky;
   top:90px;
@@ -85,27 +84,24 @@ nav a:hover{color:var(--accent);}
 
 .name{
   font-size:20px;
-  margin-top:12px;
   font-weight:700;
+  margin-top:12px;
 }
 
 .role{
   color:var(--accent);
   font-size:11px;
-  letter-spacing:1px;
   text-transform:uppercase;
-  margin-top:6px;
+  letter-spacing:1px;
 }
 
 .bio{
   color:var(--muted);
   font-size:13px;
-  margin-top:12px;
+  margin-top:10px;
 }
 
 /* RIGHT */
-.right{}
-
 h1{
   font-size:44px;
   margin:0;
@@ -114,8 +110,31 @@ h1{
 
 .subtitle{
   color:var(--muted);
-  margin-top:10px;
+  margin-top:12px;
   font-size:15px;
+}
+
+/* INTERVIEW SIGNAL STRIP */
+.signals{
+  margin-top:25px;
+  padding:16px;
+  border:1px solid var(--border);
+  background:var(--card);
+  border-radius:12px;
+}
+
+.signals h3{
+  margin:0;
+  font-size:12px;
+  letter-spacing:1.8px;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+
+.signals p{
+  margin-top:10px;
+  font-size:13px;
+  color:var(--muted);
 }
 
 /* METRICS */
@@ -134,12 +153,12 @@ h1{
 }
 
 .metric strong{
-  font-size:18px;
   color:var(--accent);
+  font-size:18px;
 }
 
-/* SECTION TITLE */
-section{margin-top:70px;}
+/* SECTION HEADERS */
+section{margin-top:75px;}
 
 h2{
   font-size:11px;
@@ -150,19 +169,13 @@ h2{
   text-transform:uppercase;
 }
 
-/* SYSTEMS */
+/* SYSTEM DESIGN (INTERVIEW VERSION) */
 .project{
   background:var(--card);
   border:1px solid var(--border);
   padding:18px;
   border-radius:14px;
   margin-top:14px;
-  transition:0.25s ease;
-}
-
-.project:hover{
-  transform:translateY(-3px);
-  border-color:var(--accent);
 }
 
 .project h3{
@@ -173,15 +186,17 @@ h2{
 .project p{
   color:var(--muted);
   font-size:13px;
-  margin-top:6px;
+  margin-top:8px;
 }
 
-.project a{
-  display:inline-block;
-  margin-top:8px;
+/* INTERVIEW TRIGGER BOX */
+.trigger{
+  margin-top:10px;
+  padding:10px;
+  border-left:2px solid var(--accent);
   font-size:12px;
-  color:var(--accent);
-  text-decoration:none;
+  color:var(--muted);
+  background:rgba(77,212,255,0.05);
 }
 
 /* EXPERIENCE */
@@ -202,15 +217,14 @@ h2{
 
 .company{
   color:var(--accent);
-  font-size:13px;
   margin-top:6px;
+  font-size:13px;
 }
 
 ul{
   color:var(--muted);
   font-size:13px;
   margin-top:10px;
-  line-height:1.6;
 }
 
 /* CONTACT */
@@ -224,7 +238,6 @@ ul{
   text-decoration:none;
 }
 
-/* FOOTER */
 footer{
   text-align:center;
   padding:40px;
@@ -240,7 +253,7 @@ footer{
 
 <nav>
 <a href="#about">About</a>
-<a href="#projects">Systems</a>
+<a href="#systems">Systems</a>
 <a href="#experience">Experience</a>
 <a href="#education">Education</a>
 <a href="#contact">Contact</a>
@@ -252,12 +265,10 @@ footer{
 <div class="left">
 <div class="profile">
 <img src="images/photo_2025-05-11_15-00-05.jpg">
-
 <div class="name">Molla D Negash</div>
 <div class="role">Staff Backend Systems Engineer</div>
-
 <div class="bio">
-Distributed Systems • Microservices • Java/Spring Boot • AWS
+Distributed Systems • Java • Spring Boot • AWS
 </div>
 </div>
 </div>
@@ -268,11 +279,15 @@ Distributed Systems • Microservices • Java/Spring Boot • AWS
 <h1>Staff Backend Systems Engineer</h1>
 
 <div class="subtitle">
-Staff-level engineer focused on distributed systems architecture, scalable backend platforms, and production-grade cloud-native systems on AWS.
+I design distributed systems that remain reliable under failure, scale, and real-world production constraints.
 </div>
 
-<div class="subtitle">
-Designing systems that remain reliable under failure, scale, and real-world production constraints.
+<!-- INTERVIEW SIGNAL -->
+<div class="signals">
+<h3>Interview Signal</h3>
+<p>
+Expect deep system design discussion on scalability, consistency tradeoffs, async processing, fault tolerance, and AWS-based distributed architecture decisions.
+</p>
 </div>
 
 <div class="metrics">
@@ -285,36 +300,36 @@ Designing systems that remain reliable under failure, scale, and real-world prod
 <section id="about">
 <h2>ENGINEERING FOCUS</h2>
 <p class="subtitle">
-Distributed systems, microservices architecture, event-driven systems, cloud-native AWS platforms, and high-throughput Java backend engineering.
+Distributed systems, microservices architecture, event-driven systems, cloud-native AWS platforms, and high-throughput backend engineering in Java/Spring Boot.
 </p>
 </section>
 
 <!-- SYSTEMS -->
-<section id="projects">
-<h2>SYSTEM DESIGN CASE STUDIES</h2>
+<section id="systems">
+<h2>SYSTEM DESIGN CASE STUDIES (INTERVIEW READY)</h2>
 
 <div class="project">
 <h3>Federal Regulatory Insights Engine</h3>
-<p>Distributed NLP system with parallel ingestion pipelines for large-scale regulatory data processing.</p>
-<a href="https://github.com/mollanegash/federal-regulations-analyzer">View Repository →</a>
+<p>Distributed NLP system for large-scale regulatory ingestion using parallel pipelines and ranking models.</p>
+<div class="trigger">Interview focus: partitioning strategy, throughput scaling, batch vs stream tradeoffs</div>
 </div>
 
 <div class="project">
 <h3>Money Transfer Platform</h3>
-<p>Event-driven financial system with retry logic, async workflows, and external API orchestration.</p>
-<a href="https://github.com/mollanegash/money-transfer-service">View Repository →</a>
+<p>Event-driven financial system with retry mechanisms, async processing, and external API orchestration.</p>
+<div class="trigger">Interview focus: consistency model, failure recovery, idempotency design</div>
 </div>
 
 <div class="project">
 <h3>Order Tracking Microservices</h3>
-<p>Event-driven microservices system with independent deployments and React frontend integration.</p>
-<a href="https://github.com/mollanegash/ordertrackingsystem">View Repository →</a>
+<p>Microservices-based event-driven system with independent deployments and frontend integration.</p>
+<div class="trigger">Interview focus: service boundaries, communication patterns, scaling strategy</div>
 </div>
 
 <div class="project">
 <h3>Employee Management API</h3>
-<p>Layered enterprise HR system with clean architecture and scalable REST API design.</p>
-<a href="https://github.com/mollanegash/Employee-Management-System-EMS-">View Repository →</a>
+<p>Layered enterprise HR system with clean architecture and REST APIs.</p>
+<div class="trigger">Interview focus: domain modeling, clean architecture, database design</div>
 </div>
 
 </section>
@@ -327,8 +342,9 @@ Distributed systems, microservices architecture, event-driven systems, cloud-nat
 <div class="exp-top"><span>Technical Lead</span><span>2023 - Present</span></div>
 <div class="company">Betsi Eco Hub LLC</div>
 <ul>
-<li>Owned distributed backend architecture on AWS + Kubernetes</li>
+<li>Owned distributed backend systems on AWS + Kubernetes</li>
 <li>Improved system performance by 40% through scaling + optimization</li>
+<li>Led architecture decisions across backend + infrastructure layers</li>
 </ul>
 </div>
 
@@ -336,8 +352,8 @@ Distributed systems, microservices architecture, event-driven systems, cloud-nat
 <div class="exp-top"><span>Senior Java Engineer</span><span>2023</span></div>
 <div class="company">LTIMindtree</div>
 <ul>
-<li>Led microservices migration of enterprise financial systems</li>
-<li>Improved reliability by 35%</li>
+<li>Led migration of monolith financial systems to microservices</li>
+<li>Improved reliability by 35% via distributed design improvements</li>
 </ul>
 </div>
 
@@ -345,8 +361,8 @@ Distributed systems, microservices architecture, event-driven systems, cloud-nat
 <div class="exp-top"><span>Enterprise Software Engineer</span><span>2010 - 2022</span></div>
 <div class="company">Government & Enterprise Systems</div>
 <ul>
-<li>Built national-scale Java backend systems</li>
-<li>Designed scalable distributed backend architectures</li>
+<li>Built national-scale backend systems</li>
+<li>Designed distributed Java architectures for enterprise systems</li>
 </ul>
 </div>
 
