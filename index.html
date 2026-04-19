@@ -41,6 +41,7 @@ nav a{
   text-decoration:none;
   font-size:12px;
   text-transform:uppercase;
+  letter-spacing:1px;
 }
 
 nav a:hover{color:var(--accent);}
@@ -77,10 +78,16 @@ nav a:hover{color:var(--accent);}
 /* RIGHT */
 .right{flex:1;}
 
-h1{font-size:44px;margin:0;}
+h1{font-size:46px;margin:0;}
 
-.subtitle{color:var(--muted);margin-top:10px;line-height:1.7;}
+.subtitle{
+  color:var(--muted);
+  margin-top:12px;
+  line-height:1.8;
+  font-size:15px;
+}
 
+/* METRICS */
 .metrics{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
@@ -97,6 +104,7 @@ h1{font-size:44px;margin:0;}
 
 .metric strong{font-size:20px;color:var(--accent);}
 
+/* SECTIONS */
 section{margin-top:70px;}
 
 h2{
@@ -107,7 +115,7 @@ h2{
   padding-left:10px;
 }
 
-/* SYSTEMS */
+/* PROJECTS */
 .project{
   background:var(--card);
   border:1px solid #1f2a37;
@@ -124,7 +132,11 @@ h2{
 
 .project h3{margin:0;}
 
-.project p{color:var(--muted);font-size:14px;}
+.project p{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.6;
+}
 
 .project a{
   color:var(--accent);
@@ -149,8 +161,13 @@ h2{
 
 .company{color:var(--accent);margin:6px 0 10px;}
 
-ul{color:var(--muted);font-size:14px;line-height:1.7;}
+ul{
+  color:var(--muted);
+  font-size:14px;
+  line-height:1.7;
+}
 
+/* CONTACT */
 .contact{text-align:center;margin-top:80px;}
 
 .contact a{color:var(--accent);text-decoration:none;}
@@ -195,7 +212,11 @@ Distributed Systems • Microservices • Java/Spring Boot • AWS
 <h1>Staff Backend Systems Engineer</h1>
 
 <div class="subtitle">
-I design and own large-scale distributed systems that operate under production constraints, high traffic, and strict reliability requirements.
+Staff-level backend engineer focused on distributed systems architecture, large-scale platform engineering, and building resilient cloud-native systems on AWS using Java/Spring Boot.
+</div>
+
+<div class="subtitle">
+I design systems that remain reliable, observable, and performant under real production failures, high traffic, and evolving business constraints.
 </div>
 
 <div class="metrics">
@@ -206,37 +227,45 @@ I design and own large-scale distributed systems that operate under production c
 
 <!-- ABOUT -->
 <section id="about">
-<h2>Engineering Focus</h2>
+<h2>ENGINEERING FOCUS</h2>
 <p class="subtitle">
-Distributed systems architecture, microservices design, cloud-native platforms (AWS), high-throughput Java systems, and production-scale backend engineering.
+Distributed systems architecture, microservices design, cloud-native platforms (AWS), high-throughput Java systems, event-driven architectures, and production-scale backend engineering.
 </p>
 </section>
 
 <!-- SYSTEMS -->
 <section id="projects">
-<h2>System Design Case Studies</h2>
+<h2>SYSTEM DESIGN CASE STUDIES</h2>
 
 <div class="project">
 <h3>Federal Regulatory Insights Engine</h3>
-<p>NLP-driven distributed system processing regulatory data using parallel pipelines and ranking models.</p>
+<p>
+Distributed NLP processing system designed for large-scale regulatory data ingestion using parallel pipelines, ranking models, and batch processing architecture for scalable analysis workloads.
+</p>
 <a href="https://github.com/mollanegash/federal-regulations-analyzer" target="_blank">View Repository →</a>
 </div>
 
 <div class="project">
 <h3>Money Transfer Platform</h3>
-<p>Event-driven financial system with async processing, retry logic, and external API orchestration.</p>
+<p>
+Event-driven financial transaction system with asynchronous processing, retry mechanisms, and external API orchestration ensuring reliability and consistency in distributed workflows.
+</p>
 <a href="https://github.com/mollanegash/money-transfer-service" target="_blank">View Repository →</a>
 </div>
 
 <div class="project">
 <h3>Order Tracking Microservices</h3>
-<p>Event-driven distributed system with Spring Boot backend and React frontend.</p>
+<p>
+Scalable event-driven microservices system with Spring Boot backend and React frontend, designed for modular service boundaries and independent deployment lifecycle.
+</p>
 <a href="https://github.com/mollanegash/ordertrackingsystem" target="_blank">View Repository →</a>
 </div>
 
 <div class="project">
 <h3>Employee Management API</h3>
-<p>Scalable HR system built with layered architecture, clean domain separation, and REST APIs.</p>
+<p>
+Enterprise-grade HR system built with layered architecture, clean domain separation, and RESTful APIs designed for maintainability and scalability.
+</p>
 <a href="https://github.com/mollanegash/Employee-Management-System-EMS-" target="_blank">View Repository →</a>
 </div>
 
@@ -244,14 +273,15 @@ Distributed systems architecture, microservices design, cloud-native platforms (
 
 <!-- EXPERIENCE -->
 <section id="experience">
-<h2>Experience</h2>
+<h2>EXPERIENCE</h2>
 
 <div class="exp">
 <div class="exp-top"><span>Technical Lead</span><span>2023 - Present</span></div>
 <div class="company">Betsi Eco Hub LLC</div>
 <ul>
-<li>Owned architecture of distributed backend systems in AWS + Kubernetes</li>
-<li>Led system scaling and improved performance by 40%</li>
+<li>Owned architecture and delivery of distributed backend systems on AWS and Kubernetes</li>
+<li>Led scaling initiatives improving system performance by 40%</li>
+<li>Directed full-stack engineering efforts across backend, infrastructure, and deployment pipelines</li>
 </ul>
 </div>
 
@@ -259,8 +289,8 @@ Distributed systems architecture, microservices design, cloud-native platforms (
 <div class="exp-top"><span>Senior Java Engineer</span><span>2023</span></div>
 <div class="company">LTIMindtree</div>
 <ul>
-<li>Led migration of monolith financial systems to microservices</li>
-<li>Improved system reliability by 35%</li>
+<li>Led migration of monolithic financial systems into microservices architecture</li>
+<li>Improved system reliability and fault tolerance by 35%</li>
 </ul>
 </div>
 
@@ -268,8 +298,8 @@ Distributed systems architecture, microservices design, cloud-native platforms (
 <div class="exp-top"><span>Enterprise Software Engineer</span><span>2010 - 2022</span></div>
 <div class="company">Government & Enterprise Systems</div>
 <ul>
-<li>Built national-scale Java backend systems</li>
-<li>Designed scalable enterprise architectures</li>
+<li>Built national-scale backend systems for government and enterprise domains</li>
+<li>Designed scalable Java backend architectures and database systems</li>
 </ul>
 </div>
 
@@ -277,23 +307,25 @@ Distributed systems architecture, microservices design, cloud-native platforms (
 
 <!-- EDUCATION -->
 <section id="education">
-<h2>Education</h2>
+<h2>EDUCATION</h2>
 
 <div class="exp">
-<div class="exp-top"><span>M.S. Computer Science</span><span>Boston University</span></div>
-<div class="company">Distributed Systems, ML, Backend Engineering</div>
+<div class="exp-top"><span>M.S. Computer Science</span><span>2016 - 2021</span></div>
+<div class="company">Boston University</div>
+<div class="subtitle">Focus: Distributed Systems, Machine Learning, Backend Engineering</div>
 </div>
 
 <div class="exp">
-<div class="exp-top"><span>B.Sc. Natural Resources Economics</span><span>Mekelle University</span></div>
-<div class="company">Quantitative Systems & Modeling Foundation</div>
+<div class="exp-top"><span>B.Sc. Natural Resources Economics & Management</span><span>2006 - 2009</span></div>
+<div class="company">Mekelle University</div>
+<div class="subtitle">Quantitative Systems Modeling, Economics, Statistical Analysis, Applied Computing</div>
 </div>
 
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
-<h2>Contact</h2>
+<h2>CONTACT</h2>
 <p>
 LinkedIn: <a href="https://www.linkedin.com/in/mollanegash/">Profile</a><br>
 GitHub: <a href="https://github.com/mollanegash">Code</a><br>
