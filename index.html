@@ -89,7 +89,6 @@ nav a:hover{color:var(--accent);}
 h1{font-size:44px;margin:0;}
 .subtitle{color:var(--muted);margin-top:12px;font-size:15px;}
 
-/* SIGNAL */
 .signal{
   margin-top:20px;
   padding:14px;
@@ -99,13 +98,13 @@ h1{font-size:44px;margin:0;}
 }
 .signal b{color:var(--good);}
 
-/* METRICS */
 .metrics{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:12px;
   margin:30px 0;
 }
+
 .metric{
   background:var(--card);
   border:1px solid var(--border);
@@ -114,7 +113,6 @@ h1{font-size:44px;margin:0;}
 }
 .metric strong{color:var(--accent);font-size:18px;}
 
-/* SECTIONS */
 section{margin-top:75px;}
 
 h2{
@@ -144,7 +142,7 @@ h2{
   font-size:13px;
 }
 
-/* INTERACTIVE MODE */
+/* SIMULATOR */
 .simulator{
   margin-top:12px;
   padding:12px;
@@ -161,20 +159,24 @@ h2{
   border-radius:14px;
   padding:18px;
   margin-top:16px;
+  cursor:pointer;
 }
+
 .exp-top{
   display:flex;
   justify-content:space-between;
   font-weight:600;
 }
+
 .company{color:var(--accent);margin-top:6px;font-size:13px;}
+
+.exp-body{display:none;}
+
 ul{color:var(--muted);font-size:13px;margin-top:10px;}
 
-/* CONTACT */
 .contact{text-align:center;margin-top:80px;}
 .contact a{color:var(--accent);}
 
-/* FOOTER */
 footer{
   text-align:center;
   padding:40px;
@@ -203,9 +205,7 @@ footer{
 <img src="images/photo_2025-05-11_15-00-05.jpg">
 <div class="name">Molla D Negash</div>
 <div class="role">Senior Backend Systems Engineer</div>
-<div class="bio">
-Java • Spring Boot • Microservices • AWS • GCP
-</div>
+<div class="bio">Java • Spring Boot • Microservices • AWS • GCP</div>
 </div>
 </div>
 
@@ -215,11 +215,11 @@ Java • Spring Boot • Microservices • AWS • GCP
 <h1>FAANG System Design Simulator</h1>
 
 <div class="subtitle">
-I design and operate distributed systems across government, enterprise, and financial-scale platforms with production-grade reliability.
+Distributed systems across enterprise, government, and financial-scale platforms.
 </div>
 
 <div class="signal">
-<b>Interview Mode:</b> Expect deep system design discussions on scalability, consistency, fault tolerance, event-driven architecture, and cloud-native design tradeoffs.
+<b>Interview Mode:</b> Scalability • Fault tolerance • Event-driven architecture • Cloud tradeoffs
 </div>
 
 <div class="metrics">
@@ -230,9 +230,9 @@ I design and operate distributed systems across government, enterprise, and fina
 
 <!-- ABOUT -->
 <section id="about">
-<h2>Engineering Focus</h2>
+<h2>About</h2>
 <p class="subtitle">
-Distributed systems architecture, microservices, event-driven systems, cloud-native AWS/GCP platforms, Kafka/Redis-based scaling, and enterprise backend engineering.
+Backend systems engineer focused on distributed systems and cloud-native architecture.
 </p>
 </section>
 
@@ -243,137 +243,116 @@ Distributed systems architecture, microservices, event-driven systems, cloud-nat
 <div class="project">
 <h3>Federal Regulatory Insights Engine</h3>
 <p>NLP-driven distributed pipeline processing regulatory datasets at scale.</p>
-<div class="simulator">Interview Mode → Partitioning strategy, batch vs streaming, ranking system design</div>
-<a href="https://github.com/mollanegash/federal-regulations-analyzer">GitHub</a>
+<div class="simulator">Partitioning • Streaming vs Batch • Ranking systems</div>
+<a href="https://github.com/mollanegash/federal-regulations-analyzer" target="_blank">GitHub →</a>
 </div>
 
 <div class="project">
 <h3>Money Transfer Platform</h3>
-<p>Event-driven financial system with retries, idempotency, and async processing.</p>
-<div class="simulator">Interview Mode → Consistency model, failure recovery, distributed transactions</div>
-<a href="https://github.com/mollanegash/money-transfer-service">GitHub</a>
+<p>Event-driven financial system with retries and idempotency.</p>
+<div class="simulator">Consistency • Failure recovery • Distributed transactions</div>
+<a href="https://github.com/mollanegash/money-transfer-service" target="_blank">GitHub →</a>
 </div>
 
 <div class="project">
 <h3>Order Tracking Microservices</h3>
-<p>Microservices event-driven architecture with Spring Boot + React.</p>
-<div class="simulator">Interview Mode → Service boundaries, API gateway, scaling patterns</div>
-<a href="https://github.com/mollanegash/ordertrackingsystem">GitHub</a>
+<p>Spring Boot + React event-driven logistics system.</p>
+<div class="simulator">Service boundaries • API gateway • Scaling</div>
+<a href="https://github.com/mollanegash/ordertrackingsystem" target="_blank">GitHub →</a>
 </div>
 
 <div class="project">
 <h3>Employee Management API</h3>
-<p>Enterprise HR system with layered architecture and clean domain separation.</p>
-<div class="simulator">Interview Mode → Domain modeling, schema design, API versioning</div>
-<a href="https://github.com/mollanegash/Employee-Management-System-EMS-">GitHub</a>
+<p>Enterprise HR system with clean domain architecture.</p>
+<div class="simulator">Domain modeling • Schema design • API versioning</div>
+<a href="https://github.com/mollanegash/Employee-Management-System-EMS-" target="_blank">GitHub →</a>
 </div>
 
 </section>
 
+<!-- EXPERIENCE -->
 <section id="experience">
-<h2>Experience (Interactive System Ownership Timeline)</h2>
+<h2>Experience (Click to Expand)</h2>
 
-<div class="exp" onclick="toggle(this)" style="cursor:pointer;">
+<div class="exp" onclick="toggle(this)">
 <div class="exp-top">
-<span>Technical Lead</span>
+<span>Betsi Eco Hub LLC</span>
 <span>2023 - Present</span>
 </div>
-<div class="company">Betsi Eco Hub LLC — Austin, TX</div>
-
-<div class="exp-body" style="display:none;">
+<div class="company">Technical Lead</div>
+<div class="exp-body">
 <ul>
-<li>Owned AWS-based distributed backend systems (Java/Spring Boot microservices)</li>
-<li>Designed high-concurrency APIs supporting production-scale traffic workloads</li>
-<li>Led system architecture decisions across backend + infrastructure layers</li>
-<li>Integrated Agentic AI workflows (OpenAI APIs) for automation pipelines</li>
-<li>Built CI/CD pipelines (GitHub Actions) → 40% deployment speed improvement</li>
+<li>AWS distributed microservices</li>
+<li>40% performance improvement</li>
+<li>AI automation integration</li>
 </ul>
-<div class="simulator">Scope: system ownership, cloud architecture, AI integration, production reliability</div>
 </div>
 </div>
 
-<div class="exp" onclick="toggle(this)" style="cursor:pointer;">
+<div class="exp" onclick="toggle(this)">
 <div class="exp-top">
-<span>Senior Java Software Engineer / Tech Lead</span>
+<span>LTIMindtree (Equifax)</span>
 <span>2023</span>
 </div>
-<div class="company">LTIMindtree (Client: Equifax) — Austin, TX</div>
-
-<div class="exp-body" style="display:none;">
+<div class="company">Senior Engineer</div>
+<div class="exp-body">
 <ul>
-<li>Built financial-grade microservices for U.S. county court data ingestion</li>
-<li>Designed AWS Fargate + Kubernetes deployment architecture</li>
-<li>Improved system reliability by 35% through distributed redesign</li>
-<li>Implemented monitoring using AWS CloudWatch + MySQL observability</li>
+<li>Financial microservices migration</li>
+<li>35% reliability improvement</li>
 </ul>
-<div class="simulator">Scope: FinTech-scale ingestion, distributed reliability, cloud orchestration</div>
 </div>
 </div>
 
-<div class="exp" onclick="toggle(this)" style="cursor:pointer;">
+<div class="exp" onclick="toggle(this)">
 <div class="exp-top">
-<span>Java Software Engineer</span>
+<span>TCS (CNA Insurance)</span>
 <span>2021 - 2022</span>
 </div>
-<div class="company">TCS (CNA Insurance) — Boston, MA</div>
-
-<div class="exp-body" style="display:none;">
+<div class="company">Java Engineer</div>
+<div class="exp-body">
 <ul>
-<li>Migrated legacy SOAP/WSDL → GCP microservices (DDD architecture)</li>
-<li>Built 5 production REST microservices with Redis caching layer</li>
-<li>Ensured zero-data-loss contract transformation during migration</li>
+<li>SOAP → REST migration</li>
+<li>Redis caching systems</li>
 </ul>
-<div class="simulator">Scope: legacy modernization, API transformation, cloud migration</div>
 </div>
 </div>
 
-<div class="exp" onclick="toggle(this)" style="cursor:pointer;">
+<div class="exp" onclick="toggle(this)">
 <div class="exp-top">
-<span>Senior Software Engineer</span>
+<span>Public Health Institute</span>
 <span>2013 - 2016</span>
 </div>
-<div class="company">Public Health Institute — Ethiopia</div>
-
-<div class="exp-body" style="display:none;">
+<div class="company">Senior Engineer</div>
+<div class="exp-body">
 <ul>
-<li>Built national Health Management Information System (HMIS)</li>
-<li>Designed secure backend systems for clinical data at national scale</li>
-<li>Implemented REST APIs for health data governance systems</li>
+<li>National health systems</li>
 </ul>
-<div class="simulator">Scope: national-scale data systems, healthcare backend reliability</div>
 </div>
 </div>
 
-<div class="exp" onclick="toggle(this)" style="cursor:pointer;">
+<div class="exp" onclick="toggle(this)">
 <div class="exp-top">
-<span>Software Engineer</span>
+<span>Ministry of Science & Technology</span>
 <span>2011 - 2013</span>
 </div>
-<div class="company">Ministry of Science & Technology — Ethiopia</div>
-
-<div class="exp-body" style="display:none;">
+<div class="company">Software Engineer</div>
+<div class="exp-body">
 <ul>
-<li>Built government cloud backend systems (Java enterprise architecture)</li>
-<li>Led SDLC for national infrastructure software systems</li>
-<li>Applied Linear Programming for resource optimization models</li>
+<li>Government systems + optimization models</li>
 </ul>
-<div class="simulator">Scope: government-scale systems + optimization engineering</div>
 </div>
 </div>
 
-<div class="exp" onclick="toggle(this)" style="cursor:pointer;">
+<div class="exp" onclick="toggle(this)">
 <div class="exp-top">
-<span>Software Engineer</span>
+<span>City Government of Addis Ababa</span>
 <span>2010 - 2011</span>
 </div>
-<div class="company">City Government of Addis Ababa — Ethiopia</div>
-
-<div class="exp-body" style="display:none;">
+<div class="company">Software Engineer</div>
+<div class="exp-body">
 <ul>
-<li>Built enterprise fleet management system (JSF, EJB, Hibernate)</li>
-<li>Managed relational databases for logistics systems</li>
+<li>Enterprise fleet system (JSF, EJB, Hibernate)</li>
 </ul>
-<div class="simulator">Scope: enterprise backend foundations + government systems</div>
 </div>
 </div>
 
@@ -382,25 +361,16 @@ Distributed systems architecture, microservices, event-driven systems, cloud-nat
 <!-- EDUCATION -->
 <section id="education">
 <h2>Education</h2>
-
-<div class="exp">
-<div class="exp-top"><span>M.S. Computer Science</span><span>Boston University</span></div>
-<div class="company">Distributed Systems, ML, Backend Engineering</div>
-</div>
-
-<div class="exp">
-<div class="exp-top"><span>B.Sc. Natural Resources Economics & Management</span><span>Mekelle University</span></div>
-<div class="company">Economics, Optimization Systems, Statistics</div>
-</div>
-
+<p>M.S. Computer Science — Boston University</p>
+<p>B.Sc. Economics — Mekelle University</p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
 <h2>Contact</h2>
 <p>
-LinkedIn: <a href="https://www.linkedin.com/in/mollanegash/">Profile</a><br>
-GitHub: <a href="https://github.com/mollanegash">Code</a><br>
+<a href="https://linkedin.com/in/mollanegash" target="_blank">LinkedIn</a><br>
+<a href="https://github.com/mollanegash" target="_blank">GitHub</a><br>
 Email: mdraya3@gmail.com
 </p>
 </section>
@@ -408,9 +378,14 @@ Email: mdraya3@gmail.com
 </div>
 </div>
 
-<footer>
-© 2026 Molla D Negash — FAANG System Design Simulator
-</footer>
+<footer>© 2026 Molla D Negash — FAANG System Design Simulator</footer>
+
+<script>
+function toggle(el){
+  const body = el.querySelector(".exp-body");
+  body.style.display = (body.style.display === "block") ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
