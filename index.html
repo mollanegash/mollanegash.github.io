@@ -16,8 +16,6 @@
   --border:#1c2a3a;
 }
 
-html{scroll-behavior:smooth;}
-
 body{
   margin:0;
   font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto;
@@ -32,10 +30,10 @@ nav{
   top:0;
   z-index:1000;
   background:rgba(6,9,15,0.85);
-  backdrop-filter:blur(14px);
+  backdrop-filter:blur(12px);
   display:flex;
   justify-content:center;
-  gap:26px;
+  gap:25px;
   padding:14px;
   border-bottom:1px solid var(--border);
 }
@@ -44,7 +42,7 @@ nav a{
   color:var(--muted);
   text-decoration:none;
   font-size:11px;
-  letter-spacing:1.6px;
+  letter-spacing:1.5px;
   text-transform:uppercase;
 }
 
@@ -52,66 +50,46 @@ nav a:hover{color:var(--accent);}
 
 /* LAYOUT */
 .container{
-  max-width:1150px;
+  max-width:1100px;
   margin:auto;
-  padding:70px 20px;
+  padding:60px 20px;
   display:grid;
-  grid-template-columns:340px 1fr;
+  grid-template-columns:320px 1fr;
   gap:50px;
 }
 
-/* LEFT */
-.left{
-  position:sticky;
-  top:90px;
-  height:fit-content;
-}
+.left{position:sticky; top:90px;}
 
 .profile{
   background:var(--panel);
   border:1px solid var(--border);
-  border-radius:16px;
+  border-radius:14px;
   padding:18px;
 }
 
 .profile img{
   width:100%;
+  border-radius:12px;
   height:320px;
   object-fit:cover;
-  border-radius:12px;
   border:1px solid var(--border);
 }
 
-.name{
-  font-size:20px;
-  font-weight:700;
-  margin-top:12px;
-}
+.name{font-size:20px;margin-top:12px;font-weight:700;}
+.role{color:var(--accent);font-size:11px;text-transform:uppercase;}
+.bio{color:var(--muted);font-size:13px;margin-top:10px;}
 
-.role{
-  color:var(--accent);
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:1px;
-}
+h1{font-size:42px;margin:0;}
+.subtitle{color:var(--muted);margin-top:10px;font-size:15px;}
 
-.bio{
+/* SIGNAL */
+.signal{
+  margin-top:20px;
+  padding:12px;
+  border-left:2px solid var(--accent);
+  background:rgba(77,212,255,0.05);
+  font-size:12px;
   color:var(--muted);
-  font-size:13px;
-  margin-top:10px;
-}
-
-/* RIGHT */
-h1{
-  font-size:44px;
-  margin:0;
-  letter-spacing:-0.5px;
-}
-
-.subtitle{
-  color:var(--muted);
-  margin-top:12px;
-  font-size:15px;
 }
 
 /* METRICS */
@@ -119,67 +97,68 @@ h1{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:12px;
-  margin:30px 0;
+  margin:25px 0;
 }
 
 .metric{
   background:var(--card);
   border:1px solid var(--border);
-  padding:14px;
+  padding:12px;
   border-radius:12px;
 }
 
-.metric strong{
-  color:var(--accent);
-  font-size:18px;
-}
+.metric strong{color:var(--accent);font-size:18px;}
 
 /* SECTIONS */
-section{margin-top:75px;}
+section{margin-top:70px;}
 
 h2{
   font-size:11px;
-  letter-spacing:2.2px;
+  letter-spacing:2px;
   color:var(--muted);
   border-left:3px solid var(--accent);
   padding-left:10px;
   text-transform:uppercase;
 }
 
-/* SYSTEMS */
-.project{
+/* SYSTEM CARD */
+.system{
   background:var(--card);
   border:1px solid var(--border);
   padding:18px;
   border-radius:14px;
   margin-top:14px;
+  cursor:pointer;
+  transition:0.3s;
 }
 
-.project h3{
-  margin:0;
-  font-size:16px;
+.system:hover{
+  transform:translateY(-3px);
+  border-color:var(--accent);
 }
 
-.project p{
-  color:var(--muted);
-  font-size:13px;
+.system h3{margin:0;font-size:15px;}
+.system p{color:var(--muted);font-size:13px;}
+
+.system a{
+  display:inline-block;
   margin-top:8px;
-}
-
-.project a{
   color:var(--accent);
+  font-size:12px;
   text-decoration:none;
-  font-size:13px;
 }
 
-/* STAFF INSIGHT TAG */
-.trigger{
+.details{
+  display:none;
   margin-top:10px;
-  padding:10px;
-  border-left:2px solid var(--accent);
+  padding-top:10px;
+  border-top:1px solid var(--border);
   font-size:12px;
   color:var(--muted);
-  background:rgba(77,212,255,0.05);
+}
+
+.system.active .details{
+  display:block;
 }
 
 /* EXPERIENCE */
@@ -188,38 +167,23 @@ h2{
   border:1px solid var(--border);
   border-radius:14px;
   padding:18px;
-  margin-top:16px;
+  margin-top:14px;
 }
 
 .exp-top{
   display:flex;
   justify-content:space-between;
   font-weight:600;
-  font-size:14px;
 }
 
-.company{
-  color:var(--accent);
-  margin-top:6px;
-  font-size:13px;
-}
+.company{color:var(--accent);font-size:13px;margin-top:5px;}
 
-ul{
-  color:var(--muted);
-  font-size:13px;
-  margin-top:10px;
-}
+ul{color:var(--muted);font-size:13px;}
 
 /* CONTACT */
-.contact{
-  text-align:center;
-  margin-top:80px;
-}
+.contact{text-align:center;margin-top:80px;}
 
-.contact a{
-  color:var(--accent);
-  text-decoration:none;
-}
+.contact a{color:var(--accent);text-decoration:none;}
 
 footer{
   text-align:center;
@@ -250,9 +214,7 @@ footer{
 <img src="images/photo_2025-05-11_15-00-05.jpg">
 <div class="name">Molla D Negash</div>
 <div class="role">Staff Backend Systems Engineer</div>
-<div class="bio">
-Distributed Systems • Microservices • Java/Spring Boot • AWS
-</div>
+<div class="bio">Distributed Systems • Java • Spring Boot • AWS</div>
 </div>
 </div>
 
@@ -262,20 +224,23 @@ Distributed Systems • Microservices • Java/Spring Boot • AWS
 <h1>Staff Backend Systems Engineer</h1>
 
 <div class="subtitle">
-I design and own distributed systems that operate under production-scale constraints, failure conditions, and high traffic environments.
+I design systems that survive scale, failure, and real production constraints.
+</div>
+
+<div class="signal">
+INTERVIEW SIGNAL: System design, scalability, fault tolerance, distributed architecture, AWS infrastructure decisions.
 </div>
 
 <div class="metrics">
 <div class="metric"><strong>40%</strong><br>Deployment Speed</div>
-<div class="metric"><strong>35%</strong><br>System Reliability</div>
+<div class="metric"><strong>35%</strong><br>Reliability</div>
 <div class="metric"><strong>10M+</strong><br>Transactions</div>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
 <h2>ENGINEERING FOCUS</h2>
 <p class="subtitle">
-Distributed systems architecture, microservices design, event-driven systems, cloud-native AWS platforms, and high-throughput backend engineering using Java/Spring Boot.
+Distributed systems, microservices architecture, event-driven systems, AWS cloud platforms, high-throughput backend engineering.
 </p>
 </section>
 
@@ -283,32 +248,40 @@ Distributed systems architecture, microservices design, event-driven systems, cl
 <section id="systems">
 <h2>SYSTEM DESIGN CASE STUDIES</h2>
 
-<div class="project">
+<div class="system" onclick="this.classList.toggle('active')">
 <h3>Federal Regulatory Insights Engine</h3>
-<p>Large-scale NLP system processing regulatory data using distributed ingestion and parallel computation pipelines.</p>
-<div class="trigger">Staff Focus: partitioning strategy, throughput scaling, compute cost tradeoffs</div>
-<a href="https://github.com/mollanegash/federal-regulations-analyzer">View Repository →</a>
+<p>NLP-based distributed processing pipeline for regulatory data.</p>
+<a href="https://github.com/mollanegash/federal-regulations-analyzer" target="_blank">GitHub Repository →</a>
+<div class="details">
+Parallel pipelines • NLP ranking • ingestion scaling • CPU bottlenecks
+</div>
 </div>
 
-<div class="project">
+<div class="system" onclick="this.classList.toggle('active')">
 <h3>Money Transfer Platform</h3>
-<p>Event-driven financial system with asynchronous processing, retry logic, and external API orchestration.</p>
-<div class="trigger">Staff Focus: idempotency, failure recovery, distributed consistency model</div>
-<a href="https://github.com/mollanegash/money-transfer-service">View Repository →</a>
+<p>Event-driven financial system with retries and async workflows.</p>
+<a href="https://github.com/mollanegash/money-transfer-service" target="_blank">GitHub Repository →</a>
+<div class="details">
+Idempotency • queue processing • failure recovery • consistency tradeoffs
+</div>
 </div>
 
-<div class="project">
+<div class="system" onclick="this.classList.toggle('active')">
 <h3>Order Tracking Microservices</h3>
-<p>Microservices-based event-driven architecture with independent deployability and decoupled communication.</p>
-<div class="trigger">Staff Focus: service boundaries, scaling strategy, event-driven design</div>
-<a href="https://github.com/mollanegash/ordertrackingsystem">View Repository →</a>
+<p>Event-driven microservices system with React frontend.</p>
+<a href="https://github.com/mollanegash/ordertrackingsystem" target="_blank">GitHub Repository →</a>
+<div class="details">
+Service boundaries • API gateway • scaling stateless services
+</div>
 </div>
 
-<div class="project">
+<div class="system" onclick="this.classList.toggle('active')">
 <h3>Employee Management API</h3>
-<p>Enterprise HR system with layered architecture and clean domain-driven design.</p>
-<div class="trigger">Staff Focus: domain modeling, system extensibility, data architecture</div>
-<a href="https://github.com/mollanegash/Employee-Management-System-EMS-">View Repository →</a>
+<p>Enterprise HR system with layered architecture.</p>
+<a href="https://github.com/mollanegash/Employee-Management-System-EMS-" target="_blank">GitHub Repository →</a>
+<div class="details">
+Clean architecture • domain design • RBAC • DB modeling
+</div>
 </div>
 
 </section>
@@ -321,9 +294,9 @@ Distributed systems architecture, microservices design, event-driven systems, cl
 <div class="exp-top"><span>Technical Lead</span><span>2023 - Present</span></div>
 <div class="company">Betsi Eco Hub LLC</div>
 <ul>
-<li>Owned distributed backend architecture on AWS + Kubernetes</li>
-<li>Led system scaling and reliability improvements (40%)</li>
-<li>Designed production-grade microservice infrastructure</li>
+<li>Owned distributed backend systems on AWS + Kubernetes</li>
+<li>Improved performance by 40%</li>
+<li>Led architecture decisions across backend + infra</li>
 </ul>
 </div>
 
@@ -331,8 +304,8 @@ Distributed systems architecture, microservices design, event-driven systems, cl
 <div class="exp-top"><span>Senior Java Engineer</span><span>2023</span></div>
 <div class="company">LTIMindtree</div>
 <ul>
-<li>Led migration from monolith to microservices architecture</li>
-<li>Improved system reliability by 35%</li>
+<li>Microservices migration</li>
+<li>35% reliability improvement</li>
 </ul>
 </div>
 
@@ -340,8 +313,9 @@ Distributed systems architecture, microservices design, event-driven systems, cl
 <div class="exp-top"><span>Enterprise Software Engineer</span><span>2010 - 2022</span></div>
 <div class="company">Government & Enterprise Systems</div>
 <ul>
-<li>Built national-scale backend systems</li>
-<li>Designed distributed Java enterprise architectures</li>
+<li>National-scale systems (health, finance, fleet)</li>
+<li>Long-running production backend systems</li>
+<li>Java enterprise architecture design</li>
 </ul>
 </div>
 
@@ -353,12 +327,12 @@ Distributed systems architecture, microservices design, event-driven systems, cl
 
 <div class="exp">
 <div class="exp-top"><span>M.S. Computer Science</span><span>Boston University</span></div>
-<div class="company">Distributed Systems • Machine Learning • Backend Engineering</div>
+<div class="company">Distributed Systems & ML</div>
 </div>
 
 <div class="exp">
 <div class="exp-top"><span>B.Sc. Natural Resources Economics & Management</span><span>Mekelle University</span></div>
-<div class="company">Quantitative Systems Modeling • Economics • Analytics Foundations</div>
+<div class="company">Quantitative Systems Modeling Foundation</div>
 </div>
 
 </section>
@@ -367,9 +341,7 @@ Distributed systems architecture, microservices design, event-driven systems, cl
 <section id="contact" class="contact">
 <h2>CONTACT</h2>
 <p>
-LinkedIn: <a href="#">Profile</a><br>
-GitHub: <a href="#">Code</a><br>
-Email: mdraya3@gmail.com
+LinkedIn • GitHub • Email: mdraya3@gmail.com
 </p>
 </section>
 
