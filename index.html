@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Molla Negash | Staff Backend Systems Engineer</title>
+<title>Molla Negash | Senior Java Software Engineer</title>
 
 <style>
 :root{
-  --bg:#06090f;
+  --bg:#05070c;
   --panel:#0f1724;
   --card:#111c2e;
   --text:#e8eef6;
@@ -16,9 +16,11 @@
   --border:#1c2a3a;
 }
 
+html{scroll-behavior:smooth;}
+
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto;
   background:var(--bg);
   color:var(--text);
   line-height:1.6;
@@ -28,14 +30,14 @@ body{
 nav{
   position:sticky;
   top:0;
-  z-index:1000;
-  background:rgba(6,9,15,0.85);
-  backdrop-filter:blur(12px);
+  background:rgba(5,7,12,0.85);
+  backdrop-filter:blur(14px);
   display:flex;
   justify-content:center;
-  gap:25px;
+  gap:24px;
   padding:14px;
   border-bottom:1px solid var(--border);
+  z-index:1000;
 }
 
 nav a{
@@ -45,121 +47,82 @@ nav a{
   letter-spacing:1.5px;
   text-transform:uppercase;
 }
-
 nav a:hover{color:var(--accent);}
 
 /* LAYOUT */
 .container{
-  max-width:1100px;
+  max-width:1150px;
   margin:auto;
-  padding:60px 20px;
+  padding:70px 20px;
   display:grid;
-  grid-template-columns:320px 1fr;
+  grid-template-columns:340px 1fr;
   gap:50px;
 }
 
-.left{position:sticky; top:90px;}
+/* LEFT */
+.left{position:sticky; top:90px; height:fit-content;}
 
 .profile{
   background:var(--panel);
   border:1px solid var(--border);
-  border-radius:14px;
+  border-radius:16px;
   padding:18px;
 }
 
 .profile img{
   width:100%;
-  border-radius:12px;
   height:320px;
   object-fit:cover;
-  border:1px solid var(--border);
+  border-radius:12px;
 }
 
-.name{font-size:20px;margin-top:12px;font-weight:700;}
-.role{color:var(--accent);font-size:11px;text-transform:uppercase;}
+.name{font-size:20px;font-weight:700;margin-top:12px;}
+.role{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:1px;}
 .bio{color:var(--muted);font-size:13px;margin-top:10px;}
 
-h1{font-size:42px;margin:0;}
-.subtitle{color:var(--muted);margin-top:10px;font-size:15px;}
-
-/* SIGNAL */
-.signal{
-  margin-top:20px;
-  padding:12px;
-  border-left:2px solid var(--accent);
-  background:rgba(77,212,255,0.05);
-  font-size:12px;
-  color:var(--muted);
-}
+/* RIGHT */
+h1{font-size:44px;margin:0;}
+.subtitle{color:var(--muted);margin-top:12px;font-size:15px;}
 
 /* METRICS */
 .metrics{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:12px;
-  margin:25px 0;
+  margin:30px 0;
 }
 
 .metric{
   background:var(--card);
   border:1px solid var(--border);
-  padding:12px;
+  padding:14px;
   border-radius:12px;
 }
-
 .metric strong{color:var(--accent);font-size:18px;}
 
-/* SECTIONS */
-section{margin-top:70px;}
+/* SECTION */
+section{margin-top:75px;}
 
 h2{
   font-size:11px;
-  letter-spacing:2px;
+  letter-spacing:2.2px;
   color:var(--muted);
   border-left:3px solid var(--accent);
   padding-left:10px;
   text-transform:uppercase;
 }
 
-/* SYSTEM CARD */
-.system{
+/* PROJECTS */
+.project{
   background:var(--card);
   border:1px solid var(--border);
   padding:18px;
   border-radius:14px;
   margin-top:14px;
-  cursor:pointer;
-  transition:0.3s;
 }
-
-.system:hover{
-  transform:translateY(-3px);
-  border-color:var(--accent);
-}
-
-.system h3{margin:0;font-size:15px;}
-.system p{color:var(--muted);font-size:13px;}
-
-.system a{
-  display:inline-block;
-  margin-top:8px;
-  color:var(--accent);
-  font-size:12px;
-  text-decoration:none;
-}
-
-.details{
-  display:none;
-  margin-top:10px;
-  padding-top:10px;
-  border-top:1px solid var(--border);
-  font-size:12px;
-  color:var(--muted);
-}
-
-.system.active .details{
-  display:block;
-}
+.project h3{margin:0;font-size:16px;}
+.project p{color:var(--muted);font-size:13px;margin-top:8px;}
+.project a{color:var(--accent);text-decoration:none;font-size:13px;}
 
 /* EXPERIENCE */
 .exp{
@@ -167,18 +130,27 @@ h2{
   border:1px solid var(--border);
   border-radius:14px;
   padding:18px;
-  margin-top:14px;
+  margin-top:16px;
 }
 
 .exp-top{
   display:flex;
   justify-content:space-between;
   font-weight:600;
+  font-size:14px;
 }
 
-.company{color:var(--accent);font-size:13px;margin-top:5px;}
+.company{
+  color:var(--accent);
+  margin-top:6px;
+  font-size:13px;
+}
 
-ul{color:var(--muted);font-size:13px;}
+ul{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:10px;
+}
 
 /* CONTACT */
 .contact{text-align:center;margin-top:80px;}
@@ -212,110 +184,123 @@ footer{
 <div class="left">
 <div class="profile">
 <img src="images/photo_2025-05-11_15-00-05.jpg">
-<div class="name">Molla D Negash</div>
-<div class="role">Staff Backend Systems Engineer</div>
-<div class="bio">Distributed Systems • Java • Spring Boot • AWS</div>
+<div class="name">Molla Negash, M.S.</div>
+<div class="role">Senior Java Software Engineer</div>
+<div class="bio">
+Java • Spring Boot • Microservices • AWS • GCP • Distributed Systems
+</div>
 </div>
 </div>
 
 <!-- RIGHT -->
 <div class="right">
 
-<h1>Staff Backend Systems Engineer</h1>
+<h1>Senior Java Software Engineer</h1>
 
 <div class="subtitle">
-I design systems that survive scale, failure, and real production constraints.
-</div>
-
-<div class="signal">
-INTERVIEW SIGNAL: System design, scalability, fault tolerance, distributed architecture, AWS infrastructure decisions.
+Backend engineer with 10+ years of experience building distributed systems across government, fintech, insurance, and enterprise domains.
+Specialized in microservices modernization, cloud-native systems, and high-scale backend architecture.
 </div>
 
 <div class="metrics">
-<div class="metric"><strong>40%</strong><br>Deployment Speed</div>
-<div class="metric"><strong>35%</strong><br>Reliability</div>
+<div class="metric"><strong>10+</strong><br>Years Experience</div>
+<div class="metric"><strong>Cloud</strong><br>AWS + GCP Systems</div>
 <div class="metric"><strong>10M+</strong><br>Transactions</div>
 </div>
 
+<!-- ABOUT -->
 <section id="about">
-<h2>ENGINEERING FOCUS</h2>
+<h2>Professional Summary</h2>
 <p class="subtitle">
-Distributed systems, microservices architecture, event-driven systems, AWS cloud platforms, high-throughput backend engineering.
+Distributed systems, microservices architecture, event-driven systems, API design, and enterprise backend modernization using Java/Spring Boot, Kafka, Redis, and Kubernetes.
 </p>
 </section>
 
 <!-- SYSTEMS -->
 <section id="systems">
-<h2>SYSTEM DESIGN CASE STUDIES</h2>
+<h2>System Design Case Studies</h2>
 
-<div class="system" onclick="this.classList.toggle('active')">
+<div class="project">
 <h3>Federal Regulatory Insights Engine</h3>
-<p>NLP-based distributed processing pipeline for regulatory data.</p>
-<a href="https://github.com/mollanegash/federal-regulations-analyzer" target="_blank">GitHub Repository →</a>
-<div class="details">
-Parallel pipelines • NLP ranking • ingestion scaling • CPU bottlenecks
-</div>
+<p>NLP-based distributed system for regulatory data processing using parallel pipelines and ranking models.</p>
+<a href="https://github.com/mollanegash/federal-regulations-analyzer">GitHub →</a>
 </div>
 
-<div class="system" onclick="this.classList.toggle('active')">
+<div class="project">
 <h3>Money Transfer Platform</h3>
-<p>Event-driven financial system with retries and async workflows.</p>
-<a href="https://github.com/mollanegash/money-transfer-service" target="_blank">GitHub Repository →</a>
-<div class="details">
-Idempotency • queue processing • failure recovery • consistency tradeoffs
-</div>
+<p>Event-driven financial system with retries, async processing, and external API orchestration.</p>
+<a href="https://github.com/mollanegash/money-transfer-service">GitHub →</a>
 </div>
 
-<div class="system" onclick="this.classList.toggle('active')">
+<div class="project">
 <h3>Order Tracking Microservices</h3>
-<p>Event-driven microservices system with React frontend.</p>
-<a href="https://github.com/mollanegash/ordertrackingsystem" target="_blank">GitHub Repository →</a>
-<div class="details">
-Service boundaries • API gateway • scaling stateless services
-</div>
+<p>Microservices architecture using Spring Boot with React frontend integration.</p>
+<a href="https://github.com/mollanegash/ordertrackingsystem">GitHub →</a>
 </div>
 
-<div class="system" onclick="this.classList.toggle('active')">
+<div class="project">
 <h3>Employee Management API</h3>
-<p>Enterprise HR system with layered architecture.</p>
-<a href="https://github.com/mollanegash/Employee-Management-System-EMS-" target="_blank">GitHub Repository →</a>
-<div class="details">
-Clean architecture • domain design • RBAC • DB modeling
-</div>
+<p>Enterprise HR system with layered architecture and REST APIs.</p>
+<a href="https://github.com/mollanegash/Employee-Management-System-EMS-">GitHub →</a>
 </div>
 
 </section>
 
 <!-- EXPERIENCE -->
 <section id="experience">
-<h2>EXPERIENCE</h2>
+<h2>Experience (Complete History)</h2>
 
 <div class="exp">
-<div class="exp-top"><span>Technical Lead</span><span>2023 - Present</span></div>
-<div class="company">Betsi Eco Hub LLC</div>
+<div class="exp-top"><span>Betsi Eco Hub LLC</span><span>2023 - Present</span></div>
+<div class="company">Senior Java Software Engineer / Tech Lead</div>
 <ul>
-<li>Owned distributed backend systems on AWS + Kubernetes</li>
-<li>Improved performance by 40%</li>
-<li>Led architecture decisions across backend + infra</li>
+<li>Built scalable Spring Boot microservices on AWS</li>
+<li>Designed distributed backend systems with high concurrency</li>
+<li>Improved deployment efficiency by 40%</li>
 </ul>
 </div>
 
 <div class="exp">
-<div class="exp-top"><span>Senior Java Engineer</span><span>2023</span></div>
-<div class="company">LTIMindtree</div>
+<div class="exp-top"><span>LTIMindtree (Equifax)</span><span>2023</span></div>
+<div class="company">Senior Java Software Engineer</div>
 <ul>
-<li>Microservices migration</li>
-<li>35% reliability improvement</li>
+<li>Built litigation data processing microservices (AWS Fargate)</li>
+<li>Designed mortgage account systems using Java 17 + JPA</li>
 </ul>
 </div>
 
 <div class="exp">
-<div class="exp-top"><span>Enterprise Software Engineer</span><span>2010 - 2022</span></div>
-<div class="company">Government & Enterprise Systems</div>
+<div class="exp-top"><span>TCS (CNA Insurance)</span><span>2021 - 2022</span></div>
+<div class="company">Java Software Engineer</div>
 <ul>
-<li>National-scale systems (health, finance, fleet)</li>
-<li>Long-running production backend systems</li>
-<li>Java enterprise architecture design</li>
+<li>Modernized SOAP/WSDL systems into GCP microservices</li>
+<li>Built Redis caching and REST API layers</li>
+</ul>
+</div>
+
+<div class="exp">
+<div class="exp-top"><span>Public Health Institute (Ethiopia)</span><span>2013 - 2016</span></div>
+<div class="company">Senior Java Software Engineer</div>
+<ul>
+<li>Built national HMIS healthcare data systems</li>
+<li>Designed secure database + REST services</li>
+</ul>
+</div>
+
+<div class="exp">
+<div class="exp-top"><span>Ministry of Science & Technology</span><span>2011 - 2013</span></div>
+<div class="company">Java Software Engineer</div>
+<ul>
+<li>Built government cloud infrastructure systems</li>
+<li>Applied linear programming for optimization systems</li>
+</ul>
+</div>
+
+<div class="exp">
+<div class="exp-top"><span>City Government of Addis Ababa</span><span>2010 - 2011</span></div>
+<div class="company">Java Software Engineer</div>
+<ul>
+<li>Built fleet management system using JSF, EJB, Hibernate</li>
 </ul>
 </div>
 
@@ -323,25 +308,27 @@ Clean architecture • domain design • RBAC • DB modeling
 
 <!-- EDUCATION -->
 <section id="education">
-<h2>EDUCATION</h2>
+<h2>Education</h2>
 
 <div class="exp">
 <div class="exp-top"><span>M.S. Computer Science</span><span>Boston University</span></div>
-<div class="company">Distributed Systems & ML</div>
+<div class="company">Distributed Systems, ML, Backend Engineering</div>
 </div>
 
 <div class="exp">
 <div class="exp-top"><span>B.Sc. Natural Resources Economics & Management</span><span>Mekelle University</span></div>
-<div class="company">Quantitative Systems Modeling Foundation</div>
+<div class="company">Applied Economics, Optimization Systems, Statistics</div>
 </div>
 
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact">
-<h2>CONTACT</h2>
+<h2>Contact</h2>
 <p>
-LinkedIn • GitHub • Email: mdraya3@gmail.com
+LinkedIn: <a href="https://www.linkedin.com/in/mollanegash/">Profile</a><br>
+GitHub: <a href="https://github.com/mollanegash">Code</a><br>
+Email: mdraya3@gmail.com
 </p>
 </section>
 
@@ -349,7 +336,7 @@ LinkedIn • GitHub • Email: mdraya3@gmail.com
 </div>
 
 <footer>
-© 2026 Molla D Negash — Staff Backend Systems Engineer
+© 2026 Molla Negash — Senior Java Software Engineer
 </footer>
 
 </body>
