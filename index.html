@@ -7,59 +7,70 @@
 
 <style>
 :root{
-  --bg:#0b0f14;
-  --card:#111826;
-  --text:#e6edf3;
-  --muted:#9aa4b2;
-  --accent:#00d4ff;
+  --bg:#070a0f;
+  --panel:#0f1623;
+  --card:#111c2e;
+  --text:#e8eef6;
+  --muted:#9aa6b2;
+  --accent:#4dd4ff;
+  --accent2:#7c5cff;
+  --border:#1d2a3a;
 }
 
 html{scroll-behavior:smooth;}
 
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial;
   background:var(--bg);
   color:var(--text);
+  line-height:1.6;
 }
 
+/* NAV */
 nav{
   position:sticky;
   top:0;
-  background:rgba(11,15,20,0.85);
-  backdrop-filter:blur(10px);
+  z-index:1000;
+  background:rgba(7,10,15,0.75);
+  backdrop-filter:blur(14px);
   display:flex;
   justify-content:center;
-  gap:30px;
+  gap:28px;
   padding:14px;
-  border-bottom:1px solid #1f2a37;
-  z-index:1000;
+  border-bottom:1px solid var(--border);
 }
 
 nav a{
   color:var(--muted);
   text-decoration:none;
-  font-size:12px;
+  font-size:11px;
+  letter-spacing:1.5px;
   text-transform:uppercase;
-  letter-spacing:1px;
 }
 
 nav a:hover{color:var(--accent);}
 
+/* LAYOUT */
 .container{
-  max-width:1200px;
+  max-width:1180px;
   margin:auto;
-  padding:60px 20px;
-  display:flex;
+  padding:70px 20px;
+  display:grid;
+  grid-template-columns:320px 1fr;
   gap:50px;
 }
 
-/* LEFT */
-.left{flex:0 0 320px; position:sticky; top:100px;}
+/* LEFT PANEL */
+.left{
+  position:sticky;
+  top:90px;
+  height:fit-content;
+}
 
 .profile{
-  background:var(--card);
-  border:1px solid #1f2a37;
+  background:var(--panel);
+  border:1px solid var(--border);
   border-radius:16px;
   padding:18px;
 }
@@ -69,115 +80,158 @@ nav a:hover{color:var(--accent);}
   height:320px;
   object-fit:cover;
   border-radius:12px;
+  border:1px solid var(--border);
 }
 
-.name{font-size:22px;margin-top:12px;font-weight:700;}
-.role{color:var(--accent);font-size:12px;margin-top:4px;}
-.bio{color:var(--muted);font-size:13px;margin-top:12px;line-height:1.6;}
+.name{
+  font-size:20px;
+  margin-top:12px;
+  font-weight:700;
+}
+
+.role{
+  color:var(--accent);
+  font-size:11px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  margin-top:6px;
+}
+
+.bio{
+  color:var(--muted);
+  font-size:13px;
+  margin-top:12px;
+}
 
 /* RIGHT */
-.right{flex:1;}
+.right{}
 
-h1{font-size:46px;margin:0;}
+h1{
+  font-size:44px;
+  margin:0;
+  letter-spacing:-0.5px;
+}
 
 .subtitle{
   color:var(--muted);
-  margin-top:12px;
-  line-height:1.8;
+  margin-top:10px;
   font-size:15px;
 }
 
 /* METRICS */
 .metrics{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  grid-template-columns:repeat(3,1fr);
   gap:12px;
   margin:30px 0;
 }
 
 .metric{
   background:var(--card);
-  border:1px solid #1f2a37;
+  border:1px solid var(--border);
   padding:14px;
   border-radius:12px;
 }
 
-.metric strong{font-size:20px;color:var(--accent);}
+.metric strong{
+  font-size:18px;
+  color:var(--accent);
+}
 
-/* SECTIONS */
+/* SECTION TITLE */
 section{margin-top:70px;}
 
 h2{
-  font-size:12px;
-  letter-spacing:2px;
+  font-size:11px;
+  letter-spacing:2.2px;
   color:var(--muted);
   border-left:3px solid var(--accent);
   padding-left:10px;
+  text-transform:uppercase;
 }
 
-/* PROJECTS */
+/* SYSTEMS */
 .project{
   background:var(--card);
-  border:1px solid #1f2a37;
-  padding:20px;
+  border:1px solid var(--border);
+  padding:18px;
   border-radius:14px;
-  margin-top:15px;
-  transition:0.3s;
+  margin-top:14px;
+  transition:0.25s ease;
 }
 
 .project:hover{
-  transform:translateY(-4px);
+  transform:translateY(-3px);
   border-color:var(--accent);
 }
 
-.project h3{margin:0;}
+.project h3{
+  margin:0;
+  font-size:16px;
+}
 
 .project p{
   color:var(--muted);
-  font-size:14px;
-  line-height:1.6;
+  font-size:13px;
+  margin-top:6px;
 }
 
 .project a{
+  display:inline-block;
+  margin-top:8px;
+  font-size:12px;
   color:var(--accent);
   text-decoration:none;
-  font-size:13px;
 }
 
 /* EXPERIENCE */
 .exp{
   background:var(--card);
-  border:1px solid #1f2a37;
+  border:1px solid var(--border);
   border-radius:14px;
-  padding:20px;
-  margin-top:20px;
+  padding:18px;
+  margin-top:16px;
 }
 
 .exp-top{
   display:flex;
   justify-content:space-between;
   font-weight:600;
+  font-size:14px;
 }
 
-.company{color:var(--accent);margin:6px 0 10px;}
+.company{
+  color:var(--accent);
+  font-size:13px;
+  margin-top:6px;
+}
 
 ul{
   color:var(--muted);
-  font-size:14px;
-  line-height:1.7;
+  font-size:13px;
+  margin-top:10px;
+  line-height:1.6;
 }
 
 /* CONTACT */
-.contact{text-align:center;margin-top:80px;}
+.contact{
+  text-align:center;
+  margin-top:80px;
+}
 
-.contact a{color:var(--accent);text-decoration:none;}
+.contact a{
+  color:var(--accent);
+  text-decoration:none;
+}
 
+/* FOOTER */
 footer{
   text-align:center;
   padding:40px;
   color:#6b7280;
-  font-size:12px;
-  border-top:1px solid #1f2a37;
+  font-size:11px;
+  border-top:1px solid var(--border);
+  margin-top:60px;
 }
 </style>
 </head>
@@ -198,8 +252,10 @@ footer{
 <div class="left">
 <div class="profile">
 <img src="images/photo_2025-05-11_15-00-05.jpg">
+
 <div class="name">Molla D Negash</div>
 <div class="role">Staff Backend Systems Engineer</div>
+
 <div class="bio">
 Distributed Systems • Microservices • Java/Spring Boot • AWS
 </div>
@@ -212,24 +268,24 @@ Distributed Systems • Microservices • Java/Spring Boot • AWS
 <h1>Staff Backend Systems Engineer</h1>
 
 <div class="subtitle">
-Staff-level backend engineer focused on distributed systems architecture, large-scale platform engineering, and building resilient cloud-native systems on AWS using Java/Spring Boot.
+Staff-level engineer focused on distributed systems architecture, scalable backend platforms, and production-grade cloud-native systems on AWS.
 </div>
 
 <div class="subtitle">
-I design systems that remain reliable, observable, and performant under real production failures, high traffic, and evolving business constraints.
+Designing systems that remain reliable under failure, scale, and real-world production constraints.
 </div>
 
 <div class="metrics">
 <div class="metric"><strong>40%</strong><br>Deployment Speed</div>
-<div class="metric"><strong>35%</strong><br>System Reliability</div>
-<div class="metric"><strong>10M+</strong><br>Transactions Processed</div>
+<div class="metric"><strong>35%</strong><br>Reliability Gain</div>
+<div class="metric"><strong>10M+</strong><br>Transactions</div>
 </div>
 
 <!-- ABOUT -->
 <section id="about">
 <h2>ENGINEERING FOCUS</h2>
 <p class="subtitle">
-Distributed systems architecture, microservices design, cloud-native platforms (AWS), high-throughput Java systems, event-driven architectures, and production-scale backend engineering.
+Distributed systems, microservices architecture, event-driven systems, cloud-native AWS platforms, and high-throughput Java backend engineering.
 </p>
 </section>
 
@@ -239,34 +295,26 @@ Distributed systems architecture, microservices design, cloud-native platforms (
 
 <div class="project">
 <h3>Federal Regulatory Insights Engine</h3>
-<p>
-Distributed NLP processing system designed for large-scale regulatory data ingestion using parallel pipelines, ranking models, and batch processing architecture for scalable analysis workloads.
-</p>
-<a href="https://github.com/mollanegash/federal-regulations-analyzer" target="_blank">View Repository →</a>
+<p>Distributed NLP system with parallel ingestion pipelines for large-scale regulatory data processing.</p>
+<a href="https://github.com/mollanegash/federal-regulations-analyzer">View Repository →</a>
 </div>
 
 <div class="project">
 <h3>Money Transfer Platform</h3>
-<p>
-Event-driven financial transaction system with asynchronous processing, retry mechanisms, and external API orchestration ensuring reliability and consistency in distributed workflows.
-</p>
-<a href="https://github.com/mollanegash/money-transfer-service" target="_blank">View Repository →</a>
+<p>Event-driven financial system with retry logic, async workflows, and external API orchestration.</p>
+<a href="https://github.com/mollanegash/money-transfer-service">View Repository →</a>
 </div>
 
 <div class="project">
 <h3>Order Tracking Microservices</h3>
-<p>
-Scalable event-driven microservices system with Spring Boot backend and React frontend, designed for modular service boundaries and independent deployment lifecycle.
-</p>
-<a href="https://github.com/mollanegash/ordertrackingsystem" target="_blank">View Repository →</a>
+<p>Event-driven microservices system with independent deployments and React frontend integration.</p>
+<a href="https://github.com/mollanegash/ordertrackingsystem">View Repository →</a>
 </div>
 
 <div class="project">
 <h3>Employee Management API</h3>
-<p>
-Enterprise-grade HR system built with layered architecture, clean domain separation, and RESTful APIs designed for maintainability and scalability.
-</p>
-<a href="https://github.com/mollanegash/Employee-Management-System-EMS-" target="_blank">View Repository →</a>
+<p>Layered enterprise HR system with clean architecture and scalable REST API design.</p>
+<a href="https://github.com/mollanegash/Employee-Management-System-EMS-">View Repository →</a>
 </div>
 
 </section>
@@ -279,9 +327,8 @@ Enterprise-grade HR system built with layered architecture, clean domain separat
 <div class="exp-top"><span>Technical Lead</span><span>2023 - Present</span></div>
 <div class="company">Betsi Eco Hub LLC</div>
 <ul>
-<li>Owned architecture and delivery of distributed backend systems on AWS and Kubernetes</li>
-<li>Led scaling initiatives improving system performance by 40%</li>
-<li>Directed full-stack engineering efforts across backend, infrastructure, and deployment pipelines</li>
+<li>Owned distributed backend architecture on AWS + Kubernetes</li>
+<li>Improved system performance by 40% through scaling + optimization</li>
 </ul>
 </div>
 
@@ -289,8 +336,8 @@ Enterprise-grade HR system built with layered architecture, clean domain separat
 <div class="exp-top"><span>Senior Java Engineer</span><span>2023</span></div>
 <div class="company">LTIMindtree</div>
 <ul>
-<li>Led migration of monolithic financial systems into microservices architecture</li>
-<li>Improved system reliability and fault tolerance by 35%</li>
+<li>Led microservices migration of enterprise financial systems</li>
+<li>Improved reliability by 35%</li>
 </ul>
 </div>
 
@@ -298,8 +345,8 @@ Enterprise-grade HR system built with layered architecture, clean domain separat
 <div class="exp-top"><span>Enterprise Software Engineer</span><span>2010 - 2022</span></div>
 <div class="company">Government & Enterprise Systems</div>
 <ul>
-<li>Built national-scale backend systems for government and enterprise domains</li>
-<li>Designed scalable Java backend architectures and database systems</li>
+<li>Built national-scale Java backend systems</li>
+<li>Designed scalable distributed backend architectures</li>
 </ul>
 </div>
 
@@ -312,13 +359,17 @@ Enterprise-grade HR system built with layered architecture, clean domain separat
 <div class="exp">
 <div class="exp-top"><span>M.S. Computer Science</span><span>2016 - 2021</span></div>
 <div class="company">Boston University</div>
-<div class="subtitle">Focus: Distributed Systems, Machine Learning, Backend Engineering</div>
+<ul>
+<li>Distributed Systems, Machine Learning, Backend Engineering</li>
+</ul>
 </div>
 
 <div class="exp">
 <div class="exp-top"><span>B.Sc. Natural Resources Economics & Management</span><span>2006 - 2009</span></div>
 <div class="company">Mekelle University</div>
-<div class="subtitle">Quantitative Systems Modeling, Economics, Statistical Analysis, Applied Computing</div>
+<ul>
+<li>Quantitative Systems Modeling, Economics, Statistical Analysis</li>
+</ul>
 </div>
 
 </section>
@@ -327,8 +378,8 @@ Enterprise-grade HR system built with layered architecture, clean domain separat
 <section id="contact" class="contact">
 <h2>CONTACT</h2>
 <p>
-LinkedIn: <a href="https://www.linkedin.com/in/mollanegash/">Profile</a><br>
-GitHub: <a href="https://github.com/mollanegash">Code</a><br>
+LinkedIn: <a href="#">Profile</a><br>
+GitHub: <a href="#">Code</a><br>
 Email: mdraya3@gmail.com
 </p>
 </section>
