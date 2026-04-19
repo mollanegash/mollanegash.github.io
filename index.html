@@ -114,29 +114,6 @@ h1{
   font-size:15px;
 }
 
-/* INTERVIEW SIGNAL STRIP */
-.signals{
-  margin-top:25px;
-  padding:16px;
-  border:1px solid var(--border);
-  background:var(--card);
-  border-radius:12px;
-}
-
-.signals h3{
-  margin:0;
-  font-size:12px;
-  letter-spacing:1.8px;
-  text-transform:uppercase;
-  color:var(--muted);
-}
-
-.signals p{
-  margin-top:10px;
-  font-size:13px;
-  color:var(--muted);
-}
-
 /* METRICS */
 .metrics{
   display:grid;
@@ -157,7 +134,7 @@ h1{
   font-size:18px;
 }
 
-/* SECTION HEADERS */
+/* SECTIONS */
 section{margin-top:75px;}
 
 h2{
@@ -169,7 +146,7 @@ h2{
   text-transform:uppercase;
 }
 
-/* SYSTEM DESIGN (INTERVIEW VERSION) */
+/* SYSTEMS */
 .project{
   background:var(--card);
   border:1px solid var(--border);
@@ -189,7 +166,13 @@ h2{
   margin-top:8px;
 }
 
-/* INTERVIEW TRIGGER BOX */
+.project a{
+  color:var(--accent);
+  text-decoration:none;
+  font-size:13px;
+}
+
+/* STAFF INSIGHT TAG */
 .trigger{
   margin-top:10px;
   padding:10px;
@@ -268,7 +251,7 @@ footer{
 <div class="name">Molla D Negash</div>
 <div class="role">Staff Backend Systems Engineer</div>
 <div class="bio">
-Distributed Systems • Java • Spring Boot • AWS
+Distributed Systems • Microservices • Java/Spring Boot • AWS
 </div>
 </div>
 </div>
@@ -279,20 +262,12 @@ Distributed Systems • Java • Spring Boot • AWS
 <h1>Staff Backend Systems Engineer</h1>
 
 <div class="subtitle">
-I design distributed systems that remain reliable under failure, scale, and real-world production constraints.
-</div>
-
-<!-- INTERVIEW SIGNAL -->
-<div class="signals">
-<h3>Interview Signal</h3>
-<p>
-Expect deep system design discussion on scalability, consistency tradeoffs, async processing, fault tolerance, and AWS-based distributed architecture decisions.
-</p>
+I design and own distributed systems that operate under production-scale constraints, failure conditions, and high traffic environments.
 </div>
 
 <div class="metrics">
 <div class="metric"><strong>40%</strong><br>Deployment Speed</div>
-<div class="metric"><strong>35%</strong><br>Reliability Gain</div>
+<div class="metric"><strong>35%</strong><br>System Reliability</div>
 <div class="metric"><strong>10M+</strong><br>Transactions</div>
 </div>
 
@@ -300,36 +275,40 @@ Expect deep system design discussion on scalability, consistency tradeoffs, asyn
 <section id="about">
 <h2>ENGINEERING FOCUS</h2>
 <p class="subtitle">
-Distributed systems, microservices architecture, event-driven systems, cloud-native AWS platforms, and high-throughput backend engineering in Java/Spring Boot.
+Distributed systems architecture, microservices design, event-driven systems, cloud-native AWS platforms, and high-throughput backend engineering using Java/Spring Boot.
 </p>
 </section>
 
 <!-- SYSTEMS -->
 <section id="systems">
-<h2>SYSTEM DESIGN CASE STUDIES (INTERVIEW READY)</h2>
+<h2>SYSTEM DESIGN CASE STUDIES</h2>
 
 <div class="project">
 <h3>Federal Regulatory Insights Engine</h3>
-<p>Distributed NLP system for large-scale regulatory ingestion using parallel pipelines and ranking models.</p>
-<div class="trigger">Interview focus: partitioning strategy, throughput scaling, batch vs stream tradeoffs</div>
+<p>Large-scale NLP system processing regulatory data using distributed ingestion and parallel computation pipelines.</p>
+<div class="trigger">Staff Focus: partitioning strategy, throughput scaling, compute cost tradeoffs</div>
+<a href="https://github.com/mollanegash/federal-regulations-analyzer">View Repository →</a>
 </div>
 
 <div class="project">
 <h3>Money Transfer Platform</h3>
-<p>Event-driven financial system with retry mechanisms, async processing, and external API orchestration.</p>
-<div class="trigger">Interview focus: consistency model, failure recovery, idempotency design</div>
+<p>Event-driven financial system with asynchronous processing, retry logic, and external API orchestration.</p>
+<div class="trigger">Staff Focus: idempotency, failure recovery, distributed consistency model</div>
+<a href="https://github.com/mollanegash/money-transfer-service">View Repository →</a>
 </div>
 
 <div class="project">
 <h3>Order Tracking Microservices</h3>
-<p>Microservices-based event-driven system with independent deployments and frontend integration.</p>
-<div class="trigger">Interview focus: service boundaries, communication patterns, scaling strategy</div>
+<p>Microservices-based event-driven architecture with independent deployability and decoupled communication.</p>
+<div class="trigger">Staff Focus: service boundaries, scaling strategy, event-driven design</div>
+<a href="https://github.com/mollanegash/ordertrackingsystem">View Repository →</a>
 </div>
 
 <div class="project">
 <h3>Employee Management API</h3>
-<p>Layered enterprise HR system with clean architecture and REST APIs.</p>
-<div class="trigger">Interview focus: domain modeling, clean architecture, database design</div>
+<p>Enterprise HR system with layered architecture and clean domain-driven design.</p>
+<div class="trigger">Staff Focus: domain modeling, system extensibility, data architecture</div>
+<a href="https://github.com/mollanegash/Employee-Management-System-EMS-">View Repository →</a>
 </div>
 
 </section>
@@ -342,9 +321,9 @@ Distributed systems, microservices architecture, event-driven systems, cloud-nat
 <div class="exp-top"><span>Technical Lead</span><span>2023 - Present</span></div>
 <div class="company">Betsi Eco Hub LLC</div>
 <ul>
-<li>Owned distributed backend systems on AWS + Kubernetes</li>
-<li>Improved system performance by 40% through scaling + optimization</li>
-<li>Led architecture decisions across backend + infrastructure layers</li>
+<li>Owned distributed backend architecture on AWS + Kubernetes</li>
+<li>Led system scaling and reliability improvements (40%)</li>
+<li>Designed production-grade microservice infrastructure</li>
 </ul>
 </div>
 
@@ -352,8 +331,8 @@ Distributed systems, microservices architecture, event-driven systems, cloud-nat
 <div class="exp-top"><span>Senior Java Engineer</span><span>2023</span></div>
 <div class="company">LTIMindtree</div>
 <ul>
-<li>Led migration of monolith financial systems to microservices</li>
-<li>Improved reliability by 35% via distributed design improvements</li>
+<li>Led migration from monolith to microservices architecture</li>
+<li>Improved system reliability by 35%</li>
 </ul>
 </div>
 
@@ -362,7 +341,7 @@ Distributed systems, microservices architecture, event-driven systems, cloud-nat
 <div class="company">Government & Enterprise Systems</div>
 <ul>
 <li>Built national-scale backend systems</li>
-<li>Designed distributed Java architectures for enterprise systems</li>
+<li>Designed distributed Java enterprise architectures</li>
 </ul>
 </div>
 
@@ -373,19 +352,13 @@ Distributed systems, microservices architecture, event-driven systems, cloud-nat
 <h2>EDUCATION</h2>
 
 <div class="exp">
-<div class="exp-top"><span>M.S. Computer Science</span><span>2016 - 2021</span></div>
-<div class="company">Boston University</div>
-<ul>
-<li>Distributed Systems, Machine Learning, Backend Engineering</li>
-</ul>
+<div class="exp-top"><span>M.S. Computer Science</span><span>Boston University</span></div>
+<div class="company">Distributed Systems • Machine Learning • Backend Engineering</div>
 </div>
 
 <div class="exp">
-<div class="exp-top"><span>B.Sc. Natural Resources Economics & Management</span><span>2006 - 2009</span></div>
-<div class="company">Mekelle University</div>
-<ul>
-<li>Quantitative Systems Modeling, Economics, Statistical Analysis</li>
-</ul>
+<div class="exp-top"><span>B.Sc. Natural Resources Economics & Management</span><span>Mekelle University</span></div>
+<div class="company">Quantitative Systems Modeling • Economics • Analytics Foundations</div>
 </div>
 
 </section>
