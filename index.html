@@ -113,7 +113,10 @@ h1{font-size:44px;margin:0;}
 }
 .metric strong{color:var(--accent);font-size:18px;}
 
-section{margin-top:75px;}
+section{
+  margin-top:75px;
+  scroll-margin-top:80px;
+}
 
 h2{
   font-size:11px;
@@ -199,7 +202,6 @@ footer{
 
 <div class="container">
 
-<!-- LEFT -->
 <div class="left">
 <div class="profile">
 <img src="images/photo_2025-05-11_15-00-05.jpg">
@@ -209,7 +211,6 @@ footer{
 </div>
 </div>
 
-<!-- RIGHT -->
 <div class="right">
 
 <h1>FAANG System Design Simulator</h1>
@@ -228,7 +229,6 @@ Distributed systems across enterprise, government, and financial-scale platforms
 <div class="metric"><strong>10M+</strong><br>Transactions</div>
 </div>
 
-<!-- ABOUT -->
 <section id="about">
 <h2>About</h2>
 <p class="subtitle">
@@ -236,10 +236,37 @@ Backend systems engineer focused on distributed systems and cloud-native archite
 </p>
 </section>
 
-<!-- SYSTEMS -->
 <section id="systems">
 <h2>System Design Case Studies (INTERACTIVE FAANG MODE)</h2>
 
+<!-- 🔥 NEW: EQUifax SYSTEM -->
+<div class="project">
+<h3>Equifax Data Intelligence & Mortgage Platform (PRODUCTION SYSTEM)</h3>
+<p>Distributed ETL system for U.S. court data + financial account restructuring platform.</p>
+<div class="simulator">ETL • Distributed ingestion • Failure handling • Financial modeling</div>
+<a href="#" onclick="toggleCase('equifax')">Deep Dive →</a>
+
+<div id="equifax" style="display:none; margin-top:12px;">
+<ul>
+<li><b>Data Platform:</b> Scraped + processed 7–10 years of county court data</li>
+<li>ETL pipelines for normalization and ingestion</li>
+<li>Handled failures from unreliable external court systems</li>
+<li>AWS monitoring + alerting (CloudWatch, logs)</li>
+
+<br>
+
+<li><b>Mortgage System:</b> Parent/Child account architecture</li>
+<li>Avoided merging → preserved financial data integrity</li>
+<li>Enabled auditability and traceability</li>
+
+<br>
+
+<li><b>Stack:</b> Java, Spring Boot, Kubernetes, Docker, Redis, AWS, GCP</li>
+</ul>
+</div>
+</div>
+
+<!-- KEEP YOUR OTHER PROJECTS -->
 <div class="project">
 <h3>Federal Regulatory Insights Engine</h3>
 <p>NLP-driven distributed pipeline processing regulatory datasets at scale.</p>
@@ -270,7 +297,6 @@ Backend systems engineer focused on distributed systems and cloud-native archite
 
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience">
 <h2>Experience (Click to Expand)</h2>
 
@@ -289,6 +315,7 @@ Backend systems engineer focused on distributed systems and cloud-native archite
 </div>
 </div>
 
+<!-- 🔥 FIXED LTIMINDTREE -->
 <div class="exp" onclick="toggle(this)">
 <div class="exp-top">
 <span>LTIMindtree (Equifax)</span>
@@ -297,12 +324,16 @@ Backend systems engineer focused on distributed systems and cloud-native archite
 <div class="company">Senior Engineer</div>
 <div class="exp-body">
 <ul>
-<li>Financial microservices migration</li>
-<li>35% reliability improvement</li>
+<li>Built ETL pipelines for U.S. county court data (7–10 years)</li>
+<li>Designed distributed ingestion + transformation systems</li>
+<li>Implemented AWS monitoring + failure alerting</li>
+<li>Designed Parent/Child account model for mortgage systems</li>
+<li>Worked across AWS + GCP (multi-cloud)</li>
 </ul>
 </div>
 </div>
 
+<!-- OTHERS UNTOUCHED -->
 <div class="exp" onclick="toggle(this)">
 <div class="exp-top">
 <span>TCS (CNA Insurance)</span>
@@ -358,14 +389,12 @@ Backend systems engineer focused on distributed systems and cloud-native archite
 
 </section>
 
-<!-- EDUCATION -->
 <section id="education">
 <h2>Education</h2>
 <p>M.S. Computer Science — Boston University</p>
 <p>B.Sc. Natural Resources Economics & Management — Mekelle University</p>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact">
 <h2>Contact</h2>
 <p>
@@ -384,6 +413,11 @@ Email: mdraya3@gmail.com
 function toggle(el){
   const body = el.querySelector(".exp-body");
   body.style.display = (body.style.display === "block") ? "none" : "block";
+}
+
+function toggleCase(id){
+  const el = document.getElementById(id);
+  el.style.display = (el.style.display === "block") ? "none" : "block";
 }
 </script>
 
