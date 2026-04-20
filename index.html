@@ -237,6 +237,28 @@ Backend systems engineer focused on distributed systems and cloud-native archite
 </section>
 
 <section id="systems">
+  <div class="project" style="border: 1px solid var(--accent);">
+  <div style="color: var(--accent); font-size: 10px; font-weight: 800; text-transform: uppercase; margin-bottom: 4px;">Flagship Project</div>
+  <h3>EduExcellence: High-Performance School Management</h3>
+  <p>Distributed microservice architecture optimized for low-latency student record retrieval.</p>
+  
+  <div class="simulator">
+    <b>Pattern:</b> Cache-Aside • <b>Strategy:</b> Custom Jackson JSON Serialization • <b>Concurrency:</b> Optimistic Locking
+  </div>
+
+  <a href="#" onclick="toggleCase('schoolsystem')">Technical Deep Dive →</a>
+  <a href="https://github.com/mollanegash/EduExcellence-School-Management-System" target="_blank" style="margin-left: 15px;">GitHub Repo →</a>
+
+  <div id="schoolsystem" style="display:none; margin-top:12px; border-top: 1px solid var(--border); padding-top: 12px;">
+    <ul>
+      <li><b>Redis Caching:</b> Implemented a distributed cache layer reducing database I/O by 40%.</li>
+      <li><b>Serialization:</b> Overrode default JDK binary serialization with <b>Jackson JSON</b> for language-agnostic data persistence and easier debugging via Redis-CLI.</li>
+      <li><b>Data Integrity:</b> Managed high-concurrency state using <b>JPA Versioning (Optimistic Locking)</b> to prevent lost updates in a multi-user environment.</li>
+      <li><b>Dual-Layer Storage:</b> Seamless integration between H2 (Dev) and PostgreSQL (Prod) using Spring Data JPA.</li>
+      <li><b>Performance:</b> Achieved sub-10ms retrieval for cached entities vs. 150ms+ for direct DB queries.</li>
+    </ul>
+  </div>
+</div>
 
 
 <!-- 🔥 NEW: EQUifax SYSTEM -->
