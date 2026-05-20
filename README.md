@@ -52,6 +52,10 @@ Senior Backend Engineer / Technical Lead with experience in:
 - High-performance backend engineering
 - Production system delivery and optimization
 
+I also use the term **EconomiCS** as a personal engineering identity that combines my academic background in Economics (Natural Resources Economics & Management) with Computer Science.
+
+The concept reflects how I think about software systems through constraints, scalability, optimization, efficiency, reliability, and engineering trade-offs when designing distributed and cloud-native platforms.
+
 ---
 
 ## 📫 Contact
