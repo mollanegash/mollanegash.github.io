@@ -1,10 +1,12 @@
+Here is your complete, fully corrected, and branded HTML file. I have fixed the CSS layout issues (preventing the "left-edge" alignment), applied the requested "EconomiCS" branding, used the correct title casing, and ensured all your experience and skill sections remain intact.
 
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Molla D. Negash | Senior Backend Engineer & Distributed Systems</title>
+<title>EconomiCS | Molla D. Negash | Distributed Systems Architect</title>
 
 <style>
         :root {
@@ -48,14 +50,17 @@
             display: grid; grid-template-columns: 340px 1fr; gap: 50px;
         }
 
-        /* HERO BANNER SECTION */
-        .hero {
-            width: 100%;
-            height: 300px;
-            background: url("banner.png") center/cover no-repeat;
-            border-radius: 16px;
-            margin-bottom: 30px;
-            border: 1px solid var(--border);
+        /* BRANDING */
+        .brand-identity {
+            font-size: 10px;
+            text-transform: none;
+            color: var(--accent);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+            text-align: center;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
 
         /* LEFT PANEL */
@@ -107,26 +112,6 @@
             .metrics { grid-template-columns: 1fr; }
             h1 { font-size: 34px; }
         }
-        /* BRAND IDENTITY - NEW */
-    .brand-identity {
-        margin-bottom: 12px;
-    }
-
-    .brand-identity h1 {
-        font-size: 11px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        color: var(--accent);
-        border-bottom: 1px solid var(--border);
-        padding-bottom: 8px;
-        margin-bottom: 10px;
-        display: inline-block;
-    }
-
-    /* Adjust existing profile styling to accommodate the brand label */
-    .profile-info {
-        padding-top: 10px;
-    }
     </style>
 </head>
 
@@ -142,472 +127,221 @@
 
 <div class="container">
 
-<!-- LEFT PANEL -->
-
 <div class="left">
-
-<div class="profile">
-
-<img src="images/photo_2025-05-11_15-00-05.jpg" alt="Molla D. Negash">
-
-<div class="header-container">
-    <div class="brand-identity">
-        <h1>EconomiCS | Engineering High-Scale Backend Systems</h1>
-    </div>
-
-    <div class="profile-info">
+    <div class="profile">
+        <div class="brand-identity">
+            EconomiCS | Engineering High-Scale Backend Systems
+        </div>
+        <img src="images/photo_2025-05-11_15-00-05.jpg" alt="Molla D. Negash">
         <div class="name">Molla D. Negash</div>
         <div class="role">Senior Backend & Distributed Systems Engineer</div>
         <div class="bio">Distributed Systems • Event-Driven Architecture • Cloud Platforms</div>
     </div>
 </div>
 
-<!-- RIGHT PANEL -->
-
 <div class="right">
-
-<h1>Senior Backend & Distributed Systems Engineer</h1>
-
-<div class="subtitle">
-Java • Spring Boot • Kafka • AWS • GCP • Microservices
-</div>
-
-<div class="subtitle">
-Designing scalable backend systems across fintech, healthcare, insurance, logistics, and government platforms.
-</div>
-
-<div class="signal">
-<b>Core Focus:</b>
-Event-Driven Architecture • Distributed Systems • Cloud-Native Platforms • High-Throughput Backend Engineering
-</div>
-
-<div class="metrics">
-
-<div class="metric">
-<strong>40%</strong><br>
-Performance Optimization
-</div>
-
-<div class="metric">
-<strong>35%</strong><br>
-Reliability Improvement
-</div>
-
-<div class="metric">
-<strong>10M+</strong><br>
-Processed Transactions
-</div>
-
-</div>
-
-<div class="signal">
-<b>Domain Coverage:</b>
-Fintech • Healthcare Systems • Insurance • Logistics • Government Platforms
-</div>
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<h2>About</h2>
-
-<p class="subtitle">
-Senior Backend Engineer specializing in high-performance backend systems, distributed architectures, ETL pipelines, and cloud-native platforms for enterprise-scale workloads.
-
-Experienced designing scalable systems across fintech, healthcare (HIS), insurance, logistics, and government domains with a strong focus on reliability, observability, and production-grade architecture.
-</p>
-
-</section>
-
-<!-- SYSTEMS -->
-
-<section id="systems">
-
-<h2>Fintech & RegTech Systems</h2>
-
-<!-- EQUifax -->
-
-<div class="project">
-
-<h3>Equifax Data Intelligence & Mortgage Platform</h3>
-
-<p>
-Distributed ETL and financial data processing platform supporting large-scale county court ingestion and mortgage account restructuring systems.
-</p>
-
-<div class="simulator">
-ETL Pipelines • Distributed Processing • Fault Tolerance • Financial Data Integrity
-</div>
-
-<div class="links">
-<a href="#" onclick="toggleCase('equifax')">Technical Deep Dive →</a>
-</div>
-
-<div id="equifax" style="display:none; margin-top:14px;">
-
-<ul>
-<li>Processed 7–10 years of U.S. county court data</li>
-<li>Designed distributed ingestion and transformation workflows</li>
-<li>Implemented monitoring and alerting using AWS CloudWatch</li>
-<li>Built Parent/Child mortgage account architecture for auditability</li>
-<li>Worked across AWS and GCP hybrid cloud environments</li>
-</ul>
-
-</div>
-
-</div>
-
-<!-- FED REG -->
-
-<div class="project">
-
-<h3>Federal Regulatory Insights Engine</h3>
-
-<p>
-High-performance regulatory analytics platform processing large-scale U.S. eCFR datasets using parallel computation and NLP-based extraction techniques.
-</p>
-
-<div class="simulator">
-Parallel Processing • Data Pipelines • Regulatory Analytics • Scalable REST APIs
-</div>
-
-<div class="links">
-
-<a href="https://federal-regulations-analyzer-fahp.onrender.com/" target="_blank">
-Live System →
-</a>
-
-<a href="https://github.com/mollanegash/federal-regulations-analyzer" target="_blank" style="color:var(--good);">
-GitHub Repo →
-</a>
-
-</div>
-
-</div>
-
-<!-- MONEY TRANSFER -->
-
-<div class="project">
-
-<h3>Money Transfer Platform</h3>
-
-<p>
-Event-driven financial transaction platform focused on retries, consistency, idempotency, and fault recovery.
-</p>
-
-<div class="simulator">
-Distributed Transactions • Event-Driven Systems • Failure Recovery
-</div>
-
-<div class="links">
-<a href="https://github.com/mollanegash/money-transfer-service" target="_blank">
-GitHub →
-</a>
-</div>
-
-</div>
-
-<!-- ENTERPRISE -->
-
-<h2>Enterprise Distributed Platforms</h2>
-
-<!-- EDU -->
-
-<div class="project" style="border:1px solid var(--accent);">
-
-<div style="color:var(--accent); font-size:10px; font-weight:800; text-transform:uppercase; margin-bottom:6px;">
-Flagship Project
-</div>
-
-<h3>EduExcellence: High-Performance School Management</h3>
-
-<p>
-Cloud-native backend platform optimized for low-latency student management, transactional consistency, and scalable service design.
-</p>
-
-<div class="simulator">
-Cache-Aside • Redis • Jackson Serialization • Optimistic Locking
-</div>
-
-<div class="links">
-
-<a href="#" onclick="toggleCase('schoolsystem')">
-Technical Deep Dive →
-</a>
-
-<a href="https://github.com/mollanegash/EduExcellence-School-Management-System" target="_blank">
-GitHub Repo →
-</a>
-
-</div>
-
-<div id="schoolsystem" style="display:none; margin-top:14px; border-top:1px solid var(--border); padding-top:14px;">
-
-<ul>
-<li>Implemented Redis Cache-Aside architecture reducing database load by ~40%</li>
-<li>Used Jackson JSON serialization for language-agnostic cache persistence</li>
-<li>Implemented JPA optimistic locking for concurrency control</li>
-<li>Integrated PostgreSQL and H2 environments using Spring Data JPA</li>
-<li>Achieved sub-10ms retrieval for cached entities</li>
-</ul>
-
-</div>
-
-</div>
-
-<!-- EMPLOYEE -->
-
-<div class="project">
-
-<h3>Employee Management API</h3>
-
-<p>
-Enterprise HR backend platform focused on clean domain modeling, API design, and scalable service architecture.
-</p>
-
-<div class="simulator">
-REST APIs • Domain Modeling • Schema Design • API Versioning
-</div>
-
-<div class="links">
-<a href="https://github.com/mollanegash/Employee-Management-System-EMS-" target="_blank">
-GitHub →
-</a>
-</div>
-
-</div>
-
-<!-- LOGISTICS -->
-
-<h2>Logistics & Operational Systems</h2>
-
-<div class="project">
-
-<h3>Order Tracking Microservices</h3>
-
-<p>
-Event-driven logistics and order coordination system built with Spring Boot and React.
-</p>
-
-<div class="simulator">
-Microservices • API Gateway • Distributed Coordination
-</div>
-
-<div class="links">
-
-<a href="https://ordertrackingsystem.onrender.com" target="_blank">
-Live System →
-</a>
-
-<a href="https://github.com/mollanegash/ordertrackingsystem" target="_blank">
-GitHub →
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- EXPERIENCE -->
-
-<section id="experience">
-
-<h2>Experience (Click to Expand)</h2>
-
-<div class="exp" onclick="toggle(this)">
-
-<div class="exp-top">
-<span>Betsi Eco Hub LLC</span>
-<span>2023 - Present</span>
-</div>
-
-<div class="company">Senior Backend Engineer / Tech Lead</div>
-
-<div class="exp-body">
-<ul>
-<li>Architected cloud-native backend platforms using Java 21 and AWS</li>
-<li>Implemented Redis caching and PostgreSQL optimization strategies</li>
-<li>Built CI/CD pipelines using GitHub Actions</li>
-<li>Led distributed systems design and backend engineering initiatives</li>
-</ul>
-</div>
-
-</div>
-
-<div class="exp" onclick="toggle(this)">
-
-<div class="exp-top">
-<span>LTIMindtree | Equifax Data Systems</span>
-<span>2023</span>
-</div>
-
-<div class="company">Sr. Specialist – Software Engineering</div>
-
-<div class="exp-body">
-<ul>
-<li>Built large-scale ETL pipelines using Java and Apache Spark</li>
-<li>Processed millions of financial and court data records</li>
-<li>Implemented monitoring and fault recovery systems</li>
-<li>Managed AWS + GCP distributed infrastructure</li>
-</ul>
-</div>
-
-</div>
-
-<div class="exp" onclick="toggle(this)">
-
-<div class="exp-top">
-<span>TCS (CNA Insurance)</span>
-<span>2021 - 2022</span>
-</div>
-
-<div class="company">Backend Engineer / Java Consultant</div>
-
-<div class="exp-body">
-<ul>
-<li>Migrated monolith systems to Spring Boot microservices</li>
-<li>Designed REST APIs and backend workflow systems</li>
-<li>Improved reliability using caching and JVM optimization</li>
-</ul>
-</div>
-
-</div>
-
-<div class="exp" onclick="toggle(this)">
-
-<div class="exp-top">
-<span>Ethiopian Public Health Institute</span>
-<span>2013 - 2016</span>
-</div>
-
-<div class="company">Research Systems Engineer (Lead Architect)</div>
-
-<div class="exp-body">
-<ul>
-<li>Designed national-scale health information systems</li>
-<li>Built ETL pipelines and analytics platforms</li>
-<li>Developed distributed reporting and monitoring systems</li>
-</ul>
-</div>
-
-</div>
-
-<div class="exp" onclick="toggle(this)">
-
-<div class="exp-top">
-<span>Ministry of Science & Technology</span>
-<span>2011 - 2013</span>
-</div>
-
-<div class="company">Backend Systems Engineer</div>
-
-<div class="exp-body">
-<ul>
-<li>Developed government innovation and reporting systems</li>
-<li>Built structured data aggregation pipelines</li>
-<li>Led requirements engineering initiatives</li>
-</ul>
-</div>
-
-</div>
-
-  <div class="exp" onclick="toggle(this)">
-<div class="exp-top">
-<span>City Government of Addis Ababa</span>
-<span>2010 - 2011</span>
-</div>
-
-<div class="company">Software Engineer</div>
-
-<div class="exp-body">
-<ul>
-<li>Developed enterprise fleet management systems using JSF, EJB, and Hibernate</li>
-
-<li>Designed backend modules for vehicle tracking, operational workflows, and reporting</li>
-
-<li>Worked on enterprise Java architecture and database-driven government systems</li>
-
-<li>Contributed to scalable municipal software platforms supporting operational coordination</li>
-</ul>
+    <h1>Senior Backend & Distributed Systems Engineer</h1>
+    <div class="subtitle">Java • Spring Boot • Kafka • AWS • GCP • Microservices</div>
+    <div class="subtitle">Designing scalable backend systems across fintech, healthcare, insurance, logistics, and government platforms.</div>
+
+    <div class="signal">
+        <b>Core Focus:</b> Event-Driven Architecture • Distributed Systems • Cloud-Native Platforms • High-Throughput Backend Engineering
+    </div>
+
+    <div class="metrics">
+        <div class="metric"><strong>40%</strong><br>Performance Optimization</div>
+        <div class="metric"><strong>35%</strong><br>Reliability Improvement</div>
+        <div class="metric"><strong>10M+</strong><br>Processed Transactions</div>
+    </div>
+
+    <div class="signal">
+        <b>Domain Coverage:</b> Fintech • Healthcare Systems • Insurance • Logistics • Government Platforms
+    </div>
+
+    <section id="about">
+        <h2>About</h2>
+        <p class="subtitle">Senior Backend Engineer specializing in high-performance backend systems, distributed architectures, ETL pipelines, and cloud-native platforms for enterprise-scale workloads. Experienced designing scalable systems across fintech, healthcare (HIS), insurance, logistics, and government domains with a strong focus on reliability, observability, and production-grade architecture.</p>
+    </section>
+
+    <section id="systems">
+        <h2>Fintech & RegTech Systems</h2>
+        <div class="project">
+            <h3>Equifax Data Intelligence & Mortgage Platform</h3>
+            <p>Distributed ETL and financial data processing platform supporting large-scale county court ingestion and mortgage account restructuring systems.</p>
+            <div class="simulator">ETL Pipelines • Distributed Processing • Fault Tolerance • Financial Data Integrity</div>
+            <div class="links"><a href="#" onclick="toggleCase('equifax')">Technical Deep Dive →</a></div>
+            <div id="equifax" style="display:none; margin-top:14px;">
+                <ul>
+                    <li>Processed 7–10 years of U.S. county court data</li>
+                    <li>Designed distributed ingestion and transformation workflows</li>
+                    <li>Implemented monitoring and alerting using AWS CloudWatch</li>
+                    <li>Built Parent/Child mortgage account architecture for auditability</li>
+                    <li>Worked across AWS and GCP hybrid cloud environments</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>Federal Regulatory Insights Engine</h3>
+            <p>High-performance regulatory analytics platform processing large-scale U.S. eCFR datasets using parallel computation and NLP-based extraction techniques.</p>
+            <div class="simulator">Parallel Processing • Data Pipelines • Regulatory Analytics • Scalable REST APIs</div>
+            <div class="links">
+                <a href="https://federal-regulations-analyzer-fahp.onrender.com/" target="_blank">Live System →</a>
+                <a href="https://github.com/mollanegash/federal-regulations-analyzer" target="_blank" style="color:var(--good);">GitHub Repo →</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>Money Transfer Platform</h3>
+            <p>Event-driven financial transaction platform focused on retries, consistency, idempotency, and fault recovery.</p>
+            <div class="simulator">Distributed Transactions • Event-Driven Systems • Failure Recovery</div>
+            <div class="links"><a href="https://github.com/mollanegash/money-transfer-service" target="_blank">GitHub →</a></div>
+        </div>
+
+        <h2>Enterprise Distributed Platforms</h2>
+        <div class="project" style="border:1px solid var(--accent);">
+            <div style="color:var(--accent); font-size:10px; font-weight:800; text-transform:uppercase; margin-bottom:6px;">Flagship Project</div>
+            <h3>EduExcellence: High-Performance School Management</h3>
+            <p>Cloud-native backend platform optimized for low-latency student management, transactional consistency, and scalable service design.</p>
+            <div class="simulator">Cache-Aside • Redis • Jackson Serialization • Optimistic Locking</div>
+            <div class="links">
+                <a href="#" onclick="toggleCase('schoolsystem')">Technical Deep Dive →</a>
+                <a href="https://github.com/mollanegash/EduExcellence-School-Management-System" target="_blank">GitHub Repo →</a>
+            </div>
+            <div id="schoolsystem" style="display:none; margin-top:14px; border-top:1px solid var(--border); padding-top:14px;">
+                <ul>
+                    <li>Implemented Redis Cache-Aside architecture reducing database load by ~40%</li>
+                    <li>Used Jackson JSON serialization for language-agnostic cache persistence</li>
+                    <li>Implemented JPA optimistic locking for concurrency control</li>
+                    <li>Integrated PostgreSQL and H2 environments using Spring Data JPA</li>
+                    <li>Achieved sub-10ms retrieval for cached entities</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project">
+            <h3>Employee Management API</h3>
+            <p>Enterprise HR backend platform focused on clean domain modeling, API design, and scalable service architecture.</p>
+            <div class="simulator">REST APIs • Domain Modeling • Schema Design • API Versioning</div>
+            <div class="links"><a href="https://github.com/mollanegash/Employee-Management-System-EMS-" target="_blank">GitHub →</a></div>
+        </div>
+
+        <h2>Logistics & Operational Systems</h2>
+        <div class="project">
+            <h3>Order Tracking Microservices</h3>
+            <p>Event-driven logistics and order coordination system built with Spring Boot and React.</p>
+            <div class="simulator">Microservices • API Gateway • Distributed Coordination</div>
+            <div class="links">
+                <a href="https://ordertrackingsystem.onrender.com" target="_blank">Live System →</a>
+                <a href="https://github.com/mollanegash/ordertrackingsystem" target="_blank">GitHub →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Experience (Click to Expand)</h2>
+        <div class="exp" onclick="toggle(this)">
+            <div class="exp-top"><span>Betsi Eco Hub LLC</span><span>2023 - Present</span></div>
+            <div class="company">Senior Backend Engineer / Tech Lead</div>
+            <div class="exp-body">
+                <ul>
+                    <li>Architected cloud-native backend platforms using Java 21 and AWS</li>
+                    <li>Implemented Redis caching and PostgreSQL optimization strategies</li>
+                    <li>Built CI/CD pipelines using GitHub Actions</li>
+                    <li>Led distributed systems design and backend engineering initiatives</li>
+                </ul>
+            </div>
+        </div>
+        <div class="exp" onclick="toggle(this)">
+            <div class="exp-top"><span>LTIMindtree | Equifax Data Systems</span><span>2023</span></div>
+            <div class="company">Sr. Specialist – Software Engineering</div>
+            <div class="exp-body">
+                <ul>
+                    <li>Built large-scale ETL pipelines using Java and Apache Spark</li>
+                    <li>Processed millions of financial and court data records</li>
+                    <li>Implemented monitoring and fault recovery systems</li>
+                    <li>Managed AWS + GCP distributed infrastructure</li>
+                </ul>
+            </div>
+        </div>
+        <div class="exp" onclick="toggle(this)">
+            <div class="exp-top"><span>TCS (CNA Insurance)</span><span>2021 - 2022</span></div>
+            <div class="company">Backend Engineer / Java Consultant</div>
+            <div class="exp-body">
+                <ul>
+                    <li>Migrated monolith systems to Spring Boot microservices</li>
+                    <li>Designed REST APIs and backend workflow systems</li>
+                    <li>Improved reliability using caching and JVM optimization</li>
+                </ul>
+            </div>
+        </div>
+        <div class="exp" onclick="toggle(this)">
+            <div class="exp-top"><span>Ethiopian Public Health Institute</span><span>2013 - 2016</span></div>
+            <div class="company">Research Systems Engineer (Lead Architect)</div>
+            <div class="exp-body">
+                <ul>
+                    <li>Designed national-scale health information systems</li>
+                    <li>Built ETL pipelines and analytics platforms</li>
+                    <li>Developed distributed reporting and monitoring systems</li>
+                </ul>
+            </div>
+        </div>
+        <div class="exp" onclick="toggle(this)">
+            <div class="exp-top"><span>Ministry of Science & Technology</span><span>2011 - 2013</span></div>
+            <div class="company">Backend Systems Engineer</div>
+            <div class="exp-body">
+                <ul>
+                    <li>Developed government innovation and reporting systems</li>
+                    <li>Built structured data aggregation pipelines</li>
+                    <li>Led requirements engineering initiatives</li>
+                </ul>
+            </div>
+        </div>
+        <div class="exp" onclick="toggle(this)">
+            <div class="exp-top"><span>City Government of Addis Ababa</span><span>2010 - 2011</span></div>
+            <div class="company">Software Engineer</div>
+            <div class="exp-body">
+                <ul>
+                    <li>Developed enterprise fleet management systems using JSF, EJB, and Hibernate</li>
+                    <li>Designed backend modules for vehicle tracking, operational workflows, and reporting</li>
+                    <li>Worked on enterprise Java architecture and database-driven government systems</li>
+                    <li>Contributed to scalable municipal software platforms supporting operational coordination</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>M.S. Computer Science — Boston University</p>
+        <p>B.Sc. Economics — Mekelle University</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>
+            <a href="https://linkedin.com/in/mollanegash" target="_blank">LinkedIn</a><br><br>
+            <a href="https://github.com/mollanegash" target="_blank">GitHub</a><br><br>
+            Email: mdraya3@gmail.com
+        </p>
+    </section>
 </div>
 </div>
 
-</section>
-
-<!-- EDUCATION -->
-
-<section id="education">
-
-<h2>Education</h2>
-
-<p>
-M.S. Computer Science — Boston University
-</p>
-
-<p>
-B.Sc. Economics — Mekelle University
-</p>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-<h2>Contact</h2>
-
-<p>
-
-<a href="https://linkedin.com/in/mollanegash" target="_blank">
-LinkedIn
-</a>
-
-<br><br>
-
-<a href="https://github.com/mollanegash" target="_blank">
-GitHub
-</a>
-
-<br><br>
-
-Email: mdraya3@gmail.com
-
-</p>
-
-</section>
-
-</div>
-</div>
-
-<footer>
-2026 Molla D. Negash — Distributed Systems Portfolio
-</footer>
+<footer>2026 Molla D. Negash — Distributed Systems Portfolio</footer>
 
 <script>
-
-function toggle(el){
-
-  const body = el.querySelector(".exp-body");
-
-  body.style.display =
-    body.style.display === "block"
-    ? "none"
-    : "block";
-}
-
-function toggleCase(id){
-
-  const el = document.getElementById(id);
-
-  el.style.display =
-    el.style.display === "block"
-    ? "none"
-    : "block";
-}
-
+    function toggle(el){
+        const body = el.querySelector(".exp-body");
+        body.style.display = body.style.display === "block" ? "none" : "block";
+    }
+    function toggleCase(id){
+        const el = document.getElementById(id);
+        el.style.display = el.style.display === "block" ? "none" : "block";
+    }
 </script>
 
 </body>
 </html>
+
 ```
