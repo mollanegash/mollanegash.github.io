@@ -1,8 +1,6 @@
 # Molla D. Negash – Portfolio Website
 
-This is the source code for my personal portfolio website, hosted using GitHub Pages.
-
-The website presents my professional experience as a Senior Backend Engineer / Technical Lead, highlighting my work in distributed systems, backend engineering, and cloud-native architecture.
+Personal engineering portfolio showcasing backend systems, distributed architecture, and cloud-native engineering work.
 
 ---
 
@@ -14,26 +12,26 @@ The website presents my professional experience as a Senior Backend Engineer / T
 
 ## 📁 Repository Structure
 
-- `index.html` → Main portfolio website
-- `images/` → Static assets (images, banners, etc.)
-- `scripts/` → JavaScript functionality (if applicable)
+- `index.html` → Main portfolio site
+- `images/` → Static assets
+- `scripts/` → JavaScript (if applicable)
 - `README.md` → Project documentation
 
 ---
 
 ## 🚀 Purpose
 
-This project serves as a personal engineering portfolio to showcase:
+This portfolio highlights my work in:
 
-- Backend system design and architecture
-- Distributed systems and microservices work
-- Cloud-native development (AWS/GCP)
-- Production engineering and DevOps practices
-- Selected software engineering projects
+- Backend system design & architecture
+- Distributed systems & microservices
+- Cloud-native engineering (AWS / GCP)
+- High-performance backend optimization
+- Production engineering & DevOps practices
 
 ---
 
-## 🛠️ Built With
+## 🛠️ Tech Stack
 
 - HTML5
 - CSS3
@@ -44,17 +42,28 @@ This project serves as a personal engineering portfolio to showcase:
 
 ## 👨‍💻 About
 
-Senior Backend Engineer / Technical Lead with experience in:
+Senior Backend Engineer / Technical Lead specializing in scalable backend systems and distributed architecture.
+
+Core expertise:
 
 - Java & Spring Boot backend systems
-- Microservices architecture and distributed systems
-- Cloud infrastructure (AWS/GCP)
-- High-performance backend engineering
-- Production system delivery and optimization
+- Microservices & distributed systems design
+- Cloud infrastructure (AWS / GCP)
+- Performance optimization & low-latency systems
+- Production-grade system reliability & scalability
 
-I also use the term **EconomiCS** as a personal engineering identity that combines my academic background in Economics (Natural Resources Economics & Management) with Computer Science.
+### Engineering Perspective: “EconomiCS”
 
-The concept reflects how I think about software systems through constraints, scalability, optimization, efficiency, reliability, and engineering trade-offs when designing distributed and cloud-native platforms.
+I use the term **EconomiCS** to describe my engineering mindset, combining Economics (Natural Resources Economics & Management) with Computer Science.
+
+It reflects how I approach systems through:
+
+- constraints
+- trade-offs
+- scalability
+- efficiency
+- reliability
+- optimization under load
 
 ---
 
@@ -62,4 +71,4 @@ The concept reflects how I think about software systems through constraints, sca
 
 - Email: mdraya3@gmail.com  
 - LinkedIn: https://linkedin.com/in/mollanegash  
-- GitHub: https://github.com/mollanegash  
+- GitHub: https://github.com/mollanegash
