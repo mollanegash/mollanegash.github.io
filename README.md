@@ -1,6 +1,6 @@
 # Molla D. Negash – Portfolio Website
 
-Personal engineering portfolio showcasing backend systems, distributed architecture, and cloud-native engineering work.
+Backend engineering portfolio focused on distributed systems, performance engineering, and cloud-scale backend design.
 
 ---
 
@@ -10,60 +10,47 @@ Personal engineering portfolio showcasing backend systems, distributed architect
 
 ---
 
-## 📁 Repository Structure
+## 🚀 Focus
 
-- `index.html` → Main portfolio site
-- `images/` → Static assets
-- `scripts/` → JavaScript (if applicable)
-- `README.md` → Project documentation
+Backend systems, distributed architecture, and performance optimization under real production constraints.
 
 ---
 
-## 🚀 Purpose
+## 🧠 Engineering Philosophy
 
-This portfolio highlights my work in:
+### EconomiCS — The Economics of Computing
 
-- Backend system design & architecture
-- Distributed systems & microservices
-- Cloud-native engineering (AWS / GCP)
-- High-performance backend optimization
-- Production engineering & DevOps practices
+I view backend systems as resource-allocation problems.
+
+Compute, memory, latency, storage, and cost are finite resources that must be optimized for efficiency, scalability, and reliability.
+
+This perspective guides how I design and optimize systems under load.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Core Areas
 
-- HTML5
-- CSS3
-- JavaScript
-- GitHub Pages (hosting)
+- Distributed systems & microservices architecture  
+- Backend performance engineering (latency & throughput optimization)  
+- Database systems (PostgreSQL optimization, query tuning, scaling)  
+- Caching systems (Redis, low-latency data access patterns)  
+- Cloud-native systems (AWS / GCP, containerized deployments)  
+- Production system reliability & observability  
 
 ---
 
 ## 👨‍💻 About
 
-Senior Backend Engineer / Technical Lead specializing in scalable backend systems and distributed architecture.
+Senior Backend Engineer specializing in scalable backend systems and distributed architecture.
 
-Core expertise:
+Focused on building and optimizing production systems where performance, reliability, and scalability are first-order constraints.
 
-- Java & Spring Boot backend systems
-- Microservices & distributed systems design
-- Cloud infrastructure (AWS / GCP)
-- Performance optimization & low-latency systems
-- Production-grade system reliability & scalability
-
-### Engineering Perspective: “EconomiCS”
-
-I use the term **EconomiCS** to describe my engineering mindset, combining Economics (Natural Resources Economics & Management) with Computer Science.
-
-It reflects how I approach systems through:
-
-- constraints
-- trade-offs
-- scalability
-- efficiency
-- reliability
-- optimization under load
+Core work includes:
+- Java & Spring Boot backend systems  
+- Microservices architecture & distributed system design  
+- Performance optimization under high load  
+- Cloud infrastructure (AWS / GCP)  
+- Production-grade system reliability engineering  
 
 ---
 
