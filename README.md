@@ -1,4 +1,4 @@
-# Molla D. Negash – Portfolio Website
+# Molla Negash – Portfolio Website
 
 Backend engineering portfolio focused on distributed systems, performance engineering, and cloud-scale backend design.
 
