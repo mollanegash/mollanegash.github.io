@@ -1,475 +1,335 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Molla Negash | Backend Engineer | Java| AI-Enabled Systems & Data Platforms"</title>
-
-<style>
-:root {
-    --bg: #05070c;
-    --panel: #0e1624;
-    --card: #111c2e;
-    --text: #e8eef6;
-    --muted: #9aa6b2;
-    --accent: #4dd4ff;
-    --border: #1c2a3a;
-    --good: #00ffb3;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-    margin: 0;
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-}
-
-/* NAVIGATION */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(5, 7, 12, 0.88);
-    backdrop-filter: blur(14px);
-    display: flex;
-    justify-content: center;
-    gap: 22px;
-    padding: 14px;
-    border-bottom: 1px solid var(--border);
-}
-
-nav a {
-    color: var(--muted);
-    text-decoration: none;
-    font-size: 11px;
-    letter-spacing: 1.6px;
-    text-transform: uppercase;
-    transition: 0.2s ease;
-}
-
-nav a:hover {
-    color: var(--accent);
-}
-
-/* LAYOUT */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 40px 20px;
-    display: grid;
-    grid-template-columns: 340px 1fr;
-    gap: 50px;
-}
-
-/* BRAND */
-.brand-identity {
-    font-size: 10px;
-    color: var(--accent);
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-    text-align: center;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-}
-
-/* LEFT PANEL */
-.left {
-    position: sticky;
-    top: 90px;
-    height: fit-content;
-}
-
-.profile {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 18px;
-}
-
-.profile img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.name {
-    font-size: 22px;
-    font-weight: 700;
-    margin-top: 14px;
-}
-
-.role {
-    color: var(--accent);
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-top: 4px;
-}
-
-.bio {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 12px;
-}
-
-/* RIGHT PANEL */
-h1 {
-    font-size: 40px;
-    margin: 0;
-    line-height: 1.2;
-}
-
-.subtitle {
-    color: var(--muted);
-    margin-top: 12px;
-    font-size: 15px;
-}
-
-/* CARDS */
-.card,
-.project,
-.exp {
-    background: var(--card);
-    border: 1px solid var(--border);
-    padding: 20px;
-    border-radius: 14px;
-    margin-top: 16px;
-}
-
-/* HEADINGS */
-section {
-    margin-top: 75px;
-    scroll-margin-top: 90px;
-}
-
-h2 {
-    font-size: 11px;
-    letter-spacing: 2px;
-    color: var(--muted);
-    border-left: 3px solid var(--accent);
-    padding-left: 10px;
-    text-transform: uppercase;
-    margin-bottom: 22px;
-}
-
-.project h3 {
-    margin: 0;
-    font-size: 17px;
-}
-
-.project p {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 10px;
-}
-
-/* LINKS — FIXED (this was your main issue) */
-    .links {
-    margin-top: 14px;
-    display: flex;
-    justify-content: center;   /* ⭐ THIS FIXES CENTERING */
-    gap: 12px;
-    flex-wrap: wrap;
-}
-.links {
-    margin-top: 14px;
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-
-    color: var(--accent);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-
-    padding: 6px 10px;
-    border: 1px solid rgba(77, 212, 255, 0.25);
-    border-radius: 8px;
-
-    transition: 0.2s ease;
-}
-
-.links a:hover {
-    background: rgba(77, 212, 255, 0.12);
-    border-color: var(--accent);
-}
-
-/* SIMULATOR TAG */
-.simulator {
-    margin-top: 14px;
-    padding: 12px;
-    border-left: 3px solid var(--accent);
-    background: rgba(77, 212, 255, 0.05);
-    font-size: 12px;
-    color: var(--muted);
-}
-
-/* EXPERIENCE */
-.exp {
-    cursor: pointer;
-}
-
-.exp-top {
-    display: flex;
-    justify-content: space-between;
-    font-weight: 600;
-    gap: 15px;
-}
-
-.company {
-    color: var(--accent);
-    margin-top: 6px;
-    font-size: 13px;
-}
-
-.exp-body {
-    display: none;
-}
-
-ul {
-    color: var(--muted);
-    font-size: 13px;
-    margin-top: 10px;
-}
-
-/* CONTACT */
-.contact {
-    text-align: center;
-    margin-top: 80px;
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    color: #6b7280;
-    font-size: 11px;
-    border-top: 1px solid var(--border);
-    margin-top: 60px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Molla Negash | Senior Software Engineer | Technical Lead | Distributed Systems</title>
+  <style>
+    :root {
+      --bg: #05070c;
+      --panel: #0e1624;
+      --card: #111c2e;
+      --text: #e8eef6;
+      --muted: #9aa6b2;
+      --accent: #4dd4ff;
+      --border: #1c2a3a;
+      --good: #00ffb3;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(5, 7, 12, 0.88);
+      backdrop-filter: blur(14px);
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      padding: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+    }
+    nav a:hover { color: var(--accent); }
+    /* LAYOUT */
     .container {
-        grid-template-columns: 1fr;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 50px;
     }
-
-    .left {
-        position: relative;
-        top: 0;
+    /* LEFT PANEL */
+    .left { position: sticky; top: 90px; height: fit-content; }
+    .profile {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
     }
-
-    h1 {
-        font-size: 34px;
+    .profile img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 12px;
     }
-}
-</style>
+    .name { font-size: 22px; font-weight: 700; margin-top: 14px; }
+    .role {
+      color: var(--accent);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+    .bio { color: var(--muted); font-size: 13px; margin-top: 12px; }
+    /* RIGHT PANEL */
+    h1 { font-size: 40px; margin: 0; line-height: 1.2; }
+    .subtitle { color: var(--muted); margin-top: 12px; font-size: 15px; }
+    /* CARDS */
+    .card, .project, .exp {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 14px;
+      margin-top: 16px;
+    }
+    /* HEADINGS */
+    section { margin-top: 75px; scroll-margin-top: 90px; }
+    h2 {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--muted);
+      border-left: 3px solid var(--accent);
+      padding-left: 10px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .project h3 { margin: 0; font-size: 17px; }
+    .project p { color: var(--muted); font-size: 13px; margin-top: 10px; }
+    /* LINKS */
+    .links {
+      margin-top: 14px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 10px;
+      border: 1px solid rgba(77, 212, 255, 0.25);
+      border-radius: 8px;
+      transition: 0.2s ease;
+    }
+    .links a:hover {
+      background: rgba(77, 212, 255, 0.12);
+      border-color: var(--accent);
+    }
+    /* EXPERIENCE */
+    .exp { cursor: pointer; }
+    .exp-top {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 600;
+      gap: 15px;
+    }
+    .company { color: var(--accent); margin-top: 6px; font-size: 13px; }
+    .exp-body { display: none; }
+    ul { color: var(--muted); font-size: 13px; margin-top: 10px; }
+    /* CONTACT */
+    .contact { text-align: center; margin-top: 80px; }
+    footer {
+      text-align: center;
+      padding: 40px;
+      color: #6b7280;
+      font-size: 11px;
+      border-top: 1px solid var(--border);
+      margin-top: 60px;
+    }
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .container { grid-template-columns: 1fr; }
+      .left { position: relative; top: 0; }
+      h1 { font-size: 34px; }
+    }
+  </style>
 </head>
-
 <body>
-
-<nav>
+  <nav>
     <a href="#about">About</a>
     <a href="#systems">Systems</a>
     <a href="#experience">Experience</a>
     <a href="#education">Education</a>
     <a href="#contact">Contact</a>
-</nav>
-
-<div class="container">
-
-<div class="left">
-  <div class="profile">
-    <img src="images/photo_2025-05-11_15-00-05.jpg" alt="Molla Negash">
-
-    <div class="name">Molla Negash</div>
-
-   <div class="role" style="font-weight: 700; color: var(--accent);">
-  Backend Engineer
-</div>
-
-<div class="bio" style="font-size: 13px; font-weight: 600; color: var(--text);">
-  Java | AI-Enabled Systems & Data Platforms
-</div>
-
-<div class="bio" style="font-size: 12px; color: var(--muted);">
-  Spring AI • RAG • Spring Boot • Spark • Databricks
-</div>
-
-    <div class="bio">
-    I make backend systems AI-Enabled and run fast
+  </nav>
+  <div class="container">
+    <div class="left">
+      <div class="profile">
+        <img src="images/photo_2025-05-11_15-00-05.jpg" alt="Molla Negash">
+        <div class="name">Molla Negash</div>
+        <div class="role" style="font-weight: 700; color: var(--accent);">
+          Senior Software Engineer | Technical Lead
+        </div>
+        <div class="bio" style="font-size: 13px; font-weight: 600; color: var(--text);">
+          Java • Spring Boot • Kafka • AWS • Kubernetes
+        </div>
+        <div class="bio" style="font-size: 12px; color: var(--muted);">
+          Spring AI • RAG • PostgreSQL • Redis
+        </div>
+        <div class="bio">I build high-throughput, event-driven platforms</div>
+        <div class="bio" style="color: var(--good); font-weight: 600;">
+          10K+ RPS • p99 ~150ms • 99.9% Availability
+        </div>
+      </div>
     </div>
-
-    <div class="bio">
-      5K+ RPS • p99 ~120ms
-    </div>
-  </div>
-</div>
-
-<div class="right">
-
-<h1>Backend Engineer</h1>
-
-<section id="about">
-  <h2>About</h2>
-
-  <p class="subtitle">
-   EconomiCS: The Economics of Computing.
-
-I view backend systems as resource-allocation problems and optimize them for latency, throughput, and cost.
-
-I focus on diagnosing bottlenecks in databases, caching layers, and service design, and making design decisions under real production constraints and load.
-
-Built production systems handling 5K+ RPS with sub-150ms p99 latency.
-  </p>
-</section>
-   <section id="systems">
-<h2>Systems</h2>
-
-<div class="card">
-<h3>Federal Regulatory Insights Engine</h3>
-<p>High-performance regulatory data processing platform with parallel pipelines and large-scale text extraction.</p>
-<div class="links">
-<a href="https://federal-regulations-analyzer-fahp.onrender.com/" target="_blank">Live</a>
-<a href="https://github.com/mollanegash/federal-regulations-analyzer" target="_blank">GitHub</a>
-</div>
-</div>
-
-<div class="card">
-<h3>EduExcellence — School Management Platform</h3>
-<p>Cloud-native backend system optimized for caching, concurrency control, and low-latency data access.</p>
-<div class="links">
-<a href="https://github.com/mollanegash/EduExcellence-School-Management-System" target="_blank">GitHub</a>
-</div>
-</div>
-
-<div class="card">
-<h3>Order Tracking Microservices</h3>
-<p>Event-driven logistics system built with Spring Boot and distributed coordination patterns.</p>
-<div class="links">
-<a href="https://ordertrackingsystem.onrender.com" target="_blank">Live</a>
-<a href="https://github.com/mollanegash/ordertrackingsystem" target="_blank">GitHub</a>
-</div>
-</div>
-
-</section>
-
-    <section id="experience">
+    <div class="right">
+      <h1>Senior Software Engineer</h1>
+      <section id="about">
+        <h2>About</h2>
+        <p class="subtitle">
+          Senior Software Engineer and Technical Lead specializing in cloud-native, distributed systems using Java, Spring Boot, AWS, Kubernetes, Kafka, PostgreSQL, and Redis. I build high-throughput, event-driven platforms supporting 10K+ RPS and 99.9% availability, and have led modernization of monoliths to scalable microservices, improved API performance 75%+ through JVM tuning and Redis caching, and designed production AI applications using Spring AI, RAG, and OpenAI with strong focus on reliability, data consistency, and performance engineering.
+        </p>
+      </section>
+      <section id="systems">
+        <h2>Systems</h2>
+        <div class="card">
+          <h3>Federal Regulatory Insights Engine</h3>
+          <p>High-performance regulatory data processing platform with parallel pipelines, Spring AI + RAG, and large-scale text extraction. Reduced database load 60% with sub-150ms API latency.</p>
+          <div class="links">
+            <a href="https://federal-regulations-analyzer-fahp.onrender.com/" target="_blank">Live</a>
+            <a href="https://github.com/mollanegash/federal-regulations-analyzer" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>EduExcellence — School Management Platform</h3>
+          <p>Cloud-native backend system optimized for caching, concurrency control, and low-latency data access. Redis caching improved response time from 85ms to 2ms.</p>
+          <div class="links">
+            <a href="https://github.com/mollanegash/EduExcellence-School-Management-System" target="_blank">GitHub</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Order Tracking Microservices</h3>
+          <p>Event-driven logistics system built with Spring Boot, Kafka, and distributed coordination patterns for real-time telemetry ingestion at scale.</p>
+          <div class="links">
+            <a href="https://ordertrackingsystem.onrender.com" target="_blank">Live</a>
+            <a href="https://github.com/mollanegash/ordertrackingsystem" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </section>
+      <section id="experience">
         <h2>Experience (Click to Expand)</h2>
         <div class="exp" onclick="toggle(this)">
-            <div class="exp-top"><span>Betsi Eco Hub LLC</span><span>2023 - Present</span></div>
-            <div class="company">Backend Engineer / Tech Lead</div>
-            <div class="exp-body">
-                <ul>
-                    <li>Architected cloud-native backend platforms using Java 21 and AWS</li>
-                    <li>Implemented Redis caching and PostgreSQL optimization strategies</li>
-                    <li>Built CI/CD pipelines using GitHub Actions</li>
-                    <li>Led distributed systems design and backend engineering initiatives</li>
-                </ul>
-            </div>
+          <div class="exp-top"><span>Betsi Eco Hub LLC</span><span>2023 - Present</span></div>
+          <div class="company">Senior Software Engineer / Technical Lead</div>
+          <div class="exp-body">
+            <ul>
+              <li>Architected cloud-native microservices and distributed platforms using Java 21, Spring Boot, AWS EKS, Kubernetes, and Apache Kafka</li>
+              <li>Built Enterprise IoT Kafka Gateway for real-time telemetry ingestion and asynchronous processing</li>
+              <li>Developed production AI capabilities using Spring AI and OpenAI RAG workflows, reducing database load by 60% while achieving sub-150ms API latency</li>
+              <li>Optimized secure cloud platforms: caching improvements 85ms → 2ms, payment integrations, and production reliability enhancements</li>
+            </ul>
+          </div>
         </div>
         <div class="exp" onclick="toggle(this)">
-            <div class="exp-top"><span>LTIMindtree | Equifax Data Systems</span><span>2023</span></div>
-            <div class="company">Software Engineering Specialist / Tech Lead</div>
-            <div class="exp-body">
-                <ul>
-                    <li>Built large-scale ETL pipelines using Java and Apache Spark</li>
-                    <li>Processed millions of financial and court data records</li>
-                    <li>Implemented monitoring and fault recovery systems</li>
-                    <li>Managed AWS + GCP distributed infrastructure</li>
-                </ul>
-            </div>
+          <div class="exp-top"><span>LinkedIn (AI Marketplace Contract)</span><span>May 2026 - Present</span></div>
+          <div class="company">Senior Software Engineering Consultant | Paid SME</div>
+          <div class="exp-body">
+            <ul>
+              <li>Selected as paid Subject Matter Expert providing expertise across Java, Spring Boot, Python, SQL, distributed systems, and cloud-native architecture</li>
+              <li>Evaluated enterprise software workflows including microservices, Kafka, PostgreSQL, Redis, AWS, Kubernetes, Terraform, and CI/CD</li>
+              <li>Applied expertise in AI engineering: RAG, LLM workflows, MLOps, and production AI application patterns</li>
+            </ul>
+          </div>
         </div>
         <div class="exp" onclick="toggle(this)">
-            <div class="exp-top"><span>TCS (CNA Insurance)</span><span>2021 - 2022</span></div>
-            <div class="company">Backend Engineer</div>
-            <div class="exp-body">
-                <ul>
-                    <li>Migrated monolith systems to Spring Boot microservices</li>
-                    <li>Designed REST APIs and backend workflow systems</li>
-                    <li>Improved reliability using caching and JVM optimization</li>
-                </ul>
-            </div>
+          <div class="exp-top"><span>Equifax (via LTIMindtree)</span><span>2023</span></div>
+          <div class="company">Senior Software Engineer</div>
+          <div class="exp-body">
+            <ul>
+              <li>Built event-driven microservices for legal intelligence and mortgage platforms using Java 21, Spring Boot, and Apache Kafka</li>
+              <li>Designed scalable data ingestion pipelines supporting 10K+ RPS and asynchronous processing workflows</li>
+              <li>Optimized high-volume backend data systems using PostgreSQL, Redis, and OpenSearch, achieving sub-150ms query performance</li>
+              <li>Improved API performance by 75% (600ms → 150ms p99) through JVM tuning, Redis caching, and AWS optimizations while maintaining 99.9% availability</li>
+            </ul>
+          </div>
         </div>
         <div class="exp" onclick="toggle(this)">
-            <div class="exp-top"><span>Ethiopian Public Health Institute</span><span>2013 - 2016</span></div>
-            <div class="company">Research Systems Engineer (Lead Architect)</div>
-            <div class="exp-body">
-                <ul>
-                    <li>Designed national-scale health information systems</li>
-                    <li>Built ETL pipelines and analytics platforms</li>
-                    <li>Developed distributed reporting and monitoring systems</li>
-                </ul>
-            </div>
+          <div class="exp-top"><span>Citi / CNA Insurance (via TCS)</span><span>2021 - 2022</span></div>
+          <div class="company">Senior Software Engineer</div>
+          <div class="exp-body">
+            <ul>
+              <li>Modernized legacy SOAP-based insurance systems into REST-based Spring Boot microservices deployed on GCP and AWS EKS</li>
+              <li>Built document processing services using Java, Spring Boot, PostgreSQL, Redis, and Elasticsearch</li>
+              <li>Reduced API p99 latency from ~600ms to ~150ms through SQL optimization, JVM tuning, Redis caching, Kubernetes, and Terraform</li>
+            </ul>
+          </div>
         </div>
         <div class="exp" onclick="toggle(this)">
-            <div class="exp-top"><span>Ministry of Science & Technology</span><span>2011 - 2013</span></div>
-            <div class="company">Backend Systems Engineer</div>
-            <div class="exp-body">
-                <ul>
-                    <li>Developed government innovation and reporting systems</li>
-                    <li>Built structured data aggregation pipelines</li>
-                    <li>Led requirements engineering initiatives</li>
-                </ul>
-            </div>
+          <div class="exp-top"><span>Independent (Contract)</span><span>2019 - 2021</span></div>
+          <div class="company">Senior Software Engineer</div>
+          <div class="exp-body">
+            <ul>
+              <li>Architected Java/Spring Boot services and REST APIs for cloud-based SaaS applications with multi-tenant PostgreSQL and Redis</li>
+              <li>Developed event-driven data processing pipelines for XML/VAST metadata ingestion</li>
+              <li>Implemented Docker containerization and AWS CI/CD automation, reducing deployment time by 70%</li>
+            </ul>
+          </div>
         </div>
         <div class="exp" onclick="toggle(this)">
-            <div class="exp-top"><span>City Government of Addis Ababa</span><span>2010 - 2011</span></div>
-            <div class="company">Software Engineer</div>
-            <div class="exp-body">
-                <ul>
-                    <li>Developed enterprise fleet management systems using JSF, EJB, and Hibernate</li>
-                    <li>Designed backend modules for vehicle tracking, operational workflows, and reporting</li>
-                    <li>Worked on enterprise Java architecture and database-driven government systems</li>
-                    <li>Contributed to scalable municipal software platforms supporting operational coordination</li>
-                </ul>
-            </div>
+          <div class="exp-top"><span>Ethiopian Public Health Institute</span><span>2013 - 2016</span></div>
+          <div class="company">Lead Systems Engineer</div>
+          <div class="exp-body">
+            <ul>
+              <li>Led national health system development supporting 10M+ citizens across federal and regional health offices</li>
+              <li>Built RESTful services integrated with DHIS2 and designed distributed ETL pipelines for HIV, TB, and maternal health data</li>
+              <li>Improved platform reliability by 90% through SOA migration and architecture standardization, reducing reporting time by 80%</li>
+            </ul>
+          </div>
         </div>
-    </section>
-
-    <section id="education">
+        <div class="exp" onclick="toggle(this)">
+          <div class="exp-top"><span>Ministry of Science & Technology</span><span>2011 - 2013</span></div>
+          <div class="company">Software Engineer</div>
+          <div class="exp-body">
+            <ul>
+              <li>Built distributed backend systems for national technology transfer and grant funding platforms supporting 15+ government agencies</li>
+              <li>Automated manual workflows and improved cross-agency integration, increasing operational efficiency by 70%</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp" onclick="toggle(this)">
+          <div class="exp-top"><span>City Government of Addis Ababa</span><span>2010 - 2011</span></div>
+          <div class="company">Software Engineer</div>
+          <div class="exp-body">
+            <ul>
+              <li>Developed distributed fleet operations platform using Java, Spring Framework, PostgreSQL, and Linux</li>
+              <li>Built TCP/IP telemetry gateway using Apache MINA with event-driven backend services and JMS/ActiveMQ</li>
+              <li>Designed concurrent Java processing workflows handling 5,000+ telemetry events per hour</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="education">
         <h2>Education</h2>
         <p>M.S. Computer Science — Boston University</p>
         <p>B.Sc. Economics — Mekelle University</p>
-    </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact</h2>
-
-    <div class="links">
-  <a href="https://linkedin.com/in/mollanegash" target="_blank">LinkedIn</a>
-  <a href="https://github.com/mollanegash" target="_blank">GitHub</a>
-  <a href="mailto:mdraya3@gmail.com">Email Me</a>
-</div>
-</section>
-
-</div> </div> <footer>
-    2026 Molla D. Negash — Distributed Systems Portfolio
-</footer>
-
-<script>
+      </section>
+      <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <div class="links">
+          <a href="https://linkedin.com/in/mollanegash" target="_blank">LinkedIn</a>
+          <a href="https://github.com/mollanegash" target="_blank">GitHub</a>
+          <a href="mailto:mdraya3@gmail.com">Email Me</a>
+        </div>
+      </section>
+    </div>
+  </div>
+  <footer>2026 Molla D. Negash — Distributed Systems Portfolio</footer>
+  <script>
     function toggle(el){
-        const body = el.querySelector(".exp-body");
-        body.style.display = body.style.display === "block" ? "none" : "block";
+      const body = el.querySelector(".exp-body");
+      body.style.display = body.style.display === "block" ? "none" : "block";
     }
-    function toggleCase(id){
-        const el = document.getElementById(id);
-        el.style.display = el.style.display === "block" ? "none" : "block";
-    }
-</script>
-
+  </script>
 </body>
 </html>
-
-
