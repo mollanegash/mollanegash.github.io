@@ -1,334 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Molla Negash | Software Engineer</title>
-  <style>
-    :root {
-      --bg: #05070c;
-      --panel: #0e1624;
-      --card: #111c2e;
-      --text: #e8eef6;
-      --muted: #9aa6b2;
-      --accent: #4dd4ff;
-      --border: #1c2a3a;
-      --good: #00ffb3;
-    }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    /* NAVIGATION */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      background: rgba(5, 7, 12, 0.88);
-      backdrop-filter: blur(14px);
-      display: flex;
-      justify-content: center;
-      gap: 22px;
-      padding: 14px;
-      border-bottom: 1px solid var(--border);
-    }
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 11px;
-      letter-spacing: 1.6px;
-      text-transform: uppercase;
-      transition: 0.2s ease;
-    }
-    nav a:hover { color: var(--accent); }
-    /* LAYOUT */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
-      display: grid;
-      grid-template-columns: 340px 1fr;
-      gap: 50px;
-    }
-    /* LEFT PANEL */
-    .left { position: sticky; top: 90px; height: fit-content; }
-    .profile {
-      background: var(--panel);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 18px;
-    }
-    .profile img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-    .name { font-size: 22px; font-weight: 700; margin-top: 14px; }
-    .role {
-      color: var(--accent);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-top: 4px;
-    }
-    .bio { color: var(--muted); font-size: 13px; margin-top: 12px; }
-    /* RIGHT PANEL */
-    h1 { font-size: 40px; margin: 0; line-height: 1.2; }
-    .subtitle { color: var(--muted); margin-top: 12px; font-size: 15px; }
-    /* CARDS */
-    .card, .project, .exp {
-      background: var(--card);
-      border: 1px solid var(--border);
-      padding: 20px;
-      border-radius: 14px;
-      margin-top: 16px;
-    }
-    /* HEADINGS */
-    section { margin-top: 75px; scroll-margin-top: 90px; }
-    h2 {
-      font-size: 11px;
-      letter-spacing: 2px;
-      color: var(--muted);
-      border-left: 3px solid var(--accent);
-      padding-left: 10px;
-      text-transform: uppercase;
-      margin-bottom: 22px;
-    }
-    .project h3 { margin: 0; font-size: 17px; }
-    .project p { color: var(--muted); font-size: 13px; margin-top: 10px; }
-    /* LINKS */
-    .links {
-      margin-top: 14px;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-    .links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--accent);
-      text-decoration: none;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 6px 10px;
-      border: 1px solid rgba(77, 212, 255, 0.25);
-      border-radius: 8px;
-      transition: 0.2s ease;
-    }
-    .links a:hover {
-      background: rgba(77, 212, 255, 0.12);
-      border-color: var(--accent);
-    }
-    /* EXPERIENCE */
-    .exp { cursor: pointer; }
-    .exp-top {
-      display: flex;
-      justify-content: space-between;
-      font-weight: 600;
-      gap: 15px;
-    }
-    .company { color: var(--accent); margin-top: 6px; font-size: 13px; }
-    .exp-body { display: none; }
-    ul { color: var(--muted); font-size: 13px; margin-top: 10px; }
-    /* CONTACT */
-    .contact { text-align: center; margin-top: 80px; }
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: #6b7280;
-      font-size: 11px;
-      border-top: 1px solid var(--border);
-      margin-top: 60px;
-    }
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .container { grid-template-columns: 1fr; }
-      .left { position: relative; top: 0; }
-      h1 { font-size: 34px; }
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#systems">Systems</a>
-    <a href="#experience">Experience</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <div class="container">
-    <div class="left">
-      <div class="profile">
-        <img src="images/photo_2025-05-11_15-00-05.jpeg" alt="Molla Negash">
-        <div class="name">Molla Negash</div>
-        <div class="role" style="font-weight: 700; color: var(--accent);">
+from pathlib import Path
+import re
+
+src = Path("/mnt/data/Pasted text(5).txt")
+html = src.read_text(encoding="utf-8")
+
+# Public-facing identity: current federal role, with a separate technical portfolio focus.
+html = html.replace(
+    "<title>Molla Negash | Software Engineer</title>",
+    "<title>Molla Negash | Patent Examiner & Software Engineering Portfolio</title>"
+)
+html = html.replace(
+    """        <div class="role" style="font-weight: 700; color: var(--accent);">
           Software EngineeR
-        </div>
-      </div>
-    </div>
-    <div class="right">
-      <h1>Software Engineer</h1>
-      <section id="about">
-        <h2>About</h2>
-        <p class="subtitle">
-          Software Engineer specializing in cloud-native, distributed systems using Java, Spring Boot, AWS, Kubernetes, Kafka, PostgreSQL, and Redis. I build high-throughput, event-driven platforms supporting 10K+ RPS and 99.9% availability, and have led modernization of monoliths to scalable microservices, improved API performance 75%+ through JVM tuning and Redis caching, and designed production AI applications using Spring AI, RAG, and OpenAI with strong focus on reliability, data consistency, and performance engineering.
-        </p>
-      </section>
-<section id="systems">
-  <h2>Systems</h2>
-  
-  <div class="card">
-    <h3>Azure RAG Platform - Production AI System</h3>
-    <p>Production RAG system using Azure OpenAI + AI Search. Secure document chat with citations. Built with TypeScript, Fastify, Bicep IaC, and Container Apps. Handles enterprise document workloads with sub-150ms inference.</p>
-    <div class="links">
-      <a href="https://github.com/mollanegash/azure-rag-platform" target="_blank">GitHub</a>
-    </div>
-  </div>
+        </div>""",
+    """        <div class="role" style="font-weight: 700; color: var(--accent);">
+          Patent Examiner | Software Engineering Background
+        </div>"""
+)
+html = html.replace("<h1>Software Engineer</h1>", "<h1>Patent Examiner | Software Engineering Portfolio</h1>")
 
-  <div class="card">
-    <h3>Enterprise IoT Kafka Gateway - 10K+ RPS</h3>
-    <p>Enterprise IoT telemetry gateway built with Spring Boot, Apache Kafka, Docker, Terraform. Processes real-time sensor data using Kafka producers/consumers, detects critical alerts at 10K+ RPS with 99.9% availability.</p>
-    <div class="links">
-      <a href="https://github.com/mollanegash/enterprise-iot-kafka-gateway" target="_blank">GitHub</a>
-    </div>
-  </div>
+old_about = """          Software Engineer specializing in cloud-native, distributed systems using Java, Spring Boot, AWS, Kubernetes, Kafka, PostgreSQL, and Redis. I build high-throughput, event-driven platforms supporting 10K+ RPS and 99.9% availability, and have led modernization of monoliths to scalable microservices, improved API performance 75%+ through JVM tuning and Redis caching, and designed production AI applications using Spring AI, RAG, and OpenAI with strong focus on reliability, data consistency, and performance engineering."""
+new_about = """          Patent Examiner at the United States Patent and Trademark Office (USPTO). My prior professional background is in software engineering, distributed systems, cloud-native architecture, and web applications. My technical experience includes Java, Spring Boot, AWS, Kubernetes, Kafka, PostgreSQL, and Redis, including event-driven platforms, scalable microservices, APIs, and AI application development. This site is a technical portfolio of selected projects and prior engineering experience."""
+html = html.replace(old_about, new_about)
 
-  <div class="card">
-    <h3>Spring AI Threat Detection Platform</h3>
-    <p>Spring Boot microservice for real-time threat detection. Java 21, Spring AI, Kafka, Docker. Demonstrates production AI integration with event-driven architecture and sub-150ms threat scoring.</p>
-    <div class="links">
-      <a href="https://github.com/mollanegash/spring-ai-threat-platform" target="_blank">GitHub</a>
-    </div>
-  </div>
-
-  <div class="card">
-    <h3>Redis Performance Proof - 85ms → 2ms</h3>
-    <p>Redis @Cacheable implementation proving latency reduction. Spring Boot 2.6.6 + Java 17 + JPA + H2. Student GET endpoint: 85ms DB → 2ms Redis. Demonstrates JVM tuning + caching expertise.</p>
-    <div class="links">
-      <a href="https://github.com/mollanegash/spring-redis-performance" target="_blank">GitHub</a>
-    </div>
-  </div>
-</section>
-      <section id="experience">
+# Add current USPTO role using a generic public description.
+needle = """      <section id="experience">
+        <h2>Experience (Click to Expand)</h2>"""
+replacement = """      <section id="experience">
         <h2>Experience (Click to Expand)</h2>
         <div class="exp" onclick="toggle(this)">
-          <div class="exp-top"><span>Betsi Eco Hub LLC</span><span>2023 - Present</span></div>
-          <div class="company">Senior Software Engineer / Technical Lead</div>
+          <div class="exp-top"><span>United States Patent and Trademark Office (USPTO)</span><span>Oct 2026 - Present</span></div>
+          <div class="company">Patent Examiner</div>
           <div class="exp-body">
             <ul>
-              <li>Architected cloud-native microservices and distributed platforms using Java 21, Spring Boot, AWS EKS, Kubernetes, and Apache Kafka</li>
-              <li>Built Enterprise IoT Kafka Gateway for real-time telemetry ingestion and asynchronous processing</li>
-              <li>Developed production AI capabilities using Spring AI and OpenAI RAG workflows, reducing database load by 60% while achieving sub-150ms API latency</li>
-              <li>Optimized secure cloud platforms: caching improvements 85ms → 2ms, payment integrations, and production reliability enhancements</li>
+              <li>Federal patent examination role.</li>
             </ul>
           </div>
-        </div>
-        <div class="exp" onclick="toggle(this)">
-          <div class="exp-top"><span>LinkedIn (AI Marketplace Contract)</span><span>May 2026 - Present</span></div>
-          <div class="company">Senior Software Engineering Consultant | Paid SME</div>
-          <div class="exp-body">
-            <ul>
-              <li>Selected as paid Subject Matter Expert providing expertise across Java, Spring Boot, Python, SQL, distributed systems, and cloud-native architecture</li>
-              <li>Evaluated enterprise software workflows including microservices, Kafka, PostgreSQL, Redis, AWS, Kubernetes, Terraform, and CI/CD</li>
-              <li>Applied expertise in AI engineering: RAG, LLM workflows, MLOps, and production AI application patterns</li>
-            </ul>
-          </div>
-        </div>
-        <div class="exp" onclick="toggle(this)">
-          <div class="exp-top"><span>Equifax (via LTIMindtree)</span><span>2023</span></div>
-          <div class="company">Senior Software Engineer</div>
-          <div class="exp-body">
-            <ul>
-              <li>Built event-driven microservices for legal intelligence and mortgage platforms using Java 21, Spring Boot, and Apache Kafka</li>
-              <li>Designed scalable data ingestion pipelines supporting 10K+ RPS and asynchronous processing workflows</li>
-              <li>Optimized high-volume backend data systems using PostgreSQL, Redis, and OpenSearch, achieving sub-150ms query performance</li>
-              <li>Improved API performance by 75% (600ms → 150ms p99) through JVM tuning, Redis caching, and AWS optimizations while maintaining 99.9% availability</li>
-            </ul>
-          </div>
-        </div>
-        <div class="exp" onclick="toggle(this)">
-          <div class="exp-top"><span>Citi / CNA Insurance (via TCS)</span><span>2021 - 2022</span></div>
-          <div class="company">Senior Software Engineer</div>
-          <div class="exp-body">
-            <ul>
-              <li>Modernized legacy SOAP-based insurance systems into REST-based Spring Boot microservices deployed on GCP and AWS EKS</li>
-              <li>Built document processing services using Java, Spring Boot, PostgreSQL, Redis, and Elasticsearch</li>
-              <li>Reduced API p99 latency from ~600ms to ~150ms through SQL optimization, JVM tuning, Redis caching, Kubernetes, and Terraform</li>
-            </ul>
-          </div>
-        </div>
-        <div class="exp" onclick="toggle(this)">
-          <div class="exp-top"><span>Independent (Contract)</span><span>2019 - 2021</span></div>
-          <div class="company">Senior Software Engineer</div>
-          <div class="exp-body">
-            <ul>
-              <li>Architected Java/Spring Boot services and REST APIs for cloud-based SaaS applications with multi-tenant PostgreSQL and Redis</li>
-              <li>Developed event-driven data processing pipelines for XML/VAST metadata ingestion</li>
-              <li>Implemented Docker containerization and AWS CI/CD automation, reducing deployment time by 70%</li>
-            </ul>
-          </div>
-        </div>
-        <div class="exp" onclick="toggle(this)">
-          <div class="exp-top"><span>Ethiopian Public Health Institute</span><span>2013 - 2016</span></div>
-          <div class="company">Lead Systems Engineer</div>
-          <div class="exp-body">
-            <ul>
-              <li>Led national health system development supporting 10M+ citizens across federal and regional health offices</li>
-              <li>Built RESTful services integrated with DHIS2 and designed distributed ETL pipelines for HIV, TB, and maternal health data</li>
-              <li>Improved platform reliability by 90% through SOA migration and architecture standardization, reducing reporting time by 80%</li>
-            </ul>
-          </div>
-        </div>
-        <div class="exp" onclick="toggle(this)">
-          <div class="exp-top"><span>Ministry of Science & Technology</span><span>2011 - 2013</span></div>
-          <div class="company">Software Engineer</div>
-          <div class="exp-body">
-            <ul>
-              <li>Built distributed backend systems for national technology transfer and grant funding platforms supporting 15+ government agencies</li>
-              <li>Automated manual workflows and improved cross-agency integration, increasing operational efficiency by 70%</li>
-            </ul>
-          </div>
-        </div>
-        <div class="exp" onclick="toggle(this)">
-          <div class="exp-top"><span>City Government of Addis Ababa</span><span>2010 - 2011</span></div>
-          <div class="company">Software Engineer</div>
-          <div class="exp-body">
-            <ul>
-              <li>Developed distributed fleet operations platform using Java, Spring Framework, PostgreSQL, and Linux</li>
-              <li>Built TCP/IP telemetry gateway using Apache MINA with event-driven backend services and JMS/ActiveMQ</li>
-              <li>Designed concurrent Java processing workflows handling 5,000+ telemetry events per hour</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section id="education">
-        <h2>Education</h2>
-        <p>M.S. Computer Science — Boston University</p>
-        <p>B.Sc. Economics — Mekelle University</p>
-      </section>
-<section id="contact" class="contact">
-  <h2>Contact</h2>
-  <div class="links">
-    <a href="https://linkedin.com/in/mollanegash" target="_blank">LinkedIn</a>
-    <a href="https://github.com/mollanegash" target="_blank">GitHub</a>
-    <a href="mailto:mdraya3@gmail.com">Email Me</a>
-  </div>
-</section>
-    </div>
-  </div>
-  <footer>2026 Molla D. Negash — Distributed Systems Portfolio</footer>
-  <script>
-    function toggle(el){
-      const body = el.querySelector(".exp-body");
-      body.style.display = body.style.display === "block" ? "none" : "block";
-    }
-  </script>
-</body>
-</html>
+        </div>"""
+html = html.replace(needle, replacement)
+
+# Recast Betsi as prior experience, with no present-tense business or client-service implication.
+html = html.replace(
+    '<div class="exp-top"><span>Betsi Eco Hub LLC</span><span>2023 - Present</span></div>',
+    '<div class="exp-top"><span>Betsi Eco Hub LLC</span><span>2023 - Oct 2026</span></div>'
+)
+html = html.replace(
+    '<div class="company">Senior Software Engineer / Technical Lead</div>',
+    '<div class="company">Prior Software Engineering Experience</div>',
+    1
+)
+# Rewrite the Betsi bullets in past tense and remove any suggestion of current operations.
+html = html.replace(
+    '<li>Architected cloud-native microservices and distributed platforms using Java 21, Spring Boot, AWS EKS, Kubernetes, and Apache Kafka</li>',
+    '<li>Prior project experience included cloud-native microservices and distributed platforms using Java, Spring Boot, AWS, Kubernetes, and Apache Kafka</li>',
+    1
+)
+html = html.replace(
+    '<li>Built Enterprise IoT Kafka Gateway for real-time telemetry ingestion and asynchronous processing</li>',
+    '<li>Developed a portfolio project demonstrating real-time telemetry ingestion and asynchronous processing with Apache Kafka</li>',
+    1
+)
+html = html.replace(
+    '<li>Developed production AI capabilities using Spring AI and OpenAI RAG workflows, reducing database load by 60% while achieving sub-150ms API latency</li>',
+    '<li>Developed software project work involving Spring AI and retrieval-augmented generation workflows</li>',
+    1
+)
+html = html.replace(
+    '<li>Optimized secure cloud platforms: caching improvements 85ms → 2ms, payment integrations, and production reliability enhancements</li>',
+    '<li>Worked on backend performance and reliability, including a Redis caching demonstration reducing a sample endpoint response time from 85ms to 2ms</li>',
+    1
+)
+
+# Omit the paid AI Marketplace contract from the public experience section pending any required ethics review/approval.
+pattern = re.compile(
+    r'\s*<div class="exp" onclick="toggle\(this\)">\s*'
+    r'<div class="exp-top"><span>LinkedIn \(AI Marketplace Contract\)</span><span>May 2026 - Present</span></div>.*?'
+    r'</div>\s*</div>',
+    re.S
+)
+html, n_removed = pattern.subn("", html, count=1)
+
+# Make footer consistent with a portfolio rather than a business/service offering.
+html = html.replace(
+    '2026 Molla D. Negash — Distributed Systems Portfolio',
+    '2026 Molla D. Negash — Technical Portfolio'
+)
+
+out = Path("/mnt/data/molla_negash_portfolio_ethics_conscious.html")
+out.write_text(html, encoding="utf-8")
+print(f"Created {out} ({out.stat().st_size} bytes); removed LinkedIn contract entry: {n_removed == 1}")
