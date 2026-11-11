@@ -169,7 +169,7 @@
         <img src="" alt="Molla Negash">
         <div class="name">Molla Negash</div>
         <div class="role" style="font-weight: 700; color: var(--accent);">
-          Patent Examiner — TC 2400
+          Patent Examiner
         </div>
       </div>
     </div>
@@ -178,7 +178,7 @@
       <section id="about">
         <h2>About</h2>
         <p class="subtitle">
-          Computer Science Patent Examiner in the Cryptography and Cybersecurity unit (TC 2400) at the USPTO, and Systems Architect specializing in cloud-native, distributed backend systems using Java 21, Spring Boot, Kafka, and Kubernetes. Combining rigorous academic grounding from Boston University (MSCS with a Security concentration) with enterprise-grade engineering experience across high-throughput telemetry pipelines, microservices modernization, and technical patent examination.
+          Patent Examiner and Systems Architect specializing in cloud-native, distributed backend systems using Java 21, Spring Boot, Kafka, and Kubernetes. Combining rigorous academic grounding from Boston University (MSCS with a Security concentration) with enterprise-grade engineering experience across high-throughput telemetry pipelines, microservices modernization, and technical analysis.
         </p>
       </section>
       <section id="systems">
@@ -223,13 +223,7 @@
             <span>USPTO</span>
             <span>2026 - Present</span>
           </div>
-          <div class="company">Patent Examiner — Computer Science (Cryptography & Cybersecurity Unit, TC 2400)</div>
-          <div class="exp-body">
-            <ul>
-              <li>Examine complex patent applications covering cryptographic algorithms, PKI, network security protocols, and secure system architectures under 35 U.S.C. 101, 102, 103, and 112.</li>
-              <li>Leverage advanced master's-level coursework in Enterprise Cybersecurity, Network/Cloud Security, and Cryptography from Boston University to evaluate technical specifications and prior art.</li>
-            </ul>
-          </div>
+          <div class="company">Patent Examiner</div>
         </div>
 
         <div class="exp" onclick="toggle(this)">
@@ -303,6 +297,7 @@
   <script>
     function toggle(el){
       const body = el.querySelector(".exp-body");
+      if (!body) return;
       body.style.display = body.style.display === "block" ? "none" : "block";
     }
   </script>
