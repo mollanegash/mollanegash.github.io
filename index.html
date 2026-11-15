@@ -72,6 +72,7 @@
     .role {
       color: var(--accent);
       font-size: 11px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
       margin-top: 4px;
@@ -127,7 +128,7 @@
       border-color: var(--accent);
     }
     /* EXPERIENCE */
-    .exp { cursor: pointer; }
+    .exp.expandable { cursor: pointer; }
     .exp-top {
       display: flex;
       justify-content: space-between;
@@ -168,9 +169,7 @@
       <div class="profile">
         <img src="" alt="Molla Negash">
         <div class="name">Molla Negash</div>
-        <div class="role" style="font-weight: 700; color: var(--accent);">
-          Patent Examiner
-        </div>
+        <div class="role">Patent Examiner</div>
       </div>
     </div>
     <div class="right">
@@ -178,7 +177,7 @@
       <section id="about">
         <h2>About</h2>
         <p class="subtitle">
-          Patent Examiner and Systems Architect specializing in cloud-native, distributed backend systems using Java 21, Spring Boot, Kafka, and Kubernetes. Combining rigorous academic grounding from Boston University (MSCS with a Security concentration) with enterprise-grade engineering experience across high-throughput telemetry pipelines, microservices modernization, and technical analysis.
+          Patent Examiner and Systems Architect with an M.S. in Computer Science from Boston University and a B.S. in Economics &amp; Management from Mekelle University. Background in distributed backend systems, event-driven telemetry pipelines, and cloud infrastructure using Java, Spring Boot, Apache Kafka, and Kubernetes.
         </p>
       </section>
       <section id="systems">
@@ -218,7 +217,7 @@
       </section>
       <section id="experience">
         <h2>Experience (Click to Expand)</h2>
-        <div class="exp" onclick="toggle(this)">
+        <div class="exp">
           <div class="exp-top">
             <span>USPTO</span>
             <span>2026 - Present</span>
@@ -226,7 +225,7 @@
           <div class="company">Patent Examiner</div>
         </div>
 
-        <div class="exp" onclick="toggle(this)">
+        <div class="exp expandable" onclick="toggle(this)">
           <div class="exp-top">
             <span>Betsi Eco Hub LLC</span>
             <span>2023 - 2026</span>
@@ -242,7 +241,7 @@
           </div>
         </div>
          
-        <div class="exp" onclick="toggle(this)">
+        <div class="exp expandable" onclick="toggle(this)">
           <div class="exp-top"><span>LTIMindtree</span><span>2023</span></div>
           <div class="company">Sr. Specialist - Software Engineering</div>
           <div class="exp-body">
@@ -254,7 +253,7 @@
             </ul>
           </div>
         </div>
-        <div class="exp" onclick="toggle(this)">
+        <div class="exp expandable" onclick="toggle(this)">
           <div class="exp-top"><span>TCS</span><span>2021 - 2022</span></div>
           <div class="company">IT Analyst</div>
           <div class="exp-body">
@@ -266,7 +265,7 @@
           </div>
         </div>
          
-        <div class="exp" onclick="toggle(this)">
+        <div class="exp expandable" onclick="toggle(this)">
           <div class="exp-top"><span>Ethiopian Government</span><span>2010 - 2016</span></div>
           <div class="company">Systems & Data Analyst</div>
           <div class="exp-body">
@@ -280,8 +279,8 @@
       </section>
       <section id="education">
         <h2>Education</h2>
-        <p>M.S. Computer Science — Boston University</p>
-        <p>B.S Economics and Management — Mekelle University</p>
+        <p>M.S. in Computer Science — Boston University</p>
+        <p>B.S. in Economics &amp; Management — Mekelle University</p>
       </section>
       <section id="contact" class="contact">
         <h2>Contact</h2>
